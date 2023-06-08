@@ -36,13 +36,11 @@
             buttoncustom1 = new Buttoncustom();
             buttoncustom2 = new Buttoncustom();
             buttoncustom3 = new Buttoncustom();
-            buttoncustom4 = new Buttoncustom();
             buttoncustom5 = new Buttoncustom();
             buttoncustom6 = new Buttoncustom();
-            buttoncustom7 = new Buttoncustom();
             panel2 = new Panel();
-            comboBox1 = new ComboBox();
             panel1.SuspendLayout();
+            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -73,6 +71,7 @@
             button2.TabIndex = 16;
             button2.Text = "X";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click_1;
             // 
             // button1
             // 
@@ -106,13 +105,14 @@
             buttoncustom1.BorderColor = Color.Black;
             buttoncustom1.BorderRadius = 40;
             buttoncustom1.BorderSize = 0;
+            buttoncustom1.Dock = DockStyle.Left;
             buttoncustom1.FlatAppearance.BorderSize = 0;
             buttoncustom1.FlatStyle = FlatStyle.Flat;
             buttoncustom1.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom1.ForeColor = Color.White;
-            buttoncustom1.Location = new Point(1302, 127);
+            buttoncustom1.Location = new Point(430, 0);
             buttoncustom1.Name = "buttoncustom1";
-            buttoncustom1.Size = new Size(252, 68);
+            buttoncustom1.Size = new Size(215, 66);
             buttoncustom1.TabIndex = 1;
             buttoncustom1.Text = "Profile";
             buttoncustom1.UseVisualStyleBackColor = false;
@@ -123,16 +123,18 @@
             buttoncustom2.BorderColor = Color.Black;
             buttoncustom2.BorderRadius = 40;
             buttoncustom2.BorderSize = 0;
+            buttoncustom2.Dock = DockStyle.Left;
             buttoncustom2.FlatAppearance.BorderSize = 0;
             buttoncustom2.FlatStyle = FlatStyle.Flat;
             buttoncustom2.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom2.ForeColor = Color.White;
-            buttoncustom2.Location = new Point(528, 127);
+            buttoncustom2.Location = new Point(860, 0);
             buttoncustom2.Name = "buttoncustom2";
-            buttoncustom2.Size = new Size(252, 68);
+            buttoncustom2.Size = new Size(215, 66);
             buttoncustom2.TabIndex = 2;
             buttoncustom2.Text = "Menu";
             buttoncustom2.UseVisualStyleBackColor = false;
+            buttoncustom2.Click += buttoncustom2_Click;
             // 
             // buttoncustom3
             // 
@@ -140,34 +142,18 @@
             buttoncustom3.BorderColor = Color.Black;
             buttoncustom3.BorderRadius = 40;
             buttoncustom3.BorderSize = 0;
+            buttoncustom3.Dock = DockStyle.Left;
             buttoncustom3.FlatAppearance.BorderSize = 0;
             buttoncustom3.FlatStyle = FlatStyle.Flat;
             buttoncustom3.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom3.ForeColor = Color.White;
-            buttoncustom3.Location = new Point(786, 127);
+            buttoncustom3.Location = new Point(215, 0);
             buttoncustom3.Name = "buttoncustom3";
-            buttoncustom3.Size = new Size(252, 68);
+            buttoncustom3.Size = new Size(215, 66);
             buttoncustom3.TabIndex = 3;
             buttoncustom3.Text = "Activity Calender ";
             buttoncustom3.UseVisualStyleBackColor = false;
             buttoncustom3.Click += buttoncustom3_Click;
-            // 
-            // buttoncustom4
-            // 
-            buttoncustom4.BackColor = Color.CornflowerBlue;
-            buttoncustom4.BorderColor = Color.Black;
-            buttoncustom4.BorderRadius = 40;
-            buttoncustom4.BorderSize = 0;
-            buttoncustom4.FlatAppearance.BorderSize = 0;
-            buttoncustom4.FlatStyle = FlatStyle.Flat;
-            buttoncustom4.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            buttoncustom4.ForeColor = Color.White;
-            buttoncustom4.Location = new Point(270, 127);
-            buttoncustom4.Name = "buttoncustom4";
-            buttoncustom4.Size = new Size(252, 68);
-            buttoncustom4.TabIndex = 4;
-            buttoncustom4.Text = "Time Table";
-            buttoncustom4.UseVisualStyleBackColor = false;
             // 
             // buttoncustom5
             // 
@@ -175,13 +161,14 @@
             buttoncustom5.BorderColor = Color.Black;
             buttoncustom5.BorderRadius = 40;
             buttoncustom5.BorderSize = 0;
+            buttoncustom5.Dock = DockStyle.Left;
             buttoncustom5.FlatAppearance.BorderSize = 0;
             buttoncustom5.FlatStyle = FlatStyle.Flat;
             buttoncustom5.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom5.ForeColor = Color.White;
-            buttoncustom5.Location = new Point(686, 748);
+            buttoncustom5.Location = new Point(645, 0);
             buttoncustom5.Name = "buttoncustom5";
-            buttoncustom5.Size = new Size(252, 68);
+            buttoncustom5.Size = new Size(215, 66);
             buttoncustom5.TabIndex = 5;
             buttoncustom5.Text = "Complaints";
             buttoncustom5.UseVisualStyleBackColor = false;
@@ -192,74 +179,44 @@
             buttoncustom6.BorderColor = Color.Black;
             buttoncustom6.BorderRadius = 40;
             buttoncustom6.BorderSize = 0;
+            buttoncustom6.Dock = DockStyle.Left;
             buttoncustom6.FlatAppearance.BorderSize = 0;
             buttoncustom6.FlatStyle = FlatStyle.Flat;
             buttoncustom6.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom6.ForeColor = Color.White;
-            buttoncustom6.Location = new Point(1044, 127);
+            buttoncustom6.Location = new Point(0, 0);
             buttoncustom6.Name = "buttoncustom6";
-            buttoncustom6.Size = new Size(252, 68);
+            buttoncustom6.Size = new Size(215, 66);
             buttoncustom6.TabIndex = 6;
             buttoncustom6.Text = "Fee Challan";
             buttoncustom6.UseVisualStyleBackColor = false;
             // 
-            // buttoncustom7
-            // 
-            buttoncustom7.BackColor = Color.CornflowerBlue;
-            buttoncustom7.BorderColor = Color.Black;
-            buttoncustom7.BorderRadius = 40;
-            buttoncustom7.BorderSize = 0;
-            buttoncustom7.FlatAppearance.BorderSize = 0;
-            buttoncustom7.FlatStyle = FlatStyle.Flat;
-            buttoncustom7.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            buttoncustom7.ForeColor = Color.White;
-            buttoncustom7.Location = new Point(566, 263);
-            buttoncustom7.Name = "buttoncustom7";
-            buttoncustom7.Size = new Size(252, 68);
-            buttoncustom7.TabIndex = 7;
-            buttoncustom7.Text = "Apply for room";
-            buttoncustom7.UseVisualStyleBackColor = false;
-            buttoncustom7.Click += buttoncustom7_Click;
-            // 
             // panel2
             // 
-            panel2.BackColor = Color.CornflowerBlue;
-            panel2.Location = new Point(12, 201);
+            panel2.Controls.Add(buttoncustom2);
+            panel2.Controls.Add(buttoncustom5);
+            panel2.Controls.Add(buttoncustom1);
+            panel2.Controls.Add(buttoncustom3);
+            panel2.Controls.Add(buttoncustom6);
+            panel2.Dock = DockStyle.Top;
+            panel2.Location = new Point(0, 121);
             panel2.Name = "panel2";
-            panel2.Size = new Size(252, 68);
-            panel2.TabIndex = 8;
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "View available room ", "select room type " });
-            comboBox1.Location = new Point(73, 326);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(182, 33);
-            comboBox1.TabIndex = 9;
-            comboBox1.Text = "Apply for room";
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            panel2.Size = new Size(1576, 66);
+            panel2.TabIndex = 10;
             // 
             // HomeStudent
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1576, 963);
-            Controls.Add(comboBox1);
-            Controls.Add(buttoncustom3);
-            Controls.Add(buttoncustom1);
             Controls.Add(panel2);
-            Controls.Add(buttoncustom2);
-            Controls.Add(buttoncustom5);
             Controls.Add(panel1);
-            Controls.Add(buttoncustom7);
-            Controls.Add(buttoncustom4);
-            Controls.Add(buttoncustom6);
             FormBorderStyle = FormBorderStyle.None;
             Name = "HomeStudent";
             Text = "HomeStudent";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -271,12 +228,9 @@
         private Buttoncustom buttoncustom1;
         private Buttoncustom buttoncustom2;
         private Buttoncustom buttoncustom3;
-        private Buttoncustom buttoncustom4;
         private Buttoncustom buttoncustom5;
         private Buttoncustom buttoncustom6;
-        private Buttoncustom buttoncustom7;
-        private Panel panel2;
         private Button button2;
-        private ComboBox comboBox1;
+        private Panel panel2;
     }
 }

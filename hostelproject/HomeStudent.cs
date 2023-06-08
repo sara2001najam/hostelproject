@@ -19,8 +19,22 @@ namespace hostelproject
 
         private void buttoncustom7_Click(object sender, EventArgs e)
         {
+            if (panel2.Height == 278)
+            {
+                panel2.Height = 68;
+            }
+            else
+            {
+                panel2.Height = 278;
+            }
 
         }
+
+        private void hostelproject_Load(object sender, EventArgs e)
+        {
+            panel2.Height = 68;
+        }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -39,6 +53,23 @@ namespace hostelproject
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttoncustom2_Click(object sender, EventArgs e)
+        {
+            menu mn = new menu();
+            mn.Show();
+        }
+
+        private void buttoncustom4_Click(object sender, EventArgs e)
+        {
+           
 
         }
     }

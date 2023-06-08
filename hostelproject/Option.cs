@@ -31,5 +31,15 @@ namespace hostelproject
             Form1 fs = new Form1();
             fs.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }

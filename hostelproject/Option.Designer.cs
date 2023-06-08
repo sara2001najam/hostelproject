@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             button1 = new Button();
             button2 = new Button();
             label1 = new Label();
             label2 = new Label();
             panel4 = new Panel();
             button3 = new Button();
+            timer1 = new System.Windows.Forms.Timer(components);
             panel4.SuspendLayout();
             SuspendLayout();
             // 
@@ -118,6 +120,13 @@
             button3.TabIndex = 14;
             button3.Text = "X";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
             // 
             // Option
             // 
@@ -132,6 +141,7 @@
             Controls.Add(button1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Option";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Option";
             panel4.ResumeLayout(false);
             ResumeLayout(false);
@@ -146,5 +156,6 @@
         private Label label2;
         private Panel panel4;
         private Button button3;
+        private System.Windows.Forms.Timer timer1;
     }
 }

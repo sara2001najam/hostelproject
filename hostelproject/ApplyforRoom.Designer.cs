@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ApplyforRoom));
             panel1 = new Panel();
+            button2 = new Button();
             button1 = new Button();
             label1 = new Label();
             panel2 = new Panel();
@@ -48,7 +49,6 @@
             dateTimePicker2 = new DateTimePicker();
             label5 = new Label();
             label6 = new Label();
-            button2 = new Button();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
@@ -65,6 +65,23 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1576, 121);
             panel1.TabIndex = 2;
+            // 
+            // button2
+            // 
+            button2.Dock = DockStyle.Right;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
+            button2.FlatAppearance.MouseOverBackColor = Color.Red;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = SystemColors.Control;
+            button2.Location = new Point(1504, 0);
+            button2.Name = "button2";
+            button2.Size = new Size(72, 121);
+            button2.TabIndex = 15;
+            button2.Text = "X";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click_1;
             // 
             // button1
             // 
@@ -319,22 +336,6 @@
             label6.Name = "label6";
             label6.Size = new Size(0, 26);
             label6.TabIndex = 20;
-            // 
-            // button2
-            // 
-            button2.Dock = DockStyle.Right;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
-            button2.FlatAppearance.MouseOverBackColor = Color.Red;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(1504, 0);
-            button2.Name = "button2";
-            button2.Size = new Size(72, 121);
-            button2.TabIndex = 15;
-            button2.Text = "X";
-            button2.UseVisualStyleBackColor = true;
             // 
             // ApplyforRoom
             // 

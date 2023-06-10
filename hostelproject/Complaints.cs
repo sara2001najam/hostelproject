@@ -16,5 +16,10 @@ namespace hostelproject
         {
             InitializeComponent();
         }
+
+        private void textboxcustom6__Textchanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

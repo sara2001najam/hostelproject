@@ -1,6 +1,6 @@
 ﻿namespace hostelproject
 {
-    partial class HomeStudent
+    partial class RoomAvailability
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeStudent));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomAvailability));
             panel1 = new Panel();
             button2 = new Button();
             button1 = new Button();
@@ -39,11 +39,14 @@
             buttoncustom10 = new Buttoncustom();
             buttoncustom11 = new Buttoncustom();
             buttoncustom12 = new Buttoncustom();
-            label2 = new Label();
-            label3 = new Label();
+            dataGridView1 = new DataGridView();
+            comboBox1 = new ComboBox();
+            label5 = new Label();
             panel2 = new Panel();
+            label14 = new Label();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -55,9 +58,10 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1576, 92);
-            panel1.TabIndex = 0;
+            panel1.Size = new Size(1576, 75);
+            panel1.TabIndex = 5;
             // 
             // button2
             // 
@@ -68,13 +72,13 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(1471, 0);
+            button2.Location = new Point(1504, 0);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(105, 92);
-            button2.TabIndex = 16;
+            button2.Size = new Size(72, 75);
+            button2.TabIndex = 15;
             button2.Text = "X";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click_1;
             // 
             // button1
             // 
@@ -85,8 +89,9 @@
             button1.ForeColor = SystemColors.ButtonFace;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.Location = new Point(0, 0);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(124, 92);
+            button1.Size = new Size(124, 75);
             button1.TabIndex = 1;
             button1.UseVisualStyleBackColor = false;
             // 
@@ -96,7 +101,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Gothic", 22F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(484, 26);
+            label1.Location = new Point(465, 13);
             label1.Name = "label1";
             label1.Size = new Size(523, 51);
             label1.TabIndex = 1;
@@ -111,11 +116,11 @@
             panel3.Controls.Add(buttoncustom11);
             panel3.Controls.Add(buttoncustom12);
             panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 92);
+            panel3.Location = new Point(0, 75);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
             panel3.Size = new Size(1576, 65);
-            panel3.TabIndex = 23;
+            panel3.TabIndex = 24;
             // 
             // buttoncustom8
             // 
@@ -212,54 +217,77 @@
             buttoncustom12.Text = "Fee Challan";
             buttoncustom12.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // dataGridView1
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.RoyalBlue;
-            label2.Location = new Point(26, 205);
-            label2.Name = "label2";
-            label2.Size = new Size(664, 86);
-            label2.TabIndex = 24;
-            label2.Text = "Welcome to Bahria University Hostel! \r\n\r\n";
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(33, 306);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.RowTemplate.Height = 33;
+            dataGridView1.Size = new Size(1476, 606);
+            dataGridView1.TabIndex = 25;
             // 
-            // label3
+            // comboBox1
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.CornflowerBlue;
-            label3.Location = new Point(26, 291);
-            label3.Name = "label3";
-            label3.Size = new Size(703, 112);
-            label3.TabIndex = 25;
-            label3.Text = "Get started on your journey with us by applying for a room. \r\nWe hope you enjoy your stay with us!\r\n\r\n ";
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Location = new Point(167, 249);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(182, 33);
+            comboBox1.TabIndex = 26;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.RoyalBlue;
+            label5.Location = new Point(33, 251);
+            label5.Name = "label5";
+            label5.Size = new Size(113, 26);
+            label5.TabIndex = 27;
+            label5.Text = "Room no.";
             // 
             // panel2
             // 
             panel2.BackColor = Color.RoyalBlue;
-            panel2.Location = new Point(26, 257);
+            panel2.Location = new Point(33, 208);
             panel2.Name = "panel2";
-            panel2.Size = new Size(810, 1);
+            panel2.Size = new Size(700, 1);
             panel2.TabIndex = 41;
             // 
-            // HomeStudent
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.ForeColor = Color.RoyalBlue;
+            label14.Location = new Point(33, 177);
+            label14.Name = "label14";
+            label14.Size = new Size(142, 28);
+            label14.TabIndex = 42;
+            label14.Text = "Availability";
+            // 
+            // RoomAvailability
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1576, 963);
+            Controls.Add(label14);
             Controls.Add(panel2);
-            Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(label5);
+            Controls.Add(comboBox1);
+            Controls.Add(dataGridView1);
             Controls.Add(panel3);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "HomeStudent";
-            Text = "HomeStudent";
+            Name = "RoomAvailability";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "RoomAvailability";
+            Load += RoomAvailability_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -267,17 +295,19 @@
         #endregion
 
         private Panel panel1;
+        private Button button2;
         private Button button1;
         private Label label1;
-        private Button button2;
         private Panel panel3;
         private Buttoncustom buttoncustom8;
         private Buttoncustom buttoncustom9;
         private Buttoncustom buttoncustom10;
         private Buttoncustom buttoncustom11;
         private Buttoncustom buttoncustom12;
-        private Label label2;
-        private Label label3;
+        private DataGridView dataGridView1;
+        private ComboBox comboBox1;
+        private Label label5;
         private Panel panel2;
+        private Label label14;
     }
 }

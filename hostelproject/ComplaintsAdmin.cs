@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace hostelproject
 {
-    public partial class menu : Form
+    public partial class ComplaintsAdmin : Form
     {
-        public menu()
+        public ComplaintsAdmin()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

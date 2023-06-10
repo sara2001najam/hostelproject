@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             gradientPanel1 = new GradientPanel();
+            textboxcustom1 = new Textboxcustom();
+            txtpass = new TextBox();
+            txtuser = new TextBox();
             panel4 = new Panel();
             button2 = new Button();
             buttoncustom2 = new Buttoncustom();
@@ -40,8 +43,6 @@
             buttoncustom1 = new Buttoncustom();
             panel1 = new Panel();
             label1 = new Label();
-            txtuser = new TextBox();
-            txtpass = new TextBox();
             gradientPanel1.SuspendLayout();
             panel4.SuspendLayout();
             SuspendLayout();
@@ -50,6 +51,7 @@
             // 
             gradientPanel1.Colorbottom = Color.RoyalBlue;
             gradientPanel1.Colortop = Color.RoyalBlue;
+            gradientPanel1.Controls.Add(textboxcustom1);
             gradientPanel1.Controls.Add(txtpass);
             gradientPanel1.Controls.Add(txtuser);
             gradientPanel1.Controls.Add(panel4);
@@ -68,6 +70,43 @@
             gradientPanel1.Size = new Size(581, 992);
             gradientPanel1.TabIndex = 0;
             gradientPanel1.Paint += gradientPanel1_Paint;
+            // 
+            // textboxcustom1
+            // 
+            textboxcustom1.BackColor = SystemColors.Window;
+            textboxcustom1.BorderColor = Color.MediumSlateBlue;
+            textboxcustom1.BorderFocusColor = Color.Indigo;
+            textboxcustom1.BorderRadius = 0;
+            textboxcustom1.BorderSize = 2;
+            textboxcustom1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            textboxcustom1.ForeColor = Color.DimGray;
+            textboxcustom1.Location = new Point(92, 375);
+            textboxcustom1.Multiline = false;
+            textboxcustom1.Name = "textboxcustom1";
+            textboxcustom1.Padding = new Padding(10, 7, 10, 7);
+            textboxcustom1.PasswordChar = false;
+            textboxcustom1.PlaceholderColor = Color.White;
+            textboxcustom1.PlaceholderText = "";
+            textboxcustom1.Size = new Size(390, 39);
+            textboxcustom1.TabIndex = 17;
+            textboxcustom1.Texts = "";
+            textboxcustom1.UnderlinedStyle = false;
+            // 
+            // txtpass
+            // 
+            txtpass.Location = new Point(208, 492);
+            txtpass.Name = "txtpass";
+            txtpass.Size = new Size(150, 31);
+            txtpass.TabIndex = 16;
+            // 
+            // txtuser
+            // 
+            txtuser.Location = new Point(208, 429);
+            txtuser.Name = "txtuser";
+            txtuser.Size = new Size(150, 31);
+            txtuser.TabIndex = 15;
+            txtuser.UseSystemPasswordChar = true;
+            txtuser.TextChanged += txtuser_TextChanged;
             // 
             // panel4
             // 
@@ -209,21 +248,6 @@
             label1.TabIndex = 0;
             label1.Text = "Bahria University Hostel ";
             // 
-            // txtuser
-            // 
-            txtuser.Location = new Point(208, 429);
-            txtuser.Name = "txtuser";
-            txtuser.Size = new Size(150, 31);
-            txtuser.TabIndex = 15;
-            txtuser.TextChanged += txtuser_TextChanged;
-            // 
-            // txtpass
-            // 
-            txtpass.Location = new Point(208, 492);
-            txtpass.Name = "txtpass";
-            txtpass.Size = new Size(150, 31);
-            txtpass.TabIndex = 16;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -258,5 +282,6 @@
         private Button button2;
         private TextBox txtpass;
         private TextBox txtuser;
+        private Textboxcustom textboxcustom1;
     }
 }

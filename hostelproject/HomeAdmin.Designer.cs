@@ -33,17 +33,17 @@
             button2 = new Button();
             button1 = new Button();
             label1 = new Label();
-            panel2 = new Panel();
-            buttoncustom9 = new Buttoncustom();
-            buttoncustom8 = new Buttoncustom();
-            buttoncustom1 = new Buttoncustom();
-            buttoncustom5 = new Buttoncustom();
-            buttoncustom6 = new Buttoncustom();
-            buttoncustom7 = new Buttoncustom();
-            buttoncustom2 = new Buttoncustom();
+            panel3 = new Panel();
             buttoncustom3 = new Buttoncustom();
+            buttoncustom2 = new Buttoncustom();
+            buttoncustom1 = new Buttoncustom();
+            buttoncustom8 = new Buttoncustom();
+            buttoncustom9 = new Buttoncustom();
+            buttoncustom10 = new Buttoncustom();
+            buttoncustom11 = new Buttoncustom();
+            buttoncustom12 = new Buttoncustom();
             panel1.SuspendLayout();
-            panel2.SuspendLayout();
+            panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -56,7 +56,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1576, 121);
+            panel1.Size = new Size(1576, 92);
             panel1.TabIndex = 1;
             // 
             // button2
@@ -68,9 +68,9 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(1504, 0);
+            button2.Location = new Point(1460, 0);
             button2.Name = "button2";
-            button2.Size = new Size(72, 121);
+            button2.Size = new Size(116, 92);
             button2.TabIndex = 15;
             button2.Text = "X";
             button2.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.Location = new Point(0, 0);
             button1.Name = "button1";
-            button1.Size = new Size(124, 121);
+            button1.Size = new Size(124, 92);
             button1.TabIndex = 1;
             button1.UseVisualStyleBackColor = false;
             // 
@@ -96,166 +96,29 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Gothic", 22F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(463, 39);
+            label1.Location = new Point(479, 26);
             label1.Name = "label1";
             label1.Size = new Size(523, 51);
             label1.TabIndex = 1;
             label1.Text = "Bahria University Hostel ";
             // 
-            // panel2
+            // panel3
             // 
-            panel2.BackColor = Color.CornflowerBlue;
-            panel2.Controls.Add(buttoncustom9);
-            panel2.Controls.Add(buttoncustom8);
-            panel2.Controls.Add(buttoncustom1);
-            panel2.Controls.Add(buttoncustom5);
-            panel2.Controls.Add(buttoncustom6);
-            panel2.Controls.Add(buttoncustom7);
-            panel2.Controls.Add(buttoncustom2);
-            panel2.Controls.Add(buttoncustom3);
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 121);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(198, 842);
-            panel2.TabIndex = 9;
-            // 
-            // buttoncustom9
-            // 
-            buttoncustom9.BackColor = Color.CornflowerBlue;
-            buttoncustom9.BorderColor = Color.Black;
-            buttoncustom9.BorderRadius = 40;
-            buttoncustom9.BorderSize = 0;
-            buttoncustom9.Dock = DockStyle.Top;
-            buttoncustom9.FlatAppearance.BorderSize = 0;
-            buttoncustom9.FlatAppearance.MouseOverBackColor = Color.Blue;
-            buttoncustom9.FlatStyle = FlatStyle.Flat;
-            buttoncustom9.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            buttoncustom9.ForeColor = Color.White;
-            buttoncustom9.Location = new Point(0, 634);
-            buttoncustom9.Name = "buttoncustom9";
-            buttoncustom9.Size = new Size(198, 100);
-            buttoncustom9.TabIndex = 11;
-            buttoncustom9.Text = "Employee info";
-            buttoncustom9.UseVisualStyleBackColor = false;
-            buttoncustom9.Click += buttoncustom9_Click;
-            // 
-            // buttoncustom8
-            // 
-            buttoncustom8.BackColor = Color.CornflowerBlue;
-            buttoncustom8.BorderColor = Color.Black;
-            buttoncustom8.BorderRadius = 40;
-            buttoncustom8.BorderSize = 0;
-            buttoncustom8.Dock = DockStyle.Top;
-            buttoncustom8.FlatAppearance.BorderSize = 0;
-            buttoncustom8.FlatAppearance.MouseOverBackColor = Color.Blue;
-            buttoncustom8.FlatStyle = FlatStyle.Flat;
-            buttoncustom8.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            buttoncustom8.ForeColor = Color.White;
-            buttoncustom8.Location = new Point(0, 534);
-            buttoncustom8.Name = "buttoncustom8";
-            buttoncustom8.Size = new Size(198, 100);
-            buttoncustom8.TabIndex = 10;
-            buttoncustom8.Text = "Utility Bills";
-            buttoncustom8.UseVisualStyleBackColor = false;
-            buttoncustom8.Click += buttoncustom8_Click;
-            // 
-            // buttoncustom1
-            // 
-            buttoncustom1.BackColor = Color.CornflowerBlue;
-            buttoncustom1.BorderColor = Color.Black;
-            buttoncustom1.BorderRadius = 40;
-            buttoncustom1.BorderSize = 0;
-            buttoncustom1.Dock = DockStyle.Top;
-            buttoncustom1.FlatAppearance.BorderSize = 0;
-            buttoncustom1.FlatAppearance.MouseOverBackColor = Color.Blue;
-            buttoncustom1.FlatStyle = FlatStyle.Flat;
-            buttoncustom1.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            buttoncustom1.ForeColor = Color.White;
-            buttoncustom1.Location = new Point(0, 434);
-            buttoncustom1.Name = "buttoncustom1";
-            buttoncustom1.Size = new Size(198, 100);
-            buttoncustom1.TabIndex = 1;
-            buttoncustom1.Text = "Student info";
-            buttoncustom1.UseVisualStyleBackColor = false;
-            buttoncustom1.Click += buttoncustom1_Click;
-            // 
-            // buttoncustom5
-            // 
-            buttoncustom5.BackColor = Color.CornflowerBlue;
-            buttoncustom5.BorderColor = Color.Black;
-            buttoncustom5.BorderRadius = 40;
-            buttoncustom5.BorderSize = 0;
-            buttoncustom5.Dock = DockStyle.Top;
-            buttoncustom5.FlatAppearance.BorderSize = 0;
-            buttoncustom5.FlatAppearance.MouseOverBackColor = Color.Blue;
-            buttoncustom5.FlatStyle = FlatStyle.Flat;
-            buttoncustom5.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            buttoncustom5.ForeColor = Color.White;
-            buttoncustom5.Location = new Point(0, 334);
-            buttoncustom5.Name = "buttoncustom5";
-            buttoncustom5.Size = new Size(198, 100);
-            buttoncustom5.TabIndex = 5;
-            buttoncustom5.Text = "Complaints";
-            buttoncustom5.UseVisualStyleBackColor = false;
-            // 
-            // buttoncustom6
-            // 
-            buttoncustom6.BackColor = Color.CornflowerBlue;
-            buttoncustom6.BorderColor = Color.Black;
-            buttoncustom6.BorderRadius = 40;
-            buttoncustom6.BorderSize = 0;
-            buttoncustom6.Dock = DockStyle.Top;
-            buttoncustom6.FlatAppearance.BorderSize = 0;
-            buttoncustom6.FlatAppearance.MouseOverBackColor = Color.Blue;
-            buttoncustom6.FlatStyle = FlatStyle.Flat;
-            buttoncustom6.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            buttoncustom6.ForeColor = Color.White;
-            buttoncustom6.Location = new Point(0, 234);
-            buttoncustom6.Name = "buttoncustom6";
-            buttoncustom6.Size = new Size(198, 100);
-            buttoncustom6.TabIndex = 6;
-            buttoncustom6.Text = "Fee Challan";
-            buttoncustom6.UseVisualStyleBackColor = false;
-            // 
-            // buttoncustom7
-            // 
-            buttoncustom7.BackColor = Color.CornflowerBlue;
-            buttoncustom7.BorderColor = Color.Black;
-            buttoncustom7.BorderRadius = 40;
-            buttoncustom7.BorderSize = 0;
-            buttoncustom7.Dock = DockStyle.Top;
-            buttoncustom7.FlatAppearance.BorderSize = 0;
-            buttoncustom7.FlatAppearance.MouseOverBackColor = Color.Blue;
-            buttoncustom7.FlatStyle = FlatStyle.Flat;
-            buttoncustom7.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            buttoncustom7.ForeColor = Color.White;
-            buttoncustom7.Location = new Point(0, 163);
-            buttoncustom7.Name = "buttoncustom7";
-            buttoncustom7.Size = new Size(198, 71);
-            buttoncustom7.TabIndex = 7;
-            buttoncustom7.Text = "Room management";
-            buttoncustom7.UseVisualStyleBackColor = false;
-            buttoncustom7.Click += buttoncustom7_Click;
-            // 
-            // buttoncustom2
-            // 
-            buttoncustom2.BackColor = Color.CornflowerBlue;
-            buttoncustom2.BorderColor = Color.Black;
-            buttoncustom2.BorderRadius = 40;
-            buttoncustom2.BorderSize = 0;
-            buttoncustom2.Dock = DockStyle.Top;
-            buttoncustom2.FlatAppearance.BorderSize = 0;
-            buttoncustom2.FlatAppearance.MouseOverBackColor = Color.Blue;
-            buttoncustom2.FlatStyle = FlatStyle.Flat;
-            buttoncustom2.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            buttoncustom2.ForeColor = Color.White;
-            buttoncustom2.Location = new Point(0, 100);
-            buttoncustom2.Name = "buttoncustom2";
-            buttoncustom2.Size = new Size(198, 63);
-            buttoncustom2.TabIndex = 2;
-            buttoncustom2.Text = "Menu";
-            buttoncustom2.UseVisualStyleBackColor = false;
-            buttoncustom2.Click += buttoncustom2_Click;
+            panel3.BackColor = Color.CornflowerBlue;
+            panel3.Controls.Add(buttoncustom3);
+            panel3.Controls.Add(buttoncustom2);
+            panel3.Controls.Add(buttoncustom1);
+            panel3.Controls.Add(buttoncustom8);
+            panel3.Controls.Add(buttoncustom9);
+            panel3.Controls.Add(buttoncustom10);
+            panel3.Controls.Add(buttoncustom11);
+            panel3.Controls.Add(buttoncustom12);
+            panel3.Dock = DockStyle.Top;
+            panel3.Location = new Point(0, 92);
+            panel3.Margin = new Padding(3, 4, 3, 4);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1576, 65);
+            panel3.TabIndex = 26;
             // 
             // buttoncustom3
             // 
@@ -263,26 +126,158 @@
             buttoncustom3.BorderColor = Color.Black;
             buttoncustom3.BorderRadius = 40;
             buttoncustom3.BorderSize = 0;
-            buttoncustom3.Dock = DockStyle.Top;
+            buttoncustom3.Dock = DockStyle.Left;
             buttoncustom3.FlatAppearance.BorderSize = 0;
-            buttoncustom3.FlatAppearance.MouseOverBackColor = Color.Blue;
             buttoncustom3.FlatStyle = FlatStyle.Flat;
             buttoncustom3.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom3.ForeColor = Color.White;
-            buttoncustom3.Location = new Point(0, 0);
+            buttoncustom3.Location = new Point(1288, 0);
+            buttoncustom3.Margin = new Padding(3, 4, 3, 4);
             buttoncustom3.Name = "buttoncustom3";
-            buttoncustom3.Size = new Size(198, 100);
-            buttoncustom3.TabIndex = 3;
-            buttoncustom3.Text = "Activity Calender ";
+            buttoncustom3.Size = new Size(184, 65);
+            buttoncustom3.TabIndex = 9;
+            buttoncustom3.Text = "Student info";
             buttoncustom3.UseVisualStyleBackColor = false;
-            buttoncustom3.Click += buttoncustom3_Click;
+            // 
+            // buttoncustom2
+            // 
+            buttoncustom2.BackColor = Color.CornflowerBlue;
+            buttoncustom2.BorderColor = Color.Black;
+            buttoncustom2.BorderRadius = 40;
+            buttoncustom2.BorderSize = 0;
+            buttoncustom2.Dock = DockStyle.Left;
+            buttoncustom2.FlatAppearance.BorderSize = 0;
+            buttoncustom2.FlatStyle = FlatStyle.Flat;
+            buttoncustom2.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom2.ForeColor = Color.White;
+            buttoncustom2.Location = new Point(1104, 0);
+            buttoncustom2.Margin = new Padding(3, 4, 3, 4);
+            buttoncustom2.Name = "buttoncustom2";
+            buttoncustom2.Size = new Size(184, 65);
+            buttoncustom2.TabIndex = 8;
+            buttoncustom2.Text = "Utility Bills";
+            buttoncustom2.UseVisualStyleBackColor = false;
+            // 
+            // buttoncustom1
+            // 
+            buttoncustom1.BackColor = Color.CornflowerBlue;
+            buttoncustom1.BorderColor = Color.Black;
+            buttoncustom1.BorderRadius = 40;
+            buttoncustom1.BorderSize = 0;
+            buttoncustom1.Dock = DockStyle.Left;
+            buttoncustom1.FlatAppearance.BorderSize = 0;
+            buttoncustom1.FlatStyle = FlatStyle.Flat;
+            buttoncustom1.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom1.ForeColor = Color.White;
+            buttoncustom1.Location = new Point(920, 0);
+            buttoncustom1.Margin = new Padding(3, 4, 3, 4);
+            buttoncustom1.Name = "buttoncustom1";
+            buttoncustom1.Size = new Size(184, 65);
+            buttoncustom1.TabIndex = 7;
+            buttoncustom1.Text = "Hostel Staff";
+            buttoncustom1.UseVisualStyleBackColor = false;
+            // 
+            // buttoncustom8
+            // 
+            buttoncustom8.BackColor = Color.CornflowerBlue;
+            buttoncustom8.BorderColor = Color.Black;
+            buttoncustom8.BorderRadius = 40;
+            buttoncustom8.BorderSize = 0;
+            buttoncustom8.Dock = DockStyle.Left;
+            buttoncustom8.FlatAppearance.BorderSize = 0;
+            buttoncustom8.FlatStyle = FlatStyle.Flat;
+            buttoncustom8.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom8.ForeColor = Color.White;
+            buttoncustom8.Location = new Point(736, 0);
+            buttoncustom8.Margin = new Padding(3, 4, 3, 4);
+            buttoncustom8.Name = "buttoncustom8";
+            buttoncustom8.Size = new Size(184, 65);
+            buttoncustom8.TabIndex = 2;
+            buttoncustom8.Text = "Menu";
+            buttoncustom8.UseVisualStyleBackColor = false;
+            // 
+            // buttoncustom9
+            // 
+            buttoncustom9.BackColor = Color.CornflowerBlue;
+            buttoncustom9.BorderColor = Color.Black;
+            buttoncustom9.BorderRadius = 40;
+            buttoncustom9.BorderSize = 0;
+            buttoncustom9.Dock = DockStyle.Left;
+            buttoncustom9.FlatAppearance.BorderSize = 0;
+            buttoncustom9.FlatStyle = FlatStyle.Flat;
+            buttoncustom9.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom9.ForeColor = Color.White;
+            buttoncustom9.Location = new Point(552, 0);
+            buttoncustom9.Margin = new Padding(3, 4, 3, 4);
+            buttoncustom9.Name = "buttoncustom9";
+            buttoncustom9.Size = new Size(184, 65);
+            buttoncustom9.TabIndex = 5;
+            buttoncustom9.Text = "Complaints";
+            buttoncustom9.UseVisualStyleBackColor = false;
+            // 
+            // buttoncustom10
+            // 
+            buttoncustom10.BackColor = Color.CornflowerBlue;
+            buttoncustom10.BorderColor = Color.Black;
+            buttoncustom10.BorderRadius = 40;
+            buttoncustom10.BorderSize = 0;
+            buttoncustom10.Dock = DockStyle.Left;
+            buttoncustom10.FlatAppearance.BorderSize = 0;
+            buttoncustom10.FlatStyle = FlatStyle.Flat;
+            buttoncustom10.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom10.ForeColor = Color.White;
+            buttoncustom10.Location = new Point(368, 0);
+            buttoncustom10.Margin = new Padding(3, 4, 3, 4);
+            buttoncustom10.Name = "buttoncustom10";
+            buttoncustom10.Size = new Size(184, 65);
+            buttoncustom10.TabIndex = 1;
+            buttoncustom10.Text = "Rooms";
+            buttoncustom10.UseVisualStyleBackColor = false;
+            // 
+            // buttoncustom11
+            // 
+            buttoncustom11.BackColor = Color.CornflowerBlue;
+            buttoncustom11.BorderColor = Color.Black;
+            buttoncustom11.BorderRadius = 40;
+            buttoncustom11.BorderSize = 0;
+            buttoncustom11.Dock = DockStyle.Left;
+            buttoncustom11.FlatAppearance.BorderSize = 0;
+            buttoncustom11.FlatStyle = FlatStyle.Flat;
+            buttoncustom11.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom11.ForeColor = Color.White;
+            buttoncustom11.Location = new Point(184, 0);
+            buttoncustom11.Margin = new Padding(3, 4, 3, 4);
+            buttoncustom11.Name = "buttoncustom11";
+            buttoncustom11.Size = new Size(184, 65);
+            buttoncustom11.TabIndex = 3;
+            buttoncustom11.Text = "Activity Calender ";
+            buttoncustom11.UseVisualStyleBackColor = false;
+            // 
+            // buttoncustom12
+            // 
+            buttoncustom12.BackColor = Color.CornflowerBlue;
+            buttoncustom12.BorderColor = Color.Black;
+            buttoncustom12.BorderRadius = 40;
+            buttoncustom12.BorderSize = 0;
+            buttoncustom12.Dock = DockStyle.Left;
+            buttoncustom12.FlatAppearance.BorderSize = 0;
+            buttoncustom12.FlatStyle = FlatStyle.Flat;
+            buttoncustom12.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom12.ForeColor = Color.White;
+            buttoncustom12.Location = new Point(0, 0);
+            buttoncustom12.Margin = new Padding(3, 4, 3, 4);
+            buttoncustom12.Name = "buttoncustom12";
+            buttoncustom12.Size = new Size(184, 65);
+            buttoncustom12.TabIndex = 6;
+            buttoncustom12.Text = "Fee Challan";
+            buttoncustom12.UseVisualStyleBackColor = false;
             // 
             // HomeAdmin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1576, 963);
-            Controls.Add(panel2);
+            Controls.Add(panel3);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "HomeAdmin";
@@ -290,7 +285,7 @@
             Load += HomeAdmin_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            panel2.ResumeLayout(false);
+            panel3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -299,15 +294,15 @@
         private Panel panel1;
         private Button button1;
         private Label label1;
-        private Panel panel2;
-        private Buttoncustom buttoncustom1;
-        private Buttoncustom buttoncustom5;
-        private Buttoncustom buttoncustom6;
-        private Buttoncustom buttoncustom7;
-        private Buttoncustom buttoncustom2;
+        private Button button2;
+        private Panel panel3;
         private Buttoncustom buttoncustom3;
+        private Buttoncustom buttoncustom2;
+        private Buttoncustom buttoncustom1;
         private Buttoncustom buttoncustom8;
         private Buttoncustom buttoncustom9;
-        private Button button2;
+        private Buttoncustom buttoncustom10;
+        private Buttoncustom buttoncustom11;
+        private Buttoncustom buttoncustom12;
     }
 }

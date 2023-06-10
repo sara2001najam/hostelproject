@@ -16,5 +16,20 @@ namespace hostelproject
         {
             InitializeComponent();
         }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textboxcustom2__Textchanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textboxcustom1__Textchanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

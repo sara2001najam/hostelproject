@@ -67,7 +67,7 @@ namespace hostelproject
 
         private void buttoncustom4_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void buttoncustom1_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿namespace hostelproject
 {
-    partial class HomeStudent
+    partial class ComplaintsAdmin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,22 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeStudent));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComplaintsAdmin));
             panel1 = new Panel();
             button2 = new Button();
             button1 = new Button();
             label1 = new Label();
             panel3 = new Panel();
+            buttoncustom3 = new Buttoncustom();
+            buttoncustom2 = new Buttoncustom();
+            buttoncustom1 = new Buttoncustom();
             buttoncustom8 = new Buttoncustom();
             buttoncustom9 = new Buttoncustom();
             buttoncustom10 = new Buttoncustom();
             buttoncustom11 = new Buttoncustom();
             buttoncustom12 = new Buttoncustom();
-            label2 = new Label();
-            label3 = new Label();
+            dataGridView1 = new DataGridView();
             panel2 = new Panel();
+            label3 = new Label();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -55,9 +59,10 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1576, 92);
-            panel1.TabIndex = 0;
+            panel1.Size = new Size(1576, 95);
+            panel1.TabIndex = 4;
             // 
             // button2
             // 
@@ -68,13 +73,13 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(1471, 0);
+            button2.Location = new Point(1504, 0);
+            button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(105, 92);
-            button2.TabIndex = 16;
+            button2.Size = new Size(72, 95);
+            button2.TabIndex = 15;
             button2.Text = "X";
             button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click_1;
             // 
             // button1
             // 
@@ -85,8 +90,9 @@
             button1.ForeColor = SystemColors.ButtonFace;
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.Location = new Point(0, 0);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(124, 92);
+            button1.Size = new Size(124, 95);
             button1.TabIndex = 1;
             button1.UseVisualStyleBackColor = false;
             // 
@@ -96,7 +102,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Century Gothic", 22F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(484, 26);
+            label1.Location = new Point(477, 29);
             label1.Name = "label1";
             label1.Size = new Size(523, 51);
             label1.TabIndex = 1;
@@ -105,17 +111,77 @@
             // panel3
             // 
             panel3.BackColor = Color.CornflowerBlue;
+            panel3.Controls.Add(buttoncustom3);
+            panel3.Controls.Add(buttoncustom2);
+            panel3.Controls.Add(buttoncustom1);
             panel3.Controls.Add(buttoncustom8);
             panel3.Controls.Add(buttoncustom9);
             panel3.Controls.Add(buttoncustom10);
             panel3.Controls.Add(buttoncustom11);
             panel3.Controls.Add(buttoncustom12);
             panel3.Dock = DockStyle.Top;
-            panel3.Location = new Point(0, 92);
+            panel3.Location = new Point(0, 95);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
             panel3.Size = new Size(1576, 65);
-            panel3.TabIndex = 23;
+            panel3.TabIndex = 25;
+            // 
+            // buttoncustom3
+            // 
+            buttoncustom3.BackColor = Color.CornflowerBlue;
+            buttoncustom3.BorderColor = Color.Black;
+            buttoncustom3.BorderRadius = 40;
+            buttoncustom3.BorderSize = 0;
+            buttoncustom3.Dock = DockStyle.Left;
+            buttoncustom3.FlatAppearance.BorderSize = 0;
+            buttoncustom3.FlatStyle = FlatStyle.Flat;
+            buttoncustom3.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom3.ForeColor = Color.White;
+            buttoncustom3.Location = new Point(1288, 0);
+            buttoncustom3.Margin = new Padding(3, 4, 3, 4);
+            buttoncustom3.Name = "buttoncustom3";
+            buttoncustom3.Size = new Size(184, 65);
+            buttoncustom3.TabIndex = 9;
+            buttoncustom3.Text = "Student info";
+            buttoncustom3.UseVisualStyleBackColor = false;
+            // 
+            // buttoncustom2
+            // 
+            buttoncustom2.BackColor = Color.CornflowerBlue;
+            buttoncustom2.BorderColor = Color.Black;
+            buttoncustom2.BorderRadius = 40;
+            buttoncustom2.BorderSize = 0;
+            buttoncustom2.Dock = DockStyle.Left;
+            buttoncustom2.FlatAppearance.BorderSize = 0;
+            buttoncustom2.FlatStyle = FlatStyle.Flat;
+            buttoncustom2.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom2.ForeColor = Color.White;
+            buttoncustom2.Location = new Point(1104, 0);
+            buttoncustom2.Margin = new Padding(3, 4, 3, 4);
+            buttoncustom2.Name = "buttoncustom2";
+            buttoncustom2.Size = new Size(184, 65);
+            buttoncustom2.TabIndex = 8;
+            buttoncustom2.Text = "Utility Bills";
+            buttoncustom2.UseVisualStyleBackColor = false;
+            // 
+            // buttoncustom1
+            // 
+            buttoncustom1.BackColor = Color.CornflowerBlue;
+            buttoncustom1.BorderColor = Color.Black;
+            buttoncustom1.BorderRadius = 40;
+            buttoncustom1.BorderSize = 0;
+            buttoncustom1.Dock = DockStyle.Left;
+            buttoncustom1.FlatAppearance.BorderSize = 0;
+            buttoncustom1.FlatStyle = FlatStyle.Flat;
+            buttoncustom1.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom1.ForeColor = Color.White;
+            buttoncustom1.Location = new Point(920, 0);
+            buttoncustom1.Margin = new Padding(3, 4, 3, 4);
+            buttoncustom1.Name = "buttoncustom1";
+            buttoncustom1.Size = new Size(184, 65);
+            buttoncustom1.TabIndex = 7;
+            buttoncustom1.Text = "Hostel Staff";
+            buttoncustom1.UseVisualStyleBackColor = false;
             // 
             // buttoncustom8
             // 
@@ -128,10 +194,10 @@
             buttoncustom8.FlatStyle = FlatStyle.Flat;
             buttoncustom8.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom8.ForeColor = Color.White;
-            buttoncustom8.Location = new Point(1244, 0);
+            buttoncustom8.Location = new Point(736, 0);
             buttoncustom8.Margin = new Padding(3, 4, 3, 4);
             buttoncustom8.Name = "buttoncustom8";
-            buttoncustom8.Size = new Size(311, 65);
+            buttoncustom8.Size = new Size(184, 65);
             buttoncustom8.TabIndex = 2;
             buttoncustom8.Text = "Menu";
             buttoncustom8.UseVisualStyleBackColor = false;
@@ -147,10 +213,10 @@
             buttoncustom9.FlatStyle = FlatStyle.Flat;
             buttoncustom9.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom9.ForeColor = Color.White;
-            buttoncustom9.Location = new Point(933, 0);
+            buttoncustom9.Location = new Point(552, 0);
             buttoncustom9.Margin = new Padding(3, 4, 3, 4);
             buttoncustom9.Name = "buttoncustom9";
-            buttoncustom9.Size = new Size(311, 65);
+            buttoncustom9.Size = new Size(184, 65);
             buttoncustom9.TabIndex = 5;
             buttoncustom9.Text = "Complaints";
             buttoncustom9.UseVisualStyleBackColor = false;
@@ -166,12 +232,12 @@
             buttoncustom10.FlatStyle = FlatStyle.Flat;
             buttoncustom10.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom10.ForeColor = Color.White;
-            buttoncustom10.Location = new Point(622, 0);
+            buttoncustom10.Location = new Point(368, 0);
             buttoncustom10.Margin = new Padding(3, 4, 3, 4);
             buttoncustom10.Name = "buttoncustom10";
-            buttoncustom10.Size = new Size(311, 65);
+            buttoncustom10.Size = new Size(184, 65);
             buttoncustom10.TabIndex = 1;
-            buttoncustom10.Text = "Profile";
+            buttoncustom10.Text = "Rooms";
             buttoncustom10.UseVisualStyleBackColor = false;
             // 
             // buttoncustom11
@@ -185,10 +251,10 @@
             buttoncustom11.FlatStyle = FlatStyle.Flat;
             buttoncustom11.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom11.ForeColor = Color.White;
-            buttoncustom11.Location = new Point(311, 0);
+            buttoncustom11.Location = new Point(184, 0);
             buttoncustom11.Margin = new Padding(3, 4, 3, 4);
             buttoncustom11.Name = "buttoncustom11";
-            buttoncustom11.Size = new Size(311, 65);
+            buttoncustom11.Size = new Size(184, 65);
             buttoncustom11.TabIndex = 3;
             buttoncustom11.Text = "Activity Calender ";
             buttoncustom11.UseVisualStyleBackColor = false;
@@ -207,59 +273,58 @@
             buttoncustom12.Location = new Point(0, 0);
             buttoncustom12.Margin = new Padding(3, 4, 3, 4);
             buttoncustom12.Name = "buttoncustom12";
-            buttoncustom12.Size = new Size(311, 65);
+            buttoncustom12.Size = new Size(184, 65);
             buttoncustom12.TabIndex = 6;
             buttoncustom12.Text = "Fee Challan";
             buttoncustom12.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // dataGridView1
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.RoyalBlue;
-            label2.Location = new Point(26, 205);
-            label2.Name = "label2";
-            label2.Size = new Size(664, 86);
-            label2.TabIndex = 24;
-            label2.Text = "Welcome to Bahria University Hostel! \r\n\r\n";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.CornflowerBlue;
-            label3.Location = new Point(26, 291);
-            label3.Name = "label3";
-            label3.Size = new Size(703, 112);
-            label3.TabIndex = 25;
-            label3.Text = "Get started on your journey with us by applying for a room. \r\nWe hope you enjoy your stay with us!\r\n\r\n ";
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(38, 297);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.RowTemplate.Height = 33;
+            dataGridView1.Size = new Size(1464, 573);
+            dataGridView1.TabIndex = 26;
             // 
             // panel2
             // 
             panel2.BackColor = Color.RoyalBlue;
-            panel2.Location = new Point(26, 257);
+            panel2.Location = new Point(36, 230);
             panel2.Name = "panel2";
-            panel2.Size = new Size(810, 1);
+            panel2.Size = new Size(700, 1);
             panel2.TabIndex = 41;
             // 
-            // HomeStudent
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.RoyalBlue;
+            label3.Location = new Point(36, 199);
+            label3.Name = "label3";
+            label3.Size = new Size(145, 28);
+            label3.TabIndex = 42;
+            label3.Text = "Complaints";
+            // 
+            // ComplaintsAdmin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1576, 963);
-            Controls.Add(panel2);
             Controls.Add(label3);
-            Controls.Add(label2);
+            Controls.Add(panel2);
+            Controls.Add(dataGridView1);
             Controls.Add(panel3);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "HomeStudent";
-            Text = "HomeStudent";
+            Name = "ComplaintsAdmin";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "ComplaintsAdmin";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -267,17 +332,20 @@
         #endregion
 
         private Panel panel1;
+        private Button button2;
         private Button button1;
         private Label label1;
-        private Button button2;
         private Panel panel3;
+        private Buttoncustom buttoncustom3;
+        private Buttoncustom buttoncustom2;
+        private Buttoncustom buttoncustom1;
         private Buttoncustom buttoncustom8;
         private Buttoncustom buttoncustom9;
         private Buttoncustom buttoncustom10;
         private Buttoncustom buttoncustom11;
         private Buttoncustom buttoncustom12;
-        private Label label2;
-        private Label label3;
+        private DataGridView dataGridView1;
         private Panel panel2;
+        private Label label3;
     }
 }

@@ -21,25 +21,7 @@ namespace hostelproject
 
         }
 
-        private void textboxcustom1__Textchanged(object sender, EventArgs e)
-        {
-            MessageBox.Show("Text changed");
-        }
-
-        private void textboxcustom3__Textchanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textboxcustom1__Textchanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttoncustom2_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void button1_Click(object sender, EventArgs e)
         {

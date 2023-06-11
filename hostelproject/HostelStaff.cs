@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace hostelproject
 {
-    public partial class Complaints : Form
+    public partial class HostelStaff : Form
     {
-        public Complaints()
+        public HostelStaff()
         {
             InitializeComponent();
         }
 
-        private void textboxcustom6__Textchanged(object sender, EventArgs e)
+        private void btnclose_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)

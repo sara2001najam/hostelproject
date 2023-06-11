@@ -81,7 +81,7 @@
             gradientPanel1.Location = new Point(0, 0);
             gradientPanel1.Name = "gradientPanel1";
             gradientPanel1.Size = new Size(581, 992);
-            gradientPanel1.TabIndex = 3;
+            gradientPanel1.TabIndex = 0;
             // 
             // buttoncustom2
             // 
@@ -91,7 +91,7 @@
             buttoncustom2.BorderSize = 0;
             buttoncustom2.FlatAppearance.BorderSize = 0;
             buttoncustom2.FlatStyle = FlatStyle.Flat;
-            buttoncustom2.Font = new Font("Century Gothic", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom2.ForeColor = Color.White;
             buttoncustom2.Location = new Point(67, 720);
             buttoncustom2.Name = "buttoncustom2";
@@ -214,11 +214,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
             label1.Location = new Point(67, 159);
             label1.Name = "label1";
-            label1.Size = new Size(433, 43);
+            label1.Size = new Size(436, 40);
             label1.TabIndex = 15;
             label1.Text = "Bahria University Hostel ";
             // 
@@ -239,7 +239,7 @@
             button2.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
             button2.FlatAppearance.MouseOverBackColor = Color.Red;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Control;
             button2.Location = new Point(509, 0);
             button2.Name = "button2";

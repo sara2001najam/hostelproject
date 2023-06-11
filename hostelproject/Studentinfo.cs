@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace hostelproject
 {
-    public partial class Complaints : Form
+    public partial class Studentinfo : Form
     {
-        public Complaints()
+        public Studentinfo()
         {
             InitializeComponent();
-        }
-
-        private void textboxcustom6__Textchanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)

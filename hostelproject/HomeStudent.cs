@@ -72,5 +72,35 @@ namespace hostelproject
 
 
         }
+
+        private void buttoncustom12_Click(object sender, EventArgs e)
+        {
+            Feechallan fe = new Feechallan();
+            fe.Show();
+        }
+
+        private void buttoncustom11_Click(object sender, EventArgs e)
+        {
+            Actcalen ac = new Actcalen();
+            ac.Show();
+        }
+
+        private void buttoncustom10_Click(object sender, EventArgs e)
+        {
+            Profile p = new Profile();
+            p.Show();
+        }
+
+        private void buttoncustom9_Click(object sender, EventArgs e)
+        {
+            Complaints cp = new Complaints();
+            cp.Show();
+        }
+
+        private void buttoncustom8_Click(object sender, EventArgs e)
+        {
+            menu m = new menu();
+            m.Show();
+        }
     }
 }

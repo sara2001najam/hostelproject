@@ -66,7 +66,7 @@
             button2.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
             button2.FlatAppearance.MouseOverBackColor = Color.Red;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Control;
             button2.Location = new Point(1471, 0);
             button2.Name = "button2";
@@ -94,11 +94,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Century Gothic", 22F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 22F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
             label1.Location = new Point(484, 26);
             label1.Name = "label1";
-            label1.Size = new Size(523, 51);
+            label1.Size = new Size(526, 52);
             label1.TabIndex = 1;
             label1.Text = "Bahria University Hostel ";
             // 
@@ -126,7 +126,7 @@
             buttoncustom8.Dock = DockStyle.Left;
             buttoncustom8.FlatAppearance.BorderSize = 0;
             buttoncustom8.FlatStyle = FlatStyle.Flat;
-            buttoncustom8.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom8.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom8.ForeColor = Color.White;
             buttoncustom8.Location = new Point(1244, 0);
             buttoncustom8.Margin = new Padding(3, 4, 3, 4);
@@ -135,6 +135,7 @@
             buttoncustom8.TabIndex = 2;
             buttoncustom8.Text = "Menu";
             buttoncustom8.UseVisualStyleBackColor = false;
+            buttoncustom8.Click += buttoncustom8_Click;
             // 
             // buttoncustom9
             // 
@@ -145,7 +146,7 @@
             buttoncustom9.Dock = DockStyle.Left;
             buttoncustom9.FlatAppearance.BorderSize = 0;
             buttoncustom9.FlatStyle = FlatStyle.Flat;
-            buttoncustom9.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom9.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom9.ForeColor = Color.White;
             buttoncustom9.Location = new Point(933, 0);
             buttoncustom9.Margin = new Padding(3, 4, 3, 4);
@@ -154,6 +155,7 @@
             buttoncustom9.TabIndex = 5;
             buttoncustom9.Text = "Complaints";
             buttoncustom9.UseVisualStyleBackColor = false;
+            buttoncustom9.Click += buttoncustom9_Click;
             // 
             // buttoncustom10
             // 
@@ -164,7 +166,7 @@
             buttoncustom10.Dock = DockStyle.Left;
             buttoncustom10.FlatAppearance.BorderSize = 0;
             buttoncustom10.FlatStyle = FlatStyle.Flat;
-            buttoncustom10.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom10.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom10.ForeColor = Color.White;
             buttoncustom10.Location = new Point(622, 0);
             buttoncustom10.Margin = new Padding(3, 4, 3, 4);
@@ -173,6 +175,7 @@
             buttoncustom10.TabIndex = 1;
             buttoncustom10.Text = "Profile";
             buttoncustom10.UseVisualStyleBackColor = false;
+            buttoncustom10.Click += buttoncustom10_Click;
             // 
             // buttoncustom11
             // 
@@ -183,7 +186,7 @@
             buttoncustom11.Dock = DockStyle.Left;
             buttoncustom11.FlatAppearance.BorderSize = 0;
             buttoncustom11.FlatStyle = FlatStyle.Flat;
-            buttoncustom11.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom11.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom11.ForeColor = Color.White;
             buttoncustom11.Location = new Point(311, 0);
             buttoncustom11.Margin = new Padding(3, 4, 3, 4);
@@ -192,6 +195,7 @@
             buttoncustom11.TabIndex = 3;
             buttoncustom11.Text = "Activity Calender ";
             buttoncustom11.UseVisualStyleBackColor = false;
+            buttoncustom11.Click += buttoncustom11_Click;
             // 
             // buttoncustom12
             // 
@@ -202,7 +206,7 @@
             buttoncustom12.Dock = DockStyle.Left;
             buttoncustom12.FlatAppearance.BorderSize = 0;
             buttoncustom12.FlatStyle = FlatStyle.Flat;
-            buttoncustom12.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom12.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom12.ForeColor = Color.White;
             buttoncustom12.Location = new Point(0, 0);
             buttoncustom12.Margin = new Padding(3, 4, 3, 4);
@@ -211,16 +215,17 @@
             buttoncustom12.TabIndex = 6;
             buttoncustom12.Text = "Fee Challan";
             buttoncustom12.UseVisualStyleBackColor = false;
+            buttoncustom12.Click += buttoncustom12_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Century Gothic", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.RoyalBlue;
             label2.Location = new Point(26, 205);
             label2.Name = "label2";
-            label2.Size = new Size(664, 86);
+            label2.Size = new Size(658, 80);
             label2.TabIndex = 24;
             label2.Text = "Welcome to Bahria University Hostel! \r\n\r\n";
             // 
@@ -228,11 +233,11 @@
             // 
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.CornflowerBlue;
             label3.Location = new Point(26, 291);
             label3.Name = "label3";
-            label3.Size = new Size(703, 112);
+            label3.Size = new Size(695, 116);
             label3.TabIndex = 25;
             label3.Text = "Get started on your journey with us by applying for a room. \r\nWe hope you enjoy your stay with us!\r\n\r\n ";
             // 
@@ -256,6 +261,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "HomeStudent";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "HomeStudent";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

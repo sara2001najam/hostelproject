@@ -29,7 +29,7 @@ namespace hostelproject
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

@@ -34,8 +34,6 @@
             comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
             label4 = new Label();
-            label12 = new Label();
-            textboxcustom6 = new Textboxcustom();
             textboxcustom1 = new Textboxcustom();
             label1 = new Label();
             textboxcustom2 = new Textboxcustom();
@@ -104,39 +102,6 @@
             label4.Name = "label4";
             label4.Size = new Size(0, 25);
             label4.TabIndex = 23;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.BackColor = Color.Transparent;
-            label12.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.ForeColor = Color.RoyalBlue;
-            label12.Location = new Point(65, 143);
-            label12.Name = "label12";
-            label12.Size = new Size(134, 25);
-            label12.TabIndex = 39;
-            label12.Text = "Employee ID";
-            // 
-            // textboxcustom6
-            // 
-            textboxcustom6.BackColor = SystemColors.Control;
-            textboxcustom6.BorderColor = Color.DarkBlue;
-            textboxcustom6.BorderFocusColor = Color.Indigo;
-            textboxcustom6.BorderRadius = 0;
-            textboxcustom6.BorderSize = 3;
-            textboxcustom6.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            textboxcustom6.ForeColor = Color.DimGray;
-            textboxcustom6.Location = new Point(252, 129);
-            textboxcustom6.Multiline = false;
-            textboxcustom6.Name = "textboxcustom6";
-            textboxcustom6.Padding = new Padding(10, 7, 10, 7);
-            textboxcustom6.PasswordChar = false;
-            textboxcustom6.PlaceholderColor = Color.White;
-            textboxcustom6.PlaceholderText = "";
-            textboxcustom6.Size = new Size(297, 39);
-            textboxcustom6.TabIndex = 40;
-            textboxcustom6.Texts = "";
-            textboxcustom6.UnderlinedStyle = true;
             // 
             // textboxcustom1
             // 
@@ -415,8 +380,6 @@
             Controls.Add(textboxcustom2);
             Controls.Add(textboxcustom1);
             Controls.Add(label1);
-            Controls.Add(textboxcustom6);
-            Controls.Add(label12);
             Controls.Add(btnclose);
             Controls.Add(dataGridView1);
             Controls.Add(comboBox2);
@@ -438,8 +401,6 @@
         private ComboBox comboBox2;
         private ComboBox comboBox1;
         private Label label4;
-        private Label label12;
-        private Textboxcustom textboxcustom6;
         private Textboxcustom textboxcustom1;
         private Label label1;
         private Textboxcustom textboxcustom2;

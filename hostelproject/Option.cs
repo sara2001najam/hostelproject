@@ -19,7 +19,7 @@ namespace hostelproject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             Form1 fs = new Form1();
             fs.Show();
 
@@ -27,7 +27,7 @@ namespace hostelproject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+           // this.Hide();
             Form1 fs = new Form1();
             fs.Show();
         }

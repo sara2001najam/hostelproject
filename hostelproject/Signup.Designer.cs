@@ -34,7 +34,7 @@
             textboxcustom5 = new Textboxcustom();
             textboxcustom4 = new Textboxcustom();
             textboxcustom3 = new Textboxcustom();
-            textboxcustom2 = new Textboxcustom();
+            txtpass = new Textboxcustom();
             txtuser = new Textboxcustom();
             label1 = new Label();
             panel4 = new Panel();
@@ -73,7 +73,7 @@
             gradientPanel1.Controls.Add(textboxcustom5);
             gradientPanel1.Controls.Add(textboxcustom4);
             gradientPanel1.Controls.Add(textboxcustom3);
-            gradientPanel1.Controls.Add(textboxcustom2);
+            gradientPanel1.Controls.Add(txtpass);
             gradientPanel1.Controls.Add(txtuser);
             gradientPanel1.Controls.Add(label1);
             gradientPanel1.Controls.Add(panel4);
@@ -167,26 +167,26 @@
             textboxcustom3.UnderlinedStyle = true;
             textboxcustom3._Textchanged += textboxcustom3__Textchanged;
             // 
-            // textboxcustom2
+            // txtpass
             // 
-            textboxcustom2.BackColor = Color.RoyalBlue;
-            textboxcustom2.BorderColor = Color.DarkBlue;
-            textboxcustom2.BorderFocusColor = Color.Indigo;
-            textboxcustom2.BorderRadius = 0;
-            textboxcustom2.BorderSize = 2;
-            textboxcustom2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            textboxcustom2.ForeColor = Color.White;
-            textboxcustom2.Location = new Point(67, 320);
-            textboxcustom2.Multiline = false;
-            textboxcustom2.Name = "textboxcustom2";
-            textboxcustom2.Padding = new Padding(10, 7, 10, 7);
-            textboxcustom2.PasswordChar = false;
-            textboxcustom2.PlaceholderColor = Color.White;
-            textboxcustom2.PlaceholderText = " Last Name";
-            textboxcustom2.Size = new Size(419, 40);
-            textboxcustom2.TabIndex = 17;
-            textboxcustom2.Texts = "";
-            textboxcustom2.UnderlinedStyle = true;
+            txtpass.BackColor = Color.RoyalBlue;
+            txtpass.BorderColor = Color.DarkBlue;
+            txtpass.BorderFocusColor = Color.Indigo;
+            txtpass.BorderRadius = 0;
+            txtpass.BorderSize = 2;
+            txtpass.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            txtpass.ForeColor = Color.White;
+            txtpass.Location = new Point(67, 320);
+            txtpass.Multiline = false;
+            txtpass.Name = "txtpass";
+            txtpass.Padding = new Padding(10, 7, 10, 7);
+            txtpass.PasswordChar = false;
+            txtpass.PlaceholderColor = Color.White;
+            txtpass.PlaceholderText = " Last Name";
+            txtpass.Size = new Size(419, 40);
+            txtpass.TabIndex = 17;
+            txtpass.Texts = "";
+            txtpass.UnderlinedStyle = true;
             // 
             // txtuser
             // 
@@ -274,7 +274,7 @@
         private Textboxcustom textboxcustom5;
         private Textboxcustom textboxcustom4;
         private Textboxcustom textboxcustom3;
-        private Textboxcustom textboxcustom2;
+        private Textboxcustom txtpass;
         private Textboxcustom txtuser;
         private Buttoncustom buttoncustom2;
     }

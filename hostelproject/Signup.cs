@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -69,10 +70,34 @@ namespace hostelproject
 
         private void buttoncustom2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("SIGN UP SUCCESSFULL");
+        //    string username = txtuser.Text;
+        //    string password = txtpass.Text;
+        //    string email = emai.Text;
+        //    bool isAdmin = adminCheckBox.Checked;
+
+        //    OpenConnection();
+
+        //    string insertQuery = "INSERT INTO Users (Username, Password, Email, IsAdmin) " +
+        //                         "VALUES (@Username, @Password, @Email, @IsAdmin)";
+
+        //    using (SqlCommand command = new SqlCommand(insertQuery, connection))
+        //    {
+        //        command.Parameters.AddWithValue("@Username", username);
+        //        command.Parameters.AddWithValue("@Password", password);
+        //        command.Parameters.AddWithValue("@Email", email);
+        //        command.Parameters.AddWithValue("@IsAdmin", isAdmin);
+
+        //        command.ExecuteNonQuery();
+        //    }
+
+        //    CloseConnection();
+
+        //    // Optionally, display a success message or perform other actions.
+        //}
+        MessageBox.Show("SIGN UP SUCCESSFULL");
             this.Hide();
-            Form1 f = new Form1();
-            f.Show();
+        Form1 f = new Form1();
+        f.Show();
         }
-    }
+}
 }

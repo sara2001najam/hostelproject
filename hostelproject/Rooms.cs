@@ -1,68 +1,88 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data;
 
 namespace hostelproject
 {
     public partial class Rooms : Form
     {
-        function fn = new function();
-        String query;
+        // Create an instance of the function class
+        private function fn = new function();
+
         public Rooms()
         {
             InitializeComponent();
+            LoadData();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void LoadData()
         {
+            string query = "SELECT * FROM Rooms";
+            DataSet ds = fn.getdata(query);
 
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+            {
+                dataGridView1.DataSource = ds.Tables[0];
+            }
+            else
+            {
+                // Handle the case when the DataSet or Tables collection is null or empty
+                // For example, you can display a message or clear the DataGridView
+                dataGridView1.DataSource = null;
+                MessageBox.Show("No data found.");
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0 && e.RowIndex < dataGridView1.Rows.Count)
+            {
+                // Retrieve the values from the selected row in the DataGridView
+                string room_type = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                int room_number = int.Parse(dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
 
-            query = "Select * from Rooms";
-            DataSet ds = fn.getdata(query);
-            dataGridView1.DataSource = ds.Tables[0];
-
+                // Populate the UI controls with the retrieved values
+                txtRoomno.Text = room_type;
+                comboBox1.Text = room_number.ToString();
+            }
         }
 
         private void buttoncustom1_Click(object sender, EventArgs e)
         {
-            query = "select * from Rooms where room_number=" +txtRoomno.Texts +"";
-            DataSet ds = fn.getdata(query);
+            buttoncustom1_Click(sender, e, fn);
+        }
 
-            if (ds.Tables[0].Rows.Count==0)
+        private void buttoncustom1_Click(object sender, EventArgs e, function fn)
+        {
+            string roomNumber = txtRoomno.Text.Trim();
+
+            if (!string.IsNullOrEmpty(roomNumber))
             {
-                String occupancy_status;
-                if(checkBox1.Checked)
+                string query = "SELECT * FROM Rooms WHERE room_number = '" + roomNumber + "'";
+                DataSet ds = fn.getdata(query);
+
+                if (ds != null && ds.Tables.Count > 0 && ds.Tables[0].Rows.Count == 0)
                 {
-                    occupancy_status = "";
+                    string occupancy_status = checkBox1.Checked ? "Occupied" : "Vacant";
+                    string room_type = "Standard"; // Set the appropriate room type here
+                    query = "INSERT INTO Rooms (room_number, room_type, occupancy_status) VALUES ('" + roomNumber + "', '" + room_type + "', '" + occupancy_status + "')";
+                    fn.setdata(query, "Room added");
+
+                    LoadData(); // Refresh the DataGridView after adding the new room
                 }
                 else
                 {
-                    occupancy_status = "";
+                    MessageBox.Show("ROOM ALREADY EXISTS!");
                 }
-                query="insert into Rooms (room_number,occupancy_status) values("+txtRoomno.Texts+", "+ occupancy_status+")";
-                fn.setdata(query, "Room added");
-
             }
             else
             {
-                MessageBox.Show("ROOM ALREADY EXISTS!");
+                MessageBox.Show("Please enter a room number.");
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
+

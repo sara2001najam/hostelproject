@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HostelStaff));
             btnclose = new Button();
             dataGridView1 = new DataGridView();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
+            cmbstatus = new ComboBox();
+            cmbposition = new ComboBox();
             label4 = new Label();
-            textboxcustom1 = new Textboxcustom();
+            txtname = new Textboxcustom();
             label1 = new Label();
-            textboxcustom2 = new Textboxcustom();
-            textboxcustom3 = new Textboxcustom();
+            txtAddress = new Textboxcustom();
+            txtphone = new Textboxcustom();
             label2 = new Label();
             label3 = new Label();
             label13 = new Label();
@@ -51,6 +51,11 @@
             button2 = new Button();
             button1 = new Button();
             label8 = new Label();
+            txtemail = new Textboxcustom();
+            label6 = new Label();
+            txtid = new Textboxcustom();
+            label7 = new Label();
+            buttoncustom5 = new Buttoncustom();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -76,24 +81,25 @@
             dataGridView1.RowTemplate.Height = 33;
             dataGridView1.Size = new Size(586, 453);
             dataGridView1.TabIndex = 29;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // comboBox2
+            // cmbstatus
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Working", "Left" });
-            comboBox2.Location = new Point(198, 432);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(173, 33);
-            comboBox2.TabIndex = 27;
+            cmbstatus.FormattingEnabled = true;
+            cmbstatus.Items.AddRange(new object[] { "Working", "Left" });
+            cmbstatus.Location = new Point(198, 432);
+            cmbstatus.Name = "cmbstatus";
+            cmbstatus.Size = new Size(173, 33);
+            cmbstatus.TabIndex = 27;
             // 
-            // comboBox1
+            // cmbposition
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Mess Staff", "Accountant", "Cleaner", "Hostel Incharge" });
-            comboBox1.Location = new Point(198, 380);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(173, 33);
-            comboBox1.TabIndex = 25;
+            cmbposition.FormattingEnabled = true;
+            cmbposition.Items.AddRange(new object[] { "Mess Staff", "Accountant", "Cleaner", "Hostel Incharge" });
+            cmbposition.Location = new Point(198, 380);
+            cmbposition.Name = "cmbposition";
+            cmbposition.Size = new Size(173, 33);
+            cmbposition.TabIndex = 25;
             // 
             // label4
             // 
@@ -103,26 +109,26 @@
             label4.Size = new Size(0, 25);
             label4.TabIndex = 23;
             // 
-            // textboxcustom1
+            // txtname
             // 
-            textboxcustom1.BackColor = SystemColors.Control;
-            textboxcustom1.BorderColor = Color.DarkBlue;
-            textboxcustom1.BorderFocusColor = Color.Indigo;
-            textboxcustom1.BorderRadius = 0;
-            textboxcustom1.BorderSize = 3;
-            textboxcustom1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            textboxcustom1.ForeColor = Color.DimGray;
-            textboxcustom1.Location = new Point(252, 186);
-            textboxcustom1.Multiline = false;
-            textboxcustom1.Name = "textboxcustom1";
-            textboxcustom1.Padding = new Padding(10, 7, 10, 7);
-            textboxcustom1.PasswordChar = false;
-            textboxcustom1.PlaceholderColor = Color.White;
-            textboxcustom1.PlaceholderText = "";
-            textboxcustom1.Size = new Size(297, 39);
-            textboxcustom1.TabIndex = 42;
-            textboxcustom1.Texts = "";
-            textboxcustom1.UnderlinedStyle = true;
+            txtname.BackColor = SystemColors.Control;
+            txtname.BorderColor = Color.DarkBlue;
+            txtname.BorderFocusColor = Color.Indigo;
+            txtname.BorderRadius = 0;
+            txtname.BorderSize = 3;
+            txtname.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtname.ForeColor = Color.DimGray;
+            txtname.Location = new Point(252, 143);
+            txtname.Multiline = false;
+            txtname.Name = "txtname";
+            txtname.Padding = new Padding(10, 7, 10, 7);
+            txtname.PasswordChar = false;
+            txtname.PlaceholderColor = Color.White;
+            txtname.PlaceholderText = "";
+            txtname.Size = new Size(297, 39);
+            txtname.TabIndex = 42;
+            txtname.Texts = "";
+            txtname.UnderlinedStyle = true;
             // 
             // label1
             // 
@@ -130,53 +136,53 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.RoyalBlue;
-            label1.Location = new Point(65, 200);
+            label1.Location = new Point(65, 154);
             label1.Name = "label1";
             label1.Size = new Size(169, 25);
             label1.TabIndex = 41;
             label1.Text = "Employee Name";
             // 
-            // textboxcustom2
+            // txtAddress
             // 
-            textboxcustom2.BackColor = SystemColors.Control;
-            textboxcustom2.BorderColor = Color.DarkBlue;
-            textboxcustom2.BorderFocusColor = Color.Indigo;
-            textboxcustom2.BorderRadius = 0;
-            textboxcustom2.BorderSize = 3;
-            textboxcustom2.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            textboxcustom2.ForeColor = Color.DimGray;
-            textboxcustom2.Location = new Point(252, 250);
-            textboxcustom2.Multiline = false;
-            textboxcustom2.Name = "textboxcustom2";
-            textboxcustom2.Padding = new Padding(10, 7, 10, 7);
-            textboxcustom2.PasswordChar = false;
-            textboxcustom2.PlaceholderColor = Color.White;
-            textboxcustom2.PlaceholderText = "";
-            textboxcustom2.Size = new Size(297, 39);
-            textboxcustom2.TabIndex = 44;
-            textboxcustom2.Texts = "";
-            textboxcustom2.UnderlinedStyle = true;
+            txtAddress.BackColor = SystemColors.Control;
+            txtAddress.BorderColor = Color.DarkBlue;
+            txtAddress.BorderFocusColor = Color.Indigo;
+            txtAddress.BorderRadius = 0;
+            txtAddress.BorderSize = 3;
+            txtAddress.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtAddress.ForeColor = Color.DimGray;
+            txtAddress.Location = new Point(252, 250);
+            txtAddress.Multiline = false;
+            txtAddress.Name = "txtAddress";
+            txtAddress.Padding = new Padding(10, 7, 10, 7);
+            txtAddress.PasswordChar = false;
+            txtAddress.PlaceholderColor = Color.White;
+            txtAddress.PlaceholderText = "";
+            txtAddress.Size = new Size(297, 39);
+            txtAddress.TabIndex = 44;
+            txtAddress.Texts = "";
+            txtAddress.UnderlinedStyle = true;
             // 
-            // textboxcustom3
+            // txtphone
             // 
-            textboxcustom3.BackColor = SystemColors.Control;
-            textboxcustom3.BorderColor = Color.DarkBlue;
-            textboxcustom3.BorderFocusColor = Color.Indigo;
-            textboxcustom3.BorderRadius = 0;
-            textboxcustom3.BorderSize = 3;
-            textboxcustom3.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            textboxcustom3.ForeColor = Color.DimGray;
-            textboxcustom3.Location = new Point(252, 300);
-            textboxcustom3.Multiline = false;
-            textboxcustom3.Name = "textboxcustom3";
-            textboxcustom3.Padding = new Padding(10, 7, 10, 7);
-            textboxcustom3.PasswordChar = false;
-            textboxcustom3.PlaceholderColor = Color.White;
-            textboxcustom3.PlaceholderText = "";
-            textboxcustom3.Size = new Size(297, 39);
-            textboxcustom3.TabIndex = 46;
-            textboxcustom3.Texts = "";
-            textboxcustom3.UnderlinedStyle = true;
+            txtphone.BackColor = SystemColors.Control;
+            txtphone.BorderColor = Color.DarkBlue;
+            txtphone.BorderFocusColor = Color.Indigo;
+            txtphone.BorderRadius = 0;
+            txtphone.BorderSize = 3;
+            txtphone.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtphone.ForeColor = Color.DimGray;
+            txtphone.Location = new Point(252, 300);
+            txtphone.Multiline = false;
+            txtphone.Name = "txtphone";
+            txtphone.Padding = new Padding(10, 7, 10, 7);
+            txtphone.PasswordChar = false;
+            txtphone.PlaceholderColor = Color.White;
+            txtphone.PlaceholderText = "";
+            txtphone.Size = new Size(297, 39);
+            txtphone.TabIndex = 46;
+            txtphone.Texts = "";
+            txtphone.UnderlinedStyle = true;
             // 
             // label2
             // 
@@ -241,6 +247,7 @@
             buttoncustom1.TabIndex = 51;
             buttoncustom1.Text = "ADD";
             buttoncustom1.UseVisualStyleBackColor = false;
+            buttoncustom1.Click += buttoncustom1_Click;
             // 
             // buttoncustom2
             // 
@@ -257,6 +264,7 @@
             buttoncustom2.TabIndex = 52;
             buttoncustom2.Text = "UPDATE";
             buttoncustom2.UseVisualStyleBackColor = false;
+            buttoncustom2.Click += buttoncustom2_Click;
             // 
             // buttoncustom3
             // 
@@ -267,12 +275,13 @@
             buttoncustom3.FlatAppearance.BorderSize = 0;
             buttoncustom3.FlatStyle = FlatStyle.Flat;
             buttoncustom3.ForeColor = Color.White;
-            buttoncustom3.Location = new Point(414, 496);
+            buttoncustom3.Location = new Point(414, 503);
             buttoncustom3.Name = "buttoncustom3";
-            buttoncustom3.Size = new Size(148, 52);
+            buttoncustom3.Size = new Size(148, 45);
             buttoncustom3.TabIndex = 53;
             buttoncustom3.Text = "DELETE";
             buttoncustom3.UseVisualStyleBackColor = false;
+            buttoncustom3.Click += buttoncustom3_Click;
             // 
             // buttoncustom4
             // 
@@ -283,12 +292,13 @@
             buttoncustom4.FlatAppearance.BorderSize = 0;
             buttoncustom4.FlatStyle = FlatStyle.Flat;
             buttoncustom4.ForeColor = Color.White;
-            buttoncustom4.Location = new Point(242, 554);
+            buttoncustom4.Location = new Point(155, 554);
             buttoncustom4.Name = "buttoncustom4";
             buttoncustom4.Size = new Size(148, 45);
             buttoncustom4.TabIndex = 54;
             buttoncustom4.Text = "SEARCH";
             buttoncustom4.UseVisualStyleBackColor = false;
+            buttoncustom4.Click += buttoncustom4_Click;
             // 
             // label9
             // 
@@ -360,11 +370,99 @@
             label8.TabIndex = 70;
             label8.Text = "EMPLOYEE LIST";
             // 
+            // txtemail
+            // 
+            txtemail.BackColor = SystemColors.Control;
+            txtemail.BorderColor = Color.DarkBlue;
+            txtemail.BorderFocusColor = Color.Indigo;
+            txtemail.BorderRadius = 0;
+            txtemail.BorderSize = 3;
+            txtemail.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtemail.ForeColor = Color.DimGray;
+            txtemail.Location = new Point(258, 197);
+            txtemail.Multiline = false;
+            txtemail.Name = "txtemail";
+            txtemail.Padding = new Padding(10, 7, 10, 7);
+            txtemail.PasswordChar = false;
+            txtemail.PlaceholderColor = Color.White;
+            txtemail.PlaceholderText = "";
+            txtemail.Size = new Size(297, 39);
+            txtemail.TabIndex = 72;
+            txtemail.Texts = "";
+            txtemail.UnderlinedStyle = true;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.RoyalBlue;
+            label6.Location = new Point(71, 208);
+            label6.Name = "label6";
+            label6.Size = new Size(65, 25);
+            label6.TabIndex = 71;
+            label6.Text = "Email";
+            // 
+            // txtid
+            // 
+            txtid.BackColor = SystemColors.Control;
+            txtid.BorderColor = Color.DarkBlue;
+            txtid.BorderFocusColor = Color.Indigo;
+            txtid.BorderRadius = 0;
+            txtid.BorderSize = 3;
+            txtid.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtid.ForeColor = Color.DimGray;
+            txtid.Location = new Point(252, 97);
+            txtid.Multiline = false;
+            txtid.Name = "txtid";
+            txtid.Padding = new Padding(10, 7, 10, 7);
+            txtid.PasswordChar = false;
+            txtid.PlaceholderColor = Color.White;
+            txtid.PlaceholderText = "";
+            txtid.Size = new Size(297, 39);
+            txtid.TabIndex = 74;
+            txtid.Texts = "";
+            txtid.UnderlinedStyle = true;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.RoyalBlue;
+            label7.Location = new Point(65, 100);
+            label7.Name = "label7";
+            label7.Size = new Size(131, 25);
+            label7.TabIndex = 73;
+            label7.Text = "Employee Id";
+            // 
+            // buttoncustom5
+            // 
+            buttoncustom5.BackColor = Color.CornflowerBlue;
+            buttoncustom5.BorderColor = Color.Black;
+            buttoncustom5.BorderRadius = 40;
+            buttoncustom5.BorderSize = 0;
+            buttoncustom5.FlatAppearance.BorderSize = 0;
+            buttoncustom5.FlatStyle = FlatStyle.Flat;
+            buttoncustom5.ForeColor = Color.White;
+            buttoncustom5.Location = new Point(349, 554);
+            buttoncustom5.Name = "buttoncustom5";
+            buttoncustom5.Size = new Size(148, 45);
+            buttoncustom5.TabIndex = 75;
+            buttoncustom5.Text = "Display";
+            buttoncustom5.UseVisualStyleBackColor = false;
+            buttoncustom5.Click += buttoncustom5_Click;
+            // 
             // HostelStaff
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1350, 700);
+            Controls.Add(buttoncustom5);
+            Controls.Add(txtid);
+            Controls.Add(label7);
+            Controls.Add(txtemail);
+            Controls.Add(label6);
             Controls.Add(label8);
             Controls.Add(panel1);
             Controls.Add(label9);
@@ -376,14 +474,14 @@
             Controls.Add(label13);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textboxcustom3);
-            Controls.Add(textboxcustom2);
-            Controls.Add(textboxcustom1);
+            Controls.Add(txtphone);
+            Controls.Add(txtAddress);
+            Controls.Add(txtname);
             Controls.Add(label1);
             Controls.Add(btnclose);
             Controls.Add(dataGridView1);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
+            Controls.Add(cmbstatus);
+            Controls.Add(cmbposition);
             Controls.Add(label4);
             FormBorderStyle = FormBorderStyle.None;
             Name = "HostelStaff";
@@ -398,13 +496,13 @@
         #endregion
         private Button btnclose;
         private DataGridView dataGridView1;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private ComboBox cmbstatus;
+        private ComboBox cmbposition;
         private Label label4;
-        private Textboxcustom textboxcustom1;
+        private Textboxcustom txtname;
         private Label label1;
-        private Textboxcustom textboxcustom2;
-        private Textboxcustom textboxcustom3;
+        private Textboxcustom txtAddress;
+        private Textboxcustom txtphone;
         private Label label2;
         private Label label3;
         private Label label13;
@@ -418,5 +516,10 @@
         private Button button2;
         private Button button1;
         private Label label8;
+        private Textboxcustom txtemail;
+        private Label label6;
+        private Textboxcustom txtid;
+        private Label label7;
+        private Buttoncustom buttoncustom5;
     }
 }

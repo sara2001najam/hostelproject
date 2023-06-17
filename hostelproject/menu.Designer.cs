@@ -35,6 +35,7 @@
             dataGridView1 = new DataGridView();
             label14 = new Label();
             panel2 = new Panel();
+            buttoncustom1 = new Buttoncustom();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -90,7 +91,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(1263, 476);
+            dataGridView1.Size = new Size(1263, 389);
             dataGridView1.TabIndex = 23;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -114,11 +115,29 @@
             panel2.Size = new Size(700, 1);
             panel2.TabIndex = 41;
             // 
+            // buttoncustom1
+            // 
+            buttoncustom1.BackColor = Color.CornflowerBlue;
+            buttoncustom1.BorderColor = Color.Black;
+            buttoncustom1.BorderRadius = 40;
+            buttoncustom1.BorderSize = 0;
+            buttoncustom1.FlatAppearance.BorderSize = 0;
+            buttoncustom1.FlatStyle = FlatStyle.Flat;
+            buttoncustom1.ForeColor = Color.White;
+            buttoncustom1.Location = new Point(747, 637);
+            buttoncustom1.Name = "buttoncustom1";
+            buttoncustom1.Size = new Size(193, 41);
+            buttoncustom1.TabIndex = 42;
+            buttoncustom1.Text = "DISPLAY";
+            buttoncustom1.UseVisualStyleBackColor = false;
+            buttoncustom1.Click += buttoncustom1_Click;
+            // 
             // menu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1350, 700);
+            Controls.Add(buttoncustom1);
             Controls.Add(panel2);
             Controls.Add(label14);
             Controls.Add(dataGridView1);
@@ -142,5 +161,6 @@
         private DataGridView dataGridView1;
         private Label label14;
         private Panel panel2;
+        private Buttoncustom buttoncustom1;
     }
 }

@@ -32,16 +32,19 @@
             panel1 = new Panel();
             button2 = new Button();
             button1 = new Button();
-            label9 = new Label();
-            textboxcustom6 = new Textboxcustom();
+            lben = new Label();
+            txtenroll = new Textboxcustom();
             label2 = new Label();
-            textboxcustom1 = new Textboxcustom();
+            txtDescription = new Textboxcustom();
             panel4 = new Panel();
             buttoncustom1 = new Buttoncustom();
-            label3 = new Label();
+            lbl = new Label();
             label4 = new Label();
             label5 = new Label();
             panel2 = new Panel();
+            btnsent = new Buttoncustom();
+            txtTitle = new Textboxcustom();
+            label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -88,39 +91,39 @@
             button1.TabIndex = 1;
             button1.UseVisualStyleBackColor = false;
             // 
-            // label9
+            // lben
             // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Transparent;
-            label9.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.RoyalBlue;
-            label9.Location = new Point(54, 184);
-            label9.Name = "label9";
-            label9.Size = new Size(231, 26);
-            label9.TabIndex = 30;
-            label9.Text = "Enter Email Address";
+            lben.AutoSize = true;
+            lben.BackColor = Color.Transparent;
+            lben.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            lben.ForeColor = Color.RoyalBlue;
+            lben.Location = new Point(54, 153);
+            lben.Name = "lben";
+            lben.Size = new Size(248, 26);
+            lben.TabIndex = 30;
+            lben.Text = "Enter Enrollmentno/ID";
             // 
-            // textboxcustom6
+            // txtenroll
             // 
-            textboxcustom6.BackColor = SystemColors.Control;
-            textboxcustom6.BorderColor = Color.DarkBlue;
-            textboxcustom6.BorderFocusColor = Color.Indigo;
-            textboxcustom6.BorderRadius = 0;
-            textboxcustom6.BorderSize = 3;
-            textboxcustom6.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            textboxcustom6.ForeColor = Color.DimGray;
-            textboxcustom6.Location = new Point(280, 171);
-            textboxcustom6.Multiline = false;
-            textboxcustom6.Name = "textboxcustom6";
-            textboxcustom6.Padding = new Padding(10, 7, 10, 7);
-            textboxcustom6.PasswordChar = false;
-            textboxcustom6.PlaceholderColor = Color.White;
-            textboxcustom6.PlaceholderText = "";
-            textboxcustom6.Size = new Size(297, 39);
-            textboxcustom6.TabIndex = 39;
-            textboxcustom6.Texts = "";
-            textboxcustom6.UnderlinedStyle = true;
-            textboxcustom6._Textchanged += textboxcustom6__Textchanged;
+            txtenroll.BackColor = SystemColors.Control;
+            txtenroll.BorderColor = Color.DarkBlue;
+            txtenroll.BorderFocusColor = Color.Indigo;
+            txtenroll.BorderRadius = 0;
+            txtenroll.BorderSize = 3;
+            txtenroll.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtenroll.ForeColor = Color.DimGray;
+            txtenroll.Location = new Point(299, 140);
+            txtenroll.Multiline = false;
+            txtenroll.Name = "txtenroll";
+            txtenroll.Padding = new Padding(10, 7, 10, 7);
+            txtenroll.PasswordChar = false;
+            txtenroll.PlaceholderColor = Color.White;
+            txtenroll.PlaceholderText = "";
+            txtenroll.Size = new Size(297, 39);
+            txtenroll.TabIndex = 39;
+            txtenroll.Texts = "";
+            txtenroll.UnderlinedStyle = true;
+            txtenroll._Textchanged += textboxcustom6__Textchanged;
             // 
             // label2
             // 
@@ -134,26 +137,26 @@
             label2.TabIndex = 40;
             label2.Text = "Complaint: ";
             // 
-            // textboxcustom1
+            // txtDescription
             // 
-            textboxcustom1.BackColor = SystemColors.Window;
-            textboxcustom1.BorderColor = Color.DarkBlue;
-            textboxcustom1.BorderFocusColor = Color.Indigo;
-            textboxcustom1.BorderRadius = 15;
-            textboxcustom1.BorderSize = 2;
-            textboxcustom1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            textboxcustom1.ForeColor = Color.DimGray;
-            textboxcustom1.Location = new Point(54, 280);
-            textboxcustom1.Multiline = true;
-            textboxcustom1.Name = "textboxcustom1";
-            textboxcustom1.Padding = new Padding(10, 7, 10, 7);
-            textboxcustom1.PasswordChar = false;
-            textboxcustom1.PlaceholderColor = Color.White;
-            textboxcustom1.PlaceholderText = "";
-            textboxcustom1.Size = new Size(523, 298);
-            textboxcustom1.TabIndex = 41;
-            textboxcustom1.Texts = "";
-            textboxcustom1.UnderlinedStyle = false;
+            txtDescription.BackColor = SystemColors.Window;
+            txtDescription.BorderColor = Color.DarkBlue;
+            txtDescription.BorderFocusColor = Color.Indigo;
+            txtDescription.BorderRadius = 15;
+            txtDescription.BorderSize = 2;
+            txtDescription.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDescription.ForeColor = Color.DimGray;
+            txtDescription.Location = new Point(54, 280);
+            txtDescription.Multiline = true;
+            txtDescription.Name = "txtDescription";
+            txtDescription.Padding = new Padding(10, 7, 10, 7);
+            txtDescription.PasswordChar = false;
+            txtDescription.PlaceholderColor = Color.White;
+            txtDescription.PlaceholderText = "";
+            txtDescription.Size = new Size(523, 298);
+            txtDescription.TabIndex = 41;
+            txtDescription.Texts = "";
+            txtDescription.UnderlinedStyle = false;
             // 
             // panel4
             // 
@@ -180,17 +183,17 @@
             buttoncustom1.Text = "Submit";
             buttoncustom1.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // lbl
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.Red;
-            label3.Location = new Point(54, 590);
-            label3.Name = "label3";
-            label3.Size = new Size(269, 20);
-            label3.TabIndex = 66;
-            label3.Text = "Your complaint has been submitted.*";
+            lbl.AutoSize = true;
+            lbl.BackColor = Color.Transparent;
+            lbl.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl.ForeColor = Color.Red;
+            lbl.Location = new Point(54, 590);
+            lbl.Name = "lbl";
+            lbl.Size = new Size(269, 20);
+            lbl.TabIndex = 66;
+            lbl.Text = "Your complaint has been submitted.*";
             // 
             // label4
             // 
@@ -224,22 +227,76 @@
             panel2.Size = new Size(700, 1);
             panel2.TabIndex = 69;
             // 
+            // btnsent
+            // 
+            btnsent.BackColor = Color.CornflowerBlue;
+            btnsent.BorderColor = Color.Black;
+            btnsent.BorderRadius = 40;
+            btnsent.BorderSize = 0;
+            btnsent.FlatAppearance.BorderSize = 0;
+            btnsent.FlatStyle = FlatStyle.Flat;
+            btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsent.ForeColor = Color.White;
+            btnsent.Location = new Point(398, 619);
+            btnsent.Name = "btnsent";
+            btnsent.Size = new Size(198, 35);
+            btnsent.TabIndex = 70;
+            btnsent.Text = "SEND";
+            btnsent.UseVisualStyleBackColor = false;
+            btnsent.Click += btnsent_Click;
+            // 
+            // txtTitle
+            // 
+            txtTitle.BackColor = SystemColors.Control;
+            txtTitle.BorderColor = Color.DarkBlue;
+            txtTitle.BorderFocusColor = Color.Indigo;
+            txtTitle.BorderRadius = 0;
+            txtTitle.BorderSize = 3;
+            txtTitle.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTitle.ForeColor = Color.DimGray;
+            txtTitle.Location = new Point(299, 183);
+            txtTitle.Multiline = false;
+            txtTitle.Name = "txtTitle";
+            txtTitle.Padding = new Padding(10, 7, 10, 7);
+            txtTitle.PasswordChar = false;
+            txtTitle.PlaceholderColor = Color.White;
+            txtTitle.PlaceholderText = "";
+            txtTitle.Size = new Size(297, 39);
+            txtTitle.TabIndex = 72;
+            txtTitle.Texts = "";
+            txtTitle.UnderlinedStyle = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.RoyalBlue;
+            label1.Location = new Point(54, 196);
+            label1.Name = "label1";
+            label1.Size = new Size(200, 26);
+            label1.TabIndex = 71;
+            label1.Text = "Enter Title/reason";
+            // 
             // Complaints
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             ClientSize = new Size(1350, 700);
+            Controls.Add(txtTitle);
+            Controls.Add(label1);
+            Controls.Add(btnsent);
             Controls.Add(panel2);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
+            Controls.Add(lbl);
             Controls.Add(buttoncustom1);
             Controls.Add(panel4);
-            Controls.Add(textboxcustom1);
+            Controls.Add(txtDescription);
             Controls.Add(label2);
-            Controls.Add(textboxcustom6);
-            Controls.Add(label9);
+            Controls.Add(txtenroll);
+            Controls.Add(lben);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Complaints";
@@ -255,15 +312,18 @@
         private Panel panel1;
         private Button button2;
         private Button button1;
-        private Label label9;
-        private Textboxcustom textboxcustom6;
+        private Label lben;
+        private Textboxcustom txtenroll;
         private Label label2;
-        private Textboxcustom textboxcustom1;
+        private Textboxcustom txtDescription;
         private Panel panel4;
         private Buttoncustom buttoncustom1;
-        private Label label3;
+        private Label lbl;
         private Label label4;
         private Label label5;
         private Panel panel2;
+        private Buttoncustom btnsent;
+        private Textboxcustom txtTitle;
+        private Label label1;
     }
 }

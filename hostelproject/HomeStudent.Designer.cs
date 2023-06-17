@@ -42,6 +42,7 @@
             label2 = new Label();
             label3 = new Label();
             panel2 = new Panel();
+            buttoncustom1 = new Buttoncustom();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -105,6 +106,7 @@
             // panel3
             // 
             panel3.BackColor = Color.CornflowerBlue;
+            panel3.Controls.Add(buttoncustom1);
             panel3.Controls.Add(buttoncustom8);
             panel3.Controls.Add(buttoncustom9);
             panel3.Controls.Add(buttoncustom10);
@@ -128,10 +130,10 @@
             buttoncustom8.FlatStyle = FlatStyle.Flat;
             buttoncustom8.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom8.ForeColor = Color.White;
-            buttoncustom8.Location = new Point(1244, 0);
+            buttoncustom8.Location = new Point(960, 0);
             buttoncustom8.Margin = new Padding(3, 4, 3, 4);
             buttoncustom8.Name = "buttoncustom8";
-            buttoncustom8.Size = new Size(311, 65);
+            buttoncustom8.Size = new Size(250, 65);
             buttoncustom8.TabIndex = 2;
             buttoncustom8.Text = "Menu";
             buttoncustom8.UseVisualStyleBackColor = false;
@@ -148,10 +150,10 @@
             buttoncustom9.FlatStyle = FlatStyle.Flat;
             buttoncustom9.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom9.ForeColor = Color.White;
-            buttoncustom9.Location = new Point(933, 0);
+            buttoncustom9.Location = new Point(731, 0);
             buttoncustom9.Margin = new Padding(3, 4, 3, 4);
             buttoncustom9.Name = "buttoncustom9";
-            buttoncustom9.Size = new Size(311, 65);
+            buttoncustom9.Size = new Size(229, 65);
             buttoncustom9.TabIndex = 5;
             buttoncustom9.Text = "Complaints";
             buttoncustom9.UseVisualStyleBackColor = false;
@@ -168,10 +170,10 @@
             buttoncustom10.FlatStyle = FlatStyle.Flat;
             buttoncustom10.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom10.ForeColor = Color.White;
-            buttoncustom10.Location = new Point(622, 0);
+            buttoncustom10.Location = new Point(508, 0);
             buttoncustom10.Margin = new Padding(3, 4, 3, 4);
             buttoncustom10.Name = "buttoncustom10";
-            buttoncustom10.Size = new Size(311, 65);
+            buttoncustom10.Size = new Size(223, 65);
             buttoncustom10.TabIndex = 1;
             buttoncustom10.Text = "Profile";
             buttoncustom10.UseVisualStyleBackColor = false;
@@ -188,10 +190,10 @@
             buttoncustom11.FlatStyle = FlatStyle.Flat;
             buttoncustom11.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom11.ForeColor = Color.White;
-            buttoncustom11.Location = new Point(311, 0);
+            buttoncustom11.Location = new Point(263, 0);
             buttoncustom11.Margin = new Padding(3, 4, 3, 4);
             buttoncustom11.Name = "buttoncustom11";
-            buttoncustom11.Size = new Size(311, 65);
+            buttoncustom11.Size = new Size(245, 65);
             buttoncustom11.TabIndex = 3;
             buttoncustom11.Text = "Activity Calender ";
             buttoncustom11.UseVisualStyleBackColor = false;
@@ -211,7 +213,7 @@
             buttoncustom12.Location = new Point(0, 0);
             buttoncustom12.Margin = new Padding(3, 4, 3, 4);
             buttoncustom12.Name = "buttoncustom12";
-            buttoncustom12.Size = new Size(311, 65);
+            buttoncustom12.Size = new Size(263, 65);
             buttoncustom12.TabIndex = 6;
             buttoncustom12.Text = "Fee Challan";
             buttoncustom12.UseVisualStyleBackColor = false;
@@ -249,6 +251,25 @@
             panel2.Size = new Size(810, 1);
             panel2.TabIndex = 41;
             // 
+            // buttoncustom1
+            // 
+            buttoncustom1.BackColor = Color.CornflowerBlue;
+            buttoncustom1.BorderColor = Color.Black;
+            buttoncustom1.BorderRadius = 40;
+            buttoncustom1.BorderSize = 0;
+            buttoncustom1.Dock = DockStyle.Left;
+            buttoncustom1.FlatAppearance.BorderSize = 0;
+            buttoncustom1.FlatStyle = FlatStyle.Flat;
+            buttoncustom1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom1.ForeColor = Color.White;
+            buttoncustom1.Location = new Point(1210, 0);
+            buttoncustom1.Margin = new Padding(3, 4, 3, 4);
+            buttoncustom1.Name = "buttoncustom1";
+            buttoncustom1.Size = new Size(311, 65);
+            buttoncustom1.TabIndex = 7;
+            buttoncustom1.Text = "Room Allotted";
+            buttoncustom1.UseVisualStyleBackColor = false;
+            // 
             // HomeStudent
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -285,5 +306,6 @@
         private Label label2;
         private Label label3;
         private Panel panel2;
+        private Buttoncustom buttoncustom1;
     }
 }

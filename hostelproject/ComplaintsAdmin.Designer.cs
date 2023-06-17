@@ -35,6 +35,9 @@
             dataGridView1 = new DataGridView();
             panel2 = new Panel();
             label3 = new Label();
+            btnDis = new Buttoncustom();
+            buttoncustom1 = new Buttoncustom();
+            lbll = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -92,7 +95,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(1187, 445);
+            dataGridView1.Size = new Size(1097, 369);
             dataGridView1.TabIndex = 26;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -115,11 +118,59 @@
             label3.TabIndex = 42;
             label3.Text = "Complaints";
             // 
+            // btnDis
+            // 
+            btnDis.BackColor = Color.CornflowerBlue;
+            btnDis.BorderColor = Color.Black;
+            btnDis.BorderRadius = 40;
+            btnDis.BorderSize = 0;
+            btnDis.FlatAppearance.BorderSize = 0;
+            btnDis.FlatStyle = FlatStyle.Flat;
+            btnDis.ForeColor = Color.White;
+            btnDis.Location = new Point(542, 622);
+            btnDis.Name = "btnDis";
+            btnDis.Size = new Size(172, 45);
+            btnDis.TabIndex = 43;
+            btnDis.Text = "Display";
+            btnDis.UseVisualStyleBackColor = false;
+            btnDis.Click += btnDis_Click;
+            // 
+            // buttoncustom1
+            // 
+            buttoncustom1.BackColor = Color.CornflowerBlue;
+            buttoncustom1.BorderColor = Color.Black;
+            buttoncustom1.BorderRadius = 40;
+            buttoncustom1.BorderSize = 0;
+            buttoncustom1.FlatAppearance.BorderSize = 0;
+            buttoncustom1.FlatStyle = FlatStyle.Flat;
+            buttoncustom1.ForeColor = Color.White;
+            buttoncustom1.Location = new Point(748, 622);
+            buttoncustom1.Name = "buttoncustom1";
+            buttoncustom1.Size = new Size(172, 45);
+            buttoncustom1.TabIndex = 44;
+            buttoncustom1.Text = "UPDATE";
+            buttoncustom1.UseVisualStyleBackColor = false;
+            buttoncustom1.Click += buttoncustom1_Click;
+            // 
+            // lbll
+            // 
+            lbll.AutoSize = true;
+            lbll.ForeColor = Color.Red;
+            lbll.Location = new Point(929, 593);
+            lbll.Name = "lbll";
+            lbll.Size = new Size(293, 25);
+            lbll.TabIndex = 45;
+            lbll.Text = "*Complaint processed successfully*";
+            lbll.Click += label1_Click;
+            // 
             // ComplaintsAdmin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1350, 700);
+            Controls.Add(lbll);
+            Controls.Add(buttoncustom1);
+            Controls.Add(btnDis);
             Controls.Add(label3);
             Controls.Add(panel2);
             Controls.Add(dataGridView1);
@@ -142,5 +193,8 @@
         private DataGridView dataGridView1;
         private Panel panel2;
         private Label label3;
+        private Buttoncustom btnDis;
+        private Buttoncustom buttoncustom1;
+        private Label lbll;
     }
 }

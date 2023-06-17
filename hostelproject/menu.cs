@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace hostelproject
 {
     public partial class menu : Form
     {
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True");
+
         public menu()
         {
             InitializeComponent();
@@ -66,5 +69,101 @@ namespace hostelproject
         {
 
         }
+
+
+        private string[] GenerateWeeklyMenu()
+        {
+            string[] menu = new string[7];
+
+            // Generate random menu items for each day
+            menu[0] = GenerateRandomMenuItem(); // Monday
+            menu[1] = GenerateRandomMenuItem(); // Tuesday
+            menu[2] = GenerateRandomMenuItem(); // Wednesday
+            menu[3] = GenerateRandomMenuItem(); // Thursday
+            menu[4] = GenerateRandomMenuItem(); // Friday
+            menu[5] = GenerateRandomMenuItem(); // Saturday
+            menu[6] = GenerateRandomMenuItem(); // Sunday
+
+            return menu;
+        }
+
+        private string GenerateRandomMenuItem()
+        {
+            string[] menuItems = { "Chicken Curry", "Beef Stir-fry", "Pasta Carbonara", "Vegetable Curry", "Fish Tacos", "Grilled Steak", "Caesar Salad", "Sushi Rolls" };
+
+            Random random = new Random();
+            int index = random.Next(0, menuItems.Length);
+
+            return menuItems[index];
+        }
+
+        private void populate()
+        {
+            string query = "SELECT * FROM WeeklyMenu";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+            var ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+
+        private void buttoncustom1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+
+                DateTime startDate = new DateTime(2023, 6, 1); // Start date of the month
+                DateTime endDate = new DateTime(2023, 6, 30); // End date of the month
+
+                DateTime currentDate = startDate;
+
+                while (currentDate <= endDate)
+                {
+                    // Generate the menu for the current week
+                    string[] menu = GenerateWeeklyMenu();
+
+                    // Create the INSERT statement
+                    string query = "INSERT INTO WeeklyMenu (MenuID, WeekStartDate, WeekEndDate, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday) " +
+                                   "VALUES (@MenuID, @WeekStartDate, @WeekEndDate, @Monday, @Tuesday, @Wednesday, @Thursday, @Friday, @Saturday, @Sunday)";
+
+                    using (SqlCommand command = new SqlCommand(query, con))
+                    {
+                        // Set parameter values
+                        command.Parameters.AddWithValue("@MenuID", Guid.NewGuid()); // Generate a unique MenuID for each week
+                        command.Parameters.AddWithValue("@WeekStartDate", currentDate);
+                        command.Parameters.AddWithValue("@WeekEndDate", currentDate.AddDays(6));
+                        command.Parameters.AddWithValue("@Monday", menu[0]);
+                        command.Parameters.AddWithValue("@Tuesday", menu[1]);
+                        command.Parameters.AddWithValue("@Wednesday", menu[2]);
+                        command.Parameters.AddWithValue("@Thursday", menu[3]);
+                        command.Parameters.AddWithValue("@Friday", menu[4]);
+                        command.Parameters.AddWithValue("@Saturday", menu[5]);
+                        command.Parameters.AddWithValue("@Sunday", menu[6]);
+
+                        // Execute the INSERT statement
+                        command.ExecuteNonQuery();
+                    }
+
+                    // Move to the next week
+                    currentDate = currentDate.AddDays(7);
+                }
+
+                MessageBox.Show("Menu for the month inserted successfully!");
+            }
+            catch (SqlException ex)
+            {
+                // Handle the SQL exception here
+                MessageBox.Show("An error occurred while inserting the menu: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+                populate();
+            }
+        }
     }
-}
+    }
+    
+

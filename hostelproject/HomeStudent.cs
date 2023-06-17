@@ -99,7 +99,7 @@ namespace hostelproject
 
         private void buttoncustom8_Click(object sender, EventArgs e)
         {
-            menu m = new menu();
+            menudis m = new menudis();
             m.Show();
         }
     }

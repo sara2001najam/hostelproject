@@ -112,7 +112,7 @@ namespace hostelproject
 
         private void buttoncustom10_Click(object sender, EventArgs e)
         {
-            Rooms rm = new Rooms();
+            RoomsManagement rm = new RoomsManagement();
             rm.Show();
         }
 

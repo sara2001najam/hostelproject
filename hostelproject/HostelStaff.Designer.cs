@@ -487,6 +487,7 @@
             Name = "HostelStaff";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "HostelStaff";
+            Load += HostelStaff_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             ResumeLayout(false);

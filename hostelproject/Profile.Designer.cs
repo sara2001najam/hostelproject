@@ -417,6 +417,7 @@
             Name = "Profile";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Profile";
+            Load += Profile_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

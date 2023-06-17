@@ -13,6 +13,8 @@ namespace hostelproject
 {
     public partial class Signup : Form
     {
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True");
+
         public Signup()
         {
             InitializeComponent();
@@ -70,34 +72,49 @@ namespace hostelproject
 
         private void buttoncustom2_Click(object sender, EventArgs e)
         {
-        //    string username = txtuser.Text;
-        //    string password = txtpass.Text;
-        //    string email = emai.Text;
-        //    bool isAdmin = adminCheckBox.Checked;
+            string fullName = txtUsername.Text;
+            string email = txtEmail.Text;
+            string password = txtpass.Text;
+            string confirmPassword = txtcpass.Text;
 
-        //    OpenConnection();
+            try
+            {
+                //using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
+                //{
+                    con.Open();
+                    //if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
+                    //{
+                    //    MessageBox.Show("Please fill in all the fields.");
 
-        //    string insertQuery = "INSERT INTO Users (Username, Password, Email, IsAdmin) " +
-        //                         "VALUES (@Username, @Password, @Email, @IsAdmin)";
+                    //}
+                    //else if (password != confirmPassword)
+                    //{
+                    //    MessageBox.Show("Password and confirm password do not match.");
+                        
+                    //}                   
+                    string query = "INSERT INTO Signup (FullName, Email, Password) VALUES (@FullName, @Email, @Password)";
 
-        //    using (SqlCommand command = new SqlCommand(insertQuery, connection))
-        //    {
-        //        command.Parameters.AddWithValue("@Username", username);
-        //        command.Parameters.AddWithValue("@Password", password);
-        //        command.Parameters.AddWithValue("@Email", email);
-        //        command.Parameters.AddWithValue("@IsAdmin", isAdmin);
+                    using (SqlCommand command = new SqlCommand(query, con))
+                    {
+                        command.Parameters.AddWithValue("@FullName", fullName);
+                        command.Parameters.AddWithValue("@Email", email);
+                        command.Parameters.AddWithValue("@Password", password);
 
-        //        command.ExecuteNonQuery();
-        //    }
+                        command.ExecuteNonQuery();
+                    }
 
-        //    CloseConnection();
-
-        //    // Optionally, display a success message or perform other actions.
-        //}
-        MessageBox.Show("SIGN UP SUCCESSFULL");
-            this.Hide();
-        Form1 f = new Form1();
-        f.Show();
+                    MessageBox.Show("Signup successful!");
+                  
+                con.Close();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
         }
+      
+    }
 }
-}
+
+

@@ -36,6 +36,9 @@
             label14 = new Label();
             panel2 = new Panel();
             buttoncustom1 = new Buttoncustom();
+            buttoncustom2 = new Buttoncustom();
+            buttoncustom3 = new Buttoncustom();
+            buttoncustom4 = new Buttoncustom();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -124,19 +127,73 @@
             buttoncustom1.FlatAppearance.BorderSize = 0;
             buttoncustom1.FlatStyle = FlatStyle.Flat;
             buttoncustom1.ForeColor = Color.White;
-            buttoncustom1.Location = new Point(747, 637);
+            buttoncustom1.Location = new Point(689, 633);
             buttoncustom1.Name = "buttoncustom1";
             buttoncustom1.Size = new Size(193, 41);
             buttoncustom1.TabIndex = 42;
-            buttoncustom1.Text = "DISPLAY";
+            buttoncustom1.Text = "SHOW MONTHLY ";
             buttoncustom1.UseVisualStyleBackColor = false;
             buttoncustom1.Click += buttoncustom1_Click;
+            // 
+            // buttoncustom2
+            // 
+            buttoncustom2.BackColor = Color.CornflowerBlue;
+            buttoncustom2.BorderColor = Color.Black;
+            buttoncustom2.BorderRadius = 40;
+            buttoncustom2.BorderSize = 0;
+            buttoncustom2.FlatAppearance.BorderSize = 0;
+            buttoncustom2.FlatStyle = FlatStyle.Flat;
+            buttoncustom2.ForeColor = Color.White;
+            buttoncustom2.Location = new Point(906, 633);
+            buttoncustom2.Name = "buttoncustom2";
+            buttoncustom2.Size = new Size(193, 41);
+            buttoncustom2.TabIndex = 43;
+            buttoncustom2.Text = "UPDATE";
+            buttoncustom2.UseVisualStyleBackColor = false;
+            buttoncustom2.Click += buttoncustom2_Click;
+            // 
+            // buttoncustom3
+            // 
+            buttoncustom3.BackColor = Color.CornflowerBlue;
+            buttoncustom3.BorderColor = Color.Black;
+            buttoncustom3.BorderRadius = 40;
+            buttoncustom3.BorderSize = 0;
+            buttoncustom3.FlatAppearance.BorderSize = 0;
+            buttoncustom3.FlatStyle = FlatStyle.Flat;
+            buttoncustom3.ForeColor = Color.White;
+            buttoncustom3.Location = new Point(1120, 633);
+            buttoncustom3.Name = "buttoncustom3";
+            buttoncustom3.Size = new Size(193, 41);
+            buttoncustom3.TabIndex = 44;
+            buttoncustom3.Text = "DELETE";
+            buttoncustom3.UseVisualStyleBackColor = false;
+            buttoncustom3.Click += buttoncustom3_Click;
+            // 
+            // buttoncustom4
+            // 
+            buttoncustom4.BackColor = Color.CornflowerBlue;
+            buttoncustom4.BorderColor = Color.Black;
+            buttoncustom4.BorderRadius = 40;
+            buttoncustom4.BorderSize = 0;
+            buttoncustom4.FlatAppearance.BorderSize = 0;
+            buttoncustom4.FlatStyle = FlatStyle.Flat;
+            buttoncustom4.ForeColor = Color.White;
+            buttoncustom4.Location = new Point(465, 633);
+            buttoncustom4.Name = "buttoncustom4";
+            buttoncustom4.Size = new Size(193, 41);
+            buttoncustom4.TabIndex = 45;
+            buttoncustom4.Text = "DISPLAY";
+            buttoncustom4.UseVisualStyleBackColor = false;
+            buttoncustom4.Click += buttoncustom4_Click;
             // 
             // menu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1350, 700);
+            Controls.Add(buttoncustom4);
+            Controls.Add(buttoncustom3);
+            Controls.Add(buttoncustom2);
             Controls.Add(buttoncustom1);
             Controls.Add(panel2);
             Controls.Add(label14);
@@ -162,5 +219,8 @@
         private Label label14;
         private Panel panel2;
         private Buttoncustom buttoncustom1;
+        private Buttoncustom buttoncustom2;
+        private Buttoncustom buttoncustom3;
+        private Buttoncustom buttoncustom4;
     }
 }

@@ -142,14 +142,14 @@ namespace hostelproject
         {
             try
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
+                using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
                 {
-                    connection.Open();
+                    con.Open();
 
-                    int? staffId = int.TryParse(txtid.Texts, out int id) ? id : (int?)null;
-                    string name = txtname.Texts;
+                    int? staffId = int.TryParse(txtid.Text, out int id) ? id : (int?)null;
+                    string name = txtname.Text;
 
-                    SqlCommand command = new SqlCommand("SearchStaff", connection);
+                    SqlCommand command = new SqlCommand("SearchStaff", con);
                     command.CommandType = CommandType.StoredProcedure;
 
                     command.Parameters.AddWithValue("@staff_id", staffId);
@@ -161,7 +161,7 @@ namespace hostelproject
 
                     if (dataTable.Rows.Count > 0)
                     {
-                        // Display the search results (e.g., bind the DataTable to a DataGridView)
+                        // Display the search results by binding the DataTable to the DataGridView
                         dataGridView1.DataSource = dataTable;
                     }
                     else
@@ -174,8 +174,6 @@ namespace hostelproject
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            //fn.getdata();
-            populate();
 
         }
 
@@ -223,6 +221,11 @@ namespace hostelproject
         private void buttoncustom5_Click(object sender, EventArgs e)
         {
             populate();
+        }
+
+        private void HostelStaff_Load(object sender, EventArgs e)
+        {
+
         }
     }
 

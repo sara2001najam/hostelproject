@@ -1,6 +1,6 @@
 ﻿namespace hostelproject
 {
-    partial class Rooms
+    partial class RoomsManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rooms));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomsManagement));
             panel1 = new Panel();
             button2 = new Button();
             button1 = new Button();

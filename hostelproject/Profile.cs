@@ -97,9 +97,9 @@ namespace hostelproject
 
             try
             {
-                    using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
-                    {
-                   
+                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
+                {
+
                     string message = "Please note that you are only allowed to update your email address. Are you sure you want to proceed?";
 
                     DialogResult dialogResult = MessageBox.Show(message, "Update Confirmation", MessageBoxButtons.YesNo);
@@ -134,10 +134,15 @@ namespace hostelproject
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-                populate();
-            }
+            populate();
+        }
+
+        private void Profile_Load(object sender, EventArgs e)
+        {
+
         }
     }
+}
 
 
 

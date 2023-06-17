@@ -131,7 +131,7 @@ namespace hostelproject
                     using (SqlCommand command = new SqlCommand(query, con))
                     {
                         // Set parameter values
-                        command.Parameters.AddWithValue("@MenuID", Guid.NewGuid()); // Generate a unique MenuID for each week
+                        command.Parameters.AddWithValue("@MenuID", GetNextMenuID());
                         command.Parameters.AddWithValue("@WeekStartDate", currentDate);
                         command.Parameters.AddWithValue("@WeekEndDate", currentDate.AddDays(6));
                         command.Parameters.AddWithValue("@Monday", menu[0]);
@@ -163,7 +163,117 @@ namespace hostelproject
                 populate();
             }
         }
+
+        private int GetNextMenuID()
+        {
+            string query = "SELECT MAX(MenuID) FROM WeeklyMenu";
+            using (SqlCommand cmd = new SqlCommand(query, con))
+            {
+                object result = cmd.ExecuteScalar();
+                if (result != DBNull.Value)
+                {
+                    return Convert.ToInt32(result) + 1;
+                }
+                else
+                {
+                    return 1;
+                }
+            }
+        }
+
+        private void buttoncustom2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+
+                // Create the SqlCommand object with the stored procedure name
+                using (SqlCommand command = new SqlCommand("UpdateMenu", con))
+                {
+                    // Set the command type to stored procedure
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Set parameter values
+                    command.Parameters.AddWithValue("@MenuID", 2); // Update with the appropriate MenuID
+                    command.Parameters.AddWithValue("@Monday", "KARAHI");
+                    command.Parameters.AddWithValue("@Tuesday", "FRIED RICE WITH SHASHLIK");
+                    command.Parameters.AddWithValue("@Wednesday", "Updated Wednesday Menu");
+                    command.Parameters.AddWithValue("@Thursday", "Updated Thursday Menu");
+                    command.Parameters.AddWithValue("@Friday", "Updated Friday Menu");
+                    command.Parameters.AddWithValue("@Saturday", "Updated Saturday Menu");
+                    command.Parameters.AddWithValue("@Sunday", "Updated Sunday Menu");
+
+                    // Execute the stored procedure
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Menu updated successfully!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Menu not found for the specified MenuID.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Handle the SQL exception here
+                MessageBox.Show("An error occurred while updating the menu: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+                populate();
+            }
+        }
+
+        private void buttoncustom3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+
+                // Create the SqlCommand object with the stored procedure name
+                using (SqlCommand command = new SqlCommand("DeleteMenu", con))
+                {
+                    // Set the command type to stored procedure
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    // Set parameter values
+                    command.Parameters.AddWithValue("@MenuID", 20); // Delete with the appropriate MenuID
+
+                    // Execute the stored procedure
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Menu deleted successfully!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Menu not found for the specified MenuID.");
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Handle the SQL exception here
+                MessageBox.Show("An error occurred while deleting the menu: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+                populate();
+            }
+        }
+
+        private void buttoncustom4_Click(object sender, EventArgs e)
+        {
+            populate();
+        }
     }
-    }
-    
+}
+
+
 

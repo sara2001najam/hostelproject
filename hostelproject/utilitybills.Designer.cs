@@ -33,12 +33,11 @@
             button2 = new Button();
             button1 = new Button();
             button3 = new Button();
-            textboxcustom1 = new Textboxcustom();
             buttoncustom4 = new Buttoncustom();
             dataGridView1 = new DataGridView();
-            label2 = new Label();
             label3 = new Label();
             panel2 = new Panel();
+            buttoncustom1 = new Buttoncustom();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -53,7 +52,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1300, 86);
+            panel1.Size = new Size(1350, 86);
             panel1.TabIndex = 3;
             // 
             // button2
@@ -65,7 +64,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(1228, 0);
+            button2.Location = new Point(1278, 0);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(72, 86);
@@ -95,33 +94,13 @@
             button3.FlatStyle = FlatStyle.Flat;
             button3.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Underline, GraphicsUnit.Point);
             button3.ForeColor = Color.RoyalBlue;
-            button3.Location = new Point(774, 222);
+            button3.Location = new Point(467, 517);
             button3.Name = "button3";
-            button3.Size = new Size(173, 55);
+            button3.Size = new Size(190, 55);
             button3.TabIndex = 25;
-            button3.Text = "Add Utility Bills+";
+            button3.Text = "Update Utility Bills+";
             button3.UseVisualStyleBackColor = true;
-            // 
-            // textboxcustom1
-            // 
-            textboxcustom1.BackColor = SystemColors.Window;
-            textboxcustom1.BorderColor = Color.DarkBlue;
-            textboxcustom1.BorderFocusColor = Color.Indigo;
-            textboxcustom1.BorderRadius = 15;
-            textboxcustom1.BorderSize = 3;
-            textboxcustom1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            textboxcustom1.ForeColor = Color.DimGray;
-            textboxcustom1.Location = new Point(700, 283);
-            textboxcustom1.Multiline = false;
-            textboxcustom1.Name = "textboxcustom1";
-            textboxcustom1.Padding = new Padding(10, 7, 10, 7);
-            textboxcustom1.PasswordChar = false;
-            textboxcustom1.PlaceholderColor = Color.White;
-            textboxcustom1.PlaceholderText = "Search Utility bills";
-            textboxcustom1.Size = new Size(390, 39);
-            textboxcustom1.TabIndex = 26;
-            textboxcustom1.Texts = "";
-            textboxcustom1.UnderlinedStyle = false;
+            button3.Click += button3_Click;
             // 
             // buttoncustom4
             // 
@@ -133,40 +112,30 @@
             buttoncustom4.FlatStyle = FlatStyle.Flat;
             buttoncustom4.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttoncustom4.ForeColor = Color.White;
-            buttoncustom4.Location = new Point(1106, 272);
+            buttoncustom4.Location = new Point(294, 529);
             buttoncustom4.Name = "buttoncustom4";
-            buttoncustom4.Size = new Size(172, 50);
+            buttoncustom4.Size = new Size(156, 33);
             buttoncustom4.TabIndex = 27;
-            buttoncustom4.Text = "Search";
+            buttoncustom4.Text = "Get";
             buttoncustom4.UseVisualStyleBackColor = false;
+            buttoncustom4.Click += buttoncustom4_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(38, 328);
+            dataGridView1.Location = new Point(38, 207);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(1205, 389);
+            dataGridView1.Size = new Size(1082, 285);
             dataGridView1.TabIndex = 28;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 7.5F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.Red;
-            label2.Location = new Point(953, 242);
-            label2.Name = "label2";
-            label2.Size = new Size(154, 18);
-            label2.TabIndex = 29;
-            label2.Text = "Bill added sucessfully*";
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.RoyalBlue;
-            label3.Location = new Point(38, 195);
+            label3.Location = new Point(38, 120);
             label3.Name = "label3";
             label3.Size = new Size(136, 29);
             label3.TabIndex = 30;
@@ -175,22 +144,39 @@
             // panel2
             // 
             panel2.BackColor = Color.RoyalBlue;
-            panel2.Location = new Point(38, 226);
+            panel2.Location = new Point(38, 152);
             panel2.Name = "panel2";
             panel2.Size = new Size(700, 1);
             panel2.TabIndex = 41;
+            // 
+            // buttoncustom1
+            // 
+            buttoncustom1.BackColor = Color.CornflowerBlue;
+            buttoncustom1.BorderColor = Color.Black;
+            buttoncustom1.BorderRadius = 40;
+            buttoncustom1.BorderSize = 0;
+            buttoncustom1.FlatAppearance.BorderSize = 0;
+            buttoncustom1.FlatStyle = FlatStyle.Flat;
+            buttoncustom1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttoncustom1.ForeColor = Color.White;
+            buttoncustom1.Location = new Point(673, 529);
+            buttoncustom1.Name = "buttoncustom1";
+            buttoncustom1.Size = new Size(156, 33);
+            buttoncustom1.TabIndex = 42;
+            buttoncustom1.Text = "Display";
+            buttoncustom1.UseVisualStyleBackColor = false;
+            buttoncustom1.Click += buttoncustom1_Click;
             // 
             // utilitybills
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1300, 722);
+            ClientSize = new Size(1350, 700);
+            Controls.Add(buttoncustom1);
             Controls.Add(panel2);
             Controls.Add(label3);
-            Controls.Add(label2);
             Controls.Add(dataGridView1);
             Controls.Add(buttoncustom4);
-            Controls.Add(textboxcustom1);
             Controls.Add(button3);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -209,11 +195,10 @@
         private Button button2;
         private Button button1;
         private Button button3;
-        private Textboxcustom textboxcustom1;
         private Buttoncustom buttoncustom4;
         private DataGridView dataGridView1;
-        private Label label2;
         private Label label3;
         private Panel panel2;
+        private Buttoncustom buttoncustom1;
     }
 }

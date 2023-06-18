@@ -51,7 +51,7 @@ namespace hostelproject
         {
             try
             {
-                string enrollmentNumber = Microsoft.VisualBasic.Interaction.InputBox("Enter Enrollment Number:", "Update Complaint Status");
+                string enrollmentNumber = Microsoft.VisualBasic.Interaction.InputBox("Enter Enrollment Number or Student ID:", "Update Complaint Status");
 
                 if (!string.IsNullOrEmpty(enrollmentNumber))
                 {
@@ -72,7 +72,7 @@ namespace hostelproject
                 }
                 else
                 {
-                    MessageBox.Show("Enrollment number cannot be empty!");
+                    MessageBox.Show("Enrollmentno / ID cannot be empty!");
                 }
             }
             catch (Exception ex)

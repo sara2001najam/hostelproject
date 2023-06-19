@@ -72,48 +72,51 @@ namespace hostelproject
 
         private void buttoncustom2_Click(object sender, EventArgs e)
         {
-            string fullName = txtUsername.Text;
-            string email = txtEmail.Text;
-            string password = txtpass.Text;
-            string confirmPassword = txtcpass.Text;
+
+            string username = txtUsername.Texts;
+            string password = txtpass.Texts;
+            string confirmPassword = txtcpass.Texts;
+            string email = txtEmail.Texts;
+            DateTime dateRegistered = DateTime.Now;
+
+            // Check if the password and confirm password match
+            if (password != confirmPassword)
+            {
+                MessageBox.Show("Password and Confirm Password do not match!");
+                return;
+            }
 
             try
             {
-                //using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
-                //{
-                    con.Open();
-                    //if (string.IsNullOrEmpty(fullName) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
-                    //{
-                    //    MessageBox.Show("Please fill in all the fields.");
+                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
+                {
+                    connection.Open();
 
-                    //}
-                    //else if (password != confirmPassword)
-                    //{
-                    //    MessageBox.Show("Password and confirm password do not match.");
-                        
-                    //}                   
-                    string query = "INSERT INTO Signup (FullName, Email, Password) VALUES (@FullName, @Email, @Password)";
+                    SqlCommand command = new SqlCommand("InsertSignup", connection);
+                    command.CommandType = CommandType.StoredProcedure;
 
-                    using (SqlCommand command = new SqlCommand(query, con))
-                    {
-                        command.Parameters.AddWithValue("@FullName", fullName);
-                        command.Parameters.AddWithValue("@Email", email);
-                        command.Parameters.AddWithValue("@Password", password);
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@password", password);
+                    command.Parameters.AddWithValue("@email", email);
+                    command.Parameters.AddWithValue("@date_registered", dateRegistered);
 
-                        command.ExecuteNonQuery();
-                    }
+                    command.ExecuteNonQuery();
 
                     MessageBox.Show("Signup successful!");
-                  
-                con.Close();
-                
+                }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
+
+
         }
-      
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

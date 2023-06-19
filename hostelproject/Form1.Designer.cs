@@ -76,20 +76,24 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.BackColor = SystemColors.HotTrack;
-            label5.Location = new Point(116, 476);
+            label5.BackColor = Color.RoyalBlue;
+            label5.FlatStyle = FlatStyle.Flat;
+            label5.Font = new Font("Constantia", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(96, 476);
             label5.Name = "label5";
-            label5.Size = new Size(87, 25);
+            label5.Size = new Size(123, 24);
             label5.TabIndex = 18;
-            label5.Text = "Password";
+            label5.Text = "PASSWORD";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.BackColor = SystemColors.HotTrack;
-            label4.Location = new Point(116, 426);
+            label4.BackColor = Color.RoyalBlue;
+            label4.FlatStyle = FlatStyle.Flat;
+            label4.Font = new Font("Constantia", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(96, 420);
             label4.Name = "label4";
-            label4.Size = new Size(104, 25);
+            label4.Size = new Size(121, 24);
             label4.TabIndex = 17;
             label4.Text = "USERNAME";
             // 
@@ -97,7 +101,7 @@
             // 
             txtpass.Location = new Point(250, 476);
             txtpass.Name = "txtpass";
-            txtpass.Size = new Size(150, 31);
+            txtpass.Size = new Size(186, 31);
             txtpass.TabIndex = 16;
             txtpass.UseSystemPasswordChar = true;
             // 
@@ -105,7 +109,7 @@
             // 
             txtuser.Location = new Point(250, 420);
             txtuser.Name = "txtuser";
-            txtuser.Size = new Size(150, 31);
+            txtuser.Size = new Size(186, 31);
             txtuser.TabIndex = 15;
             txtuser.TextChanged += txtuser_TextChanged;
             // 

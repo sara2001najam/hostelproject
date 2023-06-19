@@ -28,65 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(utilitybills));
-            panel1 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
             button3 = new Button();
             buttoncustom4 = new Buttoncustom();
             dataGridView1 = new DataGridView();
             label3 = new Label();
             panel2 = new Panel();
             buttoncustom1 = new Buttoncustom();
-            panel1.SuspendLayout();
+            buttoncustom2 = new Buttoncustom();
+            btnsent = new Buttoncustom();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.RoyalBlue;
-            panel1.BackgroundImageLayout = ImageLayout.None;
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1350, 86);
-            panel1.TabIndex = 3;
-            // 
-            // button2
-            // 
-            button2.Dock = DockStyle.Right;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
-            button2.FlatAppearance.MouseOverBackColor = Color.Red;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(1278, 0);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(72, 86);
-            button2.TabIndex = 15;
-            button2.Text = "X";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.Dock = DockStyle.Left;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = SystemColors.ButtonFace;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(0, 0);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(124, 86);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
@@ -167,38 +118,72 @@
             buttoncustom1.UseVisualStyleBackColor = false;
             buttoncustom1.Click += buttoncustom1_Click;
             // 
+            // buttoncustom2
+            // 
+            buttoncustom2.BackColor = Color.CornflowerBlue;
+            buttoncustom2.BorderColor = Color.Black;
+            buttoncustom2.BorderRadius = 40;
+            buttoncustom2.BorderSize = 0;
+            buttoncustom2.FlatAppearance.BorderSize = 0;
+            buttoncustom2.FlatStyle = FlatStyle.Flat;
+            buttoncustom2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttoncustom2.ForeColor = Color.White;
+            buttoncustom2.Location = new Point(902, 529);
+            buttoncustom2.Name = "buttoncustom2";
+            buttoncustom2.Size = new Size(156, 33);
+            buttoncustom2.TabIndex = 43;
+            buttoncustom2.Text = "Delete";
+            buttoncustom2.UseVisualStyleBackColor = false;
+            buttoncustom2.Click += buttoncustom2_Click;
+            // 
+            // btnsent
+            // 
+            btnsent.BackColor = Color.CornflowerBlue;
+            btnsent.BorderColor = Color.Black;
+            btnsent.BorderRadius = 40;
+            btnsent.BorderSize = 0;
+            btnsent.FlatAppearance.BorderSize = 0;
+            btnsent.FlatStyle = FlatStyle.Flat;
+            btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsent.ForeColor = Color.White;
+            btnsent.Location = new Point(765, 584);
+            btnsent.Name = "btnsent";
+            btnsent.Size = new Size(198, 35);
+            btnsent.TabIndex = 71;
+            btnsent.Text = "LEAVE";
+            btnsent.UseVisualStyleBackColor = false;
+            btnsent.Click += btnsent_Click;
+            // 
             // utilitybills
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1350, 700);
+            ClientSize = new Size(1600, 650);
+            Controls.Add(btnsent);
+            Controls.Add(buttoncustom2);
             Controls.Add(buttoncustom1);
             Controls.Add(panel2);
             Controls.Add(label3);
             Controls.Add(dataGridView1);
             Controls.Add(buttoncustom4);
             Controls.Add(button3);
-            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "utilitybills";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "utilitybills";
-            panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
-        private Button button2;
-        private Button button1;
         private Button button3;
         private Buttoncustom buttoncustom4;
         private DataGridView dataGridView1;
         private Label label3;
         private Panel panel2;
         private Buttoncustom buttoncustom1;
+        private Buttoncustom buttoncustom2;
+        private Buttoncustom btnsent;
     }
 }

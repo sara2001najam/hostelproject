@@ -164,5 +164,70 @@ namespace hostelproject
         {
             populate();
         }
+
+        private void buttoncustom2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+
+                // Prompt the user to enter the bill ID
+                string billIdInput = Microsoft.VisualBasic.Interaction.InputBox("Enter the Bill ID:", "Delete Utility Bill", "");
+
+                int billId;
+                if (!int.TryParse(billIdInput, out billId))
+                {
+                    MessageBox.Show("Invalid Bill ID. Please enter a numeric value.");
+                    return;
+                }
+
+                // Check if the utility bill exists
+                string checkQuery = "SELECT COUNT(*) FROM UtilityBills WHERE BillId = @BillId";
+                using (SqlCommand checkCommand = new SqlCommand(checkQuery, con))
+                {
+                    checkCommand.Parameters.AddWithValue("@BillId", billId);
+                    int billCount = Convert.ToInt32(checkCommand.ExecuteScalar());
+
+                    if (billCount == 0)
+                    {
+                        MessageBox.Show("No utility bill found for Bill ID: " + billId);
+                        return;
+                    }
+                }
+
+                // Delete the utility bill
+                string deleteQuery = "DELETE FROM UtilityBills WHERE BillId = @BillId";
+                using (SqlCommand deleteCommand = new SqlCommand(deleteQuery, con))
+                {
+                    deleteCommand.Parameters.AddWithValue("@BillId", billId);
+                    int rowsAffected = deleteCommand.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Utility bill deleted for Bill ID: " + billId);
+                        populate(); // Refresh the data in the DataGridView
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to delete utility bill for Bill ID: " + billId);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Handle the SQL exception here
+                MessageBox.Show("An error occurred while deleting the utility bill: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+
+        }
+
+        private void btnsent_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

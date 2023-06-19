@@ -34,6 +34,7 @@
             button1 = new Button();
             label1 = new Label();
             panel3 = new Panel();
+            buttoncustom1 = new Buttoncustom();
             buttoncustom8 = new Buttoncustom();
             buttoncustom9 = new Buttoncustom();
             buttoncustom10 = new Buttoncustom();
@@ -42,7 +43,6 @@
             label2 = new Label();
             label3 = new Label();
             panel2 = new Panel();
-            buttoncustom1 = new Buttoncustom();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -57,7 +57,7 @@
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1576, 92);
+            panel1.Size = new Size(1630, 92);
             panel1.TabIndex = 0;
             // 
             // button2
@@ -69,7 +69,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(1471, 0);
+            button2.Location = new Point(1525, 0);
             button2.Name = "button2";
             button2.Size = new Size(105, 92);
             button2.TabIndex = 16;
@@ -116,8 +116,28 @@
             panel3.Location = new Point(0, 92);
             panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1576, 65);
+            panel3.Size = new Size(1630, 65);
             panel3.TabIndex = 23;
+            // 
+            // buttoncustom1
+            // 
+            buttoncustom1.BackColor = Color.CornflowerBlue;
+            buttoncustom1.BorderColor = Color.Black;
+            buttoncustom1.BorderRadius = 40;
+            buttoncustom1.BorderSize = 0;
+            buttoncustom1.Dock = DockStyle.Left;
+            buttoncustom1.FlatAppearance.BorderSize = 0;
+            buttoncustom1.FlatStyle = FlatStyle.Flat;
+            buttoncustom1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom1.ForeColor = Color.White;
+            buttoncustom1.Location = new Point(1210, 0);
+            buttoncustom1.Margin = new Padding(3, 4, 3, 4);
+            buttoncustom1.Name = "buttoncustom1";
+            buttoncustom1.Size = new Size(311, 65);
+            buttoncustom1.TabIndex = 7;
+            buttoncustom1.Text = "Room Allotted";
+            buttoncustom1.UseVisualStyleBackColor = false;
+            buttoncustom1.Click += buttoncustom1_Click;
             // 
             // buttoncustom8
             // 
@@ -251,30 +271,11 @@
             panel2.Size = new Size(810, 1);
             panel2.TabIndex = 41;
             // 
-            // buttoncustom1
-            // 
-            buttoncustom1.BackColor = Color.CornflowerBlue;
-            buttoncustom1.BorderColor = Color.Black;
-            buttoncustom1.BorderRadius = 40;
-            buttoncustom1.BorderSize = 0;
-            buttoncustom1.Dock = DockStyle.Left;
-            buttoncustom1.FlatAppearance.BorderSize = 0;
-            buttoncustom1.FlatStyle = FlatStyle.Flat;
-            buttoncustom1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            buttoncustom1.ForeColor = Color.White;
-            buttoncustom1.Location = new Point(1210, 0);
-            buttoncustom1.Margin = new Padding(3, 4, 3, 4);
-            buttoncustom1.Name = "buttoncustom1";
-            buttoncustom1.Size = new Size(311, 65);
-            buttoncustom1.TabIndex = 7;
-            buttoncustom1.Text = "Room Allotted";
-            buttoncustom1.UseVisualStyleBackColor = false;
-            // 
             // HomeStudent
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1576, 963);
+            ClientSize = new Size(1630, 963);
             Controls.Add(panel2);
             Controls.Add(label3);
             Controls.Add(label2);

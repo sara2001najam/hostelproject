@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HostelStaff));
-            btnclose = new Button();
             dataGridView1 = new DataGridView();
             cmbstatus = new ComboBox();
             cmbposition = new ComboBox();
@@ -47,28 +45,15 @@
             buttoncustom3 = new Buttoncustom();
             buttoncustom4 = new Buttoncustom();
             label9 = new Label();
-            panel1 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
             label8 = new Label();
             txtemail = new Textboxcustom();
             label6 = new Label();
             txtid = new Textboxcustom();
             label7 = new Label();
             buttoncustom5 = new Buttoncustom();
+            btnsent = new Buttoncustom();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // btnclose
-            // 
-            btnclose.Location = new Point(1144, 12);
-            btnclose.Name = "btnclose";
-            btnclose.Size = new Size(68, 48);
-            btnclose.TabIndex = 34;
-            btnclose.Text = "close";
-            btnclose.UseVisualStyleBackColor = true;
-            btnclose.Click += btnclose_Click;
             // 
             // dataGridView1
             // 
@@ -79,7 +64,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(586, 453);
+            dataGridView1.Size = new Size(881, 436);
             dataGridView1.TabIndex = 29;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -292,7 +277,7 @@
             buttoncustom4.FlatAppearance.BorderSize = 0;
             buttoncustom4.FlatStyle = FlatStyle.Flat;
             buttoncustom4.ForeColor = Color.White;
-            buttoncustom4.Location = new Point(155, 554);
+            buttoncustom4.Location = new Point(71, 564);
             buttoncustom4.Name = "buttoncustom4";
             buttoncustom4.Size = new Size(148, 45);
             buttoncustom4.TabIndex = 54;
@@ -311,52 +296,6 @@
             label9.Size = new Size(201, 28);
             label9.TabIndex = 55;
             label9.Text = "EMPLOYEE LIST";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.RoyalBlue;
-            panel1.BackgroundImageLayout = ImageLayout.None;
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1350, 61);
-            panel1.TabIndex = 69;
-            // 
-            // button2
-            // 
-            button2.Dock = DockStyle.Right;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
-            button2.FlatAppearance.MouseOverBackColor = Color.Red;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(1278, 0);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(72, 61);
-            button2.TabIndex = 15;
-            button2.Text = "X";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.Dock = DockStyle.Left;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = SystemColors.ButtonFace;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(0, 0);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(124, 61);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -432,9 +371,9 @@
             label7.ForeColor = Color.RoyalBlue;
             label7.Location = new Point(65, 100);
             label7.Name = "label7";
-            label7.Size = new Size(131, 25);
+            label7.Size = new Size(81, 25);
             label7.TabIndex = 73;
-            label7.Text = "Employee Id";
+            label7.Text = "Staff Id";
             // 
             // buttoncustom5
             // 
@@ -445,26 +384,44 @@
             buttoncustom5.FlatAppearance.BorderSize = 0;
             buttoncustom5.FlatStyle = FlatStyle.Flat;
             buttoncustom5.ForeColor = Color.White;
-            buttoncustom5.Location = new Point(349, 554);
+            buttoncustom5.Location = new Point(242, 564);
             buttoncustom5.Name = "buttoncustom5";
             buttoncustom5.Size = new Size(148, 45);
             buttoncustom5.TabIndex = 75;
-            buttoncustom5.Text = "Display";
+            buttoncustom5.Text = "DISPLAY";
             buttoncustom5.UseVisualStyleBackColor = false;
             buttoncustom5.Click += buttoncustom5_Click;
+            // 
+            // btnsent
+            // 
+            btnsent.BackColor = Color.CornflowerBlue;
+            btnsent.BorderColor = Color.Black;
+            btnsent.BorderRadius = 40;
+            btnsent.BorderSize = 0;
+            btnsent.FlatAppearance.BorderSize = 0;
+            btnsent.FlatStyle = FlatStyle.Flat;
+            btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsent.ForeColor = Color.White;
+            btnsent.Location = new Point(414, 564);
+            btnsent.Name = "btnsent";
+            btnsent.Size = new Size(156, 45);
+            btnsent.TabIndex = 76;
+            btnsent.Text = "LEAVE";
+            btnsent.UseVisualStyleBackColor = false;
+            btnsent.Click += btnsent_Click;
             // 
             // HostelStaff
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1350, 700);
+            ClientSize = new Size(1600, 650);
+            Controls.Add(btnsent);
             Controls.Add(buttoncustom5);
             Controls.Add(txtid);
             Controls.Add(label7);
             Controls.Add(txtemail);
             Controls.Add(label6);
             Controls.Add(label8);
-            Controls.Add(panel1);
             Controls.Add(label9);
             Controls.Add(buttoncustom4);
             Controls.Add(buttoncustom3);
@@ -478,7 +435,6 @@
             Controls.Add(txtAddress);
             Controls.Add(txtname);
             Controls.Add(label1);
-            Controls.Add(btnclose);
             Controls.Add(dataGridView1);
             Controls.Add(cmbstatus);
             Controls.Add(cmbposition);
@@ -489,13 +445,11 @@
             Text = "HostelStaff";
             Load += HostelStaff_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Button btnclose;
         private DataGridView dataGridView1;
         private ComboBox cmbstatus;
         private ComboBox cmbposition;
@@ -513,14 +467,12 @@
         private Buttoncustom buttoncustom3;
         private Buttoncustom buttoncustom4;
         private Label label9;
-        private Panel panel1;
-        private Button button2;
-        private Button button1;
         private Label label8;
         private Textboxcustom txtemail;
         private Label label6;
         private Textboxcustom txtid;
         private Label label7;
         private Buttoncustom buttoncustom5;
+        private Buttoncustom btnsent;
     }
 }

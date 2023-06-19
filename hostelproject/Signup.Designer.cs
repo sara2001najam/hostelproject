@@ -80,6 +80,7 @@
             gradientPanel1.Name = "gradientPanel1";
             gradientPanel1.Size = new Size(581, 992);
             gradientPanel1.TabIndex = 0;
+            gradientPanel1.Paint += gradientPanel1_Paint;
             // 
             // buttoncustom2
             // 
@@ -234,6 +235,7 @@
             Controls.Add(textboxcustom1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Signup";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Signup";
             gradientPanel1.ResumeLayout(false);
             gradientPanel1.PerformLayout();

@@ -75,8 +75,7 @@ namespace hostelproject
 
         private void buttoncustom12_Click(object sender, EventArgs e)
         {
-            Feechallan fe = new Feechallan();
-            fe.Show();
+            
         }
 
         private void buttoncustom11_Click(object sender, EventArgs e)
@@ -101,6 +100,12 @@ namespace hostelproject
         {
             menudis m = new menudis();
             m.Show();
+        }
+
+        private void buttoncustom1_Click(object sender, EventArgs e)
+        {
+            RoomAlloted ra = new RoomAlloted();
+            ra.Show();
         }
     }
 }

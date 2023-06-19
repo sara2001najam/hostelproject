@@ -28,57 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Actcalen));
-            panel1 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
             label14 = new Label();
             panel2 = new Panel();
-            panel1.SuspendLayout();
+            btnsent = new Buttoncustom();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.RoyalBlue;
-            panel1.BackgroundImageLayout = ImageLayout.None;
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1300, 77);
-            panel1.TabIndex = 4;
-            // 
-            // button2
-            // 
-            button2.Dock = DockStyle.Right;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
-            button2.FlatAppearance.MouseOverBackColor = Color.Red;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(1228, 0);
-            button2.Name = "button2";
-            button2.Size = new Size(72, 77);
-            button2.TabIndex = 15;
-            button2.Text = "X";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.Dock = DockStyle.Left;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = SystemColors.ButtonFace;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(0, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(124, 77);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = false;
             // 
             // label14
             // 
@@ -100,29 +53,43 @@
             panel2.Size = new Size(700, 1);
             panel2.TabIndex = 42;
             // 
+            // btnsent
+            // 
+            btnsent.BackColor = Color.CornflowerBlue;
+            btnsent.BorderColor = Color.Black;
+            btnsent.BorderRadius = 40;
+            btnsent.BorderSize = 0;
+            btnsent.FlatAppearance.BorderSize = 0;
+            btnsent.FlatStyle = FlatStyle.Flat;
+            btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsent.ForeColor = Color.White;
+            btnsent.Location = new Point(1300, 559);
+            btnsent.Name = "btnsent";
+            btnsent.Size = new Size(198, 35);
+            btnsent.TabIndex = 71;
+            btnsent.Text = "LEAVE";
+            btnsent.UseVisualStyleBackColor = false;
+            btnsent.Click += btnsent_Click;
+            // 
             // Actcalen
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1300, 700);
+            ClientSize = new Size(1600, 650);
+            Controls.Add(btnsent);
             Controls.Add(panel2);
             Controls.Add(label14);
-            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Actcalen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Actcalen";
-            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
-        private Button button2;
-        private Button button1;
         private Label label14;
         private Panel panel2;
+        private Buttoncustom btnsent;
     }
 }

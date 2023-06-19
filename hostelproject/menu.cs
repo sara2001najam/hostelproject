@@ -51,7 +51,7 @@ namespace hostelproject
 
         private void buttoncustom12_Click(object sender, EventArgs e)
         {
-            Feechallan fe = new Feechallan();
+            SalaryEmp fe = new SalaryEmp();
             fe.Show();
         }
 
@@ -271,6 +271,11 @@ namespace hostelproject
         private void buttoncustom4_Click(object sender, EventArgs e)
         {
             populate();
+        }
+
+        private void btnsent_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

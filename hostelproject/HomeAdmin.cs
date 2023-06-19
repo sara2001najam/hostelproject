@@ -133,5 +133,11 @@ namespace hostelproject
             Studentinfo si = new Studentinfo();
             si.Show();
         }
+
+        private void buttoncustom4_Click_1(object sender, EventArgs e)
+        {
+            SalaryEmp s =new SalaryEmp();
+            s.Show();
+        }
     }
 }

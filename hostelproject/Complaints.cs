@@ -41,10 +41,11 @@ namespace hostelproject
         //    dataGridView1.DataSource = ds.Tables[0];
         //    con.Close();
         //}
-        
+
 
         private void btnsent_Click(object sender, EventArgs e)
-        {lbl.Visible=false;
+        {
+            lbl.Visible = false;
             string enrollID = txtenroll.Texts;
             string title = txtTitle.Texts;
             string description = txtDescription.Texts;
@@ -67,7 +68,7 @@ namespace hostelproject
                     command.Parameters.AddWithValue("@status", status);
                     command.ExecuteNonQuery();
 
-                    lbl.Visible=true;
+                    lbl.Visible = true;
                     MessageBox.Show("Complaint sent successfully!");
 
                 }
@@ -76,6 +77,11 @@ namespace hostelproject
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void buttoncustom2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

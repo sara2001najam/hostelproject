@@ -34,6 +34,7 @@
             button1 = new Button();
             label1 = new Label();
             panel3 = new Panel();
+            buttoncustom4 = new Buttoncustom();
             buttoncustom3 = new Buttoncustom();
             buttoncustom2 = new Buttoncustom();
             buttoncustom1 = new Buttoncustom();
@@ -108,6 +109,7 @@
             // panel3
             // 
             panel3.BackColor = Color.CornflowerBlue;
+            panel3.Controls.Add(buttoncustom4);
             panel3.Controls.Add(buttoncustom3);
             panel3.Controls.Add(buttoncustom2);
             panel3.Controls.Add(buttoncustom1);
@@ -124,6 +126,26 @@
             panel3.TabIndex = 26;
             panel3.Paint += panel3_Paint;
             // 
+            // buttoncustom4
+            // 
+            buttoncustom4.BackColor = Color.CornflowerBlue;
+            buttoncustom4.BorderColor = Color.Black;
+            buttoncustom4.BorderRadius = 40;
+            buttoncustom4.BorderSize = 0;
+            buttoncustom4.Dock = DockStyle.Left;
+            buttoncustom4.FlatAppearance.BorderSize = 0;
+            buttoncustom4.FlatStyle = FlatStyle.Flat;
+            buttoncustom4.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            buttoncustom4.ForeColor = Color.White;
+            buttoncustom4.Location = new Point(1399, 0);
+            buttoncustom4.Margin = new Padding(3, 4, 3, 4);
+            buttoncustom4.Name = "buttoncustom4";
+            buttoncustom4.Size = new Size(184, 65);
+            buttoncustom4.TabIndex = 18;
+            buttoncustom4.Text = "Salary Allocation";
+            buttoncustom4.UseVisualStyleBackColor = false;
+            buttoncustom4.Click += buttoncustom4_Click_1;
+            // 
             // buttoncustom3
             // 
             buttoncustom3.BackColor = Color.CornflowerBlue;
@@ -135,7 +157,7 @@
             buttoncustom3.FlatStyle = FlatStyle.Flat;
             buttoncustom3.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom3.ForeColor = Color.White;
-            buttoncustom3.Location = new Point(1304, 0);
+            buttoncustom3.Location = new Point(1215, 0);
             buttoncustom3.Margin = new Padding(3, 4, 3, 4);
             buttoncustom3.Name = "buttoncustom3";
             buttoncustom3.Size = new Size(184, 65);
@@ -155,10 +177,10 @@
             buttoncustom2.FlatStyle = FlatStyle.Flat;
             buttoncustom2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom2.ForeColor = Color.White;
-            buttoncustom2.Location = new Point(1120, 0);
+            buttoncustom2.Location = new Point(1067, 0);
             buttoncustom2.Margin = new Padding(3, 4, 3, 4);
             buttoncustom2.Name = "buttoncustom2";
-            buttoncustom2.Size = new Size(184, 65);
+            buttoncustom2.Size = new Size(148, 65);
             buttoncustom2.TabIndex = 16;
             buttoncustom2.Text = "Utility Bills";
             buttoncustom2.UseVisualStyleBackColor = false;
@@ -175,7 +197,7 @@
             buttoncustom1.FlatStyle = FlatStyle.Flat;
             buttoncustom1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom1.ForeColor = Color.White;
-            buttoncustom1.Location = new Point(936, 0);
+            buttoncustom1.Location = new Point(883, 0);
             buttoncustom1.Margin = new Padding(3, 4, 3, 4);
             buttoncustom1.Name = "buttoncustom1";
             buttoncustom1.Size = new Size(184, 65);
@@ -195,7 +217,7 @@
             buttoncustom8.FlatStyle = FlatStyle.Flat;
             buttoncustom8.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom8.ForeColor = Color.White;
-            buttoncustom8.Location = new Point(752, 0);
+            buttoncustom8.Location = new Point(699, 0);
             buttoncustom8.Margin = new Padding(3, 4, 3, 4);
             buttoncustom8.Name = "buttoncustom8";
             buttoncustom8.Size = new Size(184, 65);
@@ -215,7 +237,7 @@
             buttoncustom9.FlatStyle = FlatStyle.Flat;
             buttoncustom9.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             buttoncustom9.ForeColor = Color.White;
-            buttoncustom9.Location = new Point(568, 0);
+            buttoncustom9.Location = new Point(515, 0);
             buttoncustom9.Margin = new Padding(3, 4, 3, 4);
             buttoncustom9.Name = "buttoncustom9";
             buttoncustom9.Size = new Size(184, 65);
@@ -238,7 +260,7 @@
             buttoncustom10.Location = new Point(368, 0);
             buttoncustom10.Margin = new Padding(3, 4, 3, 4);
             buttoncustom10.Name = "buttoncustom10";
-            buttoncustom10.Size = new Size(200, 65);
+            buttoncustom10.Size = new Size(147, 65);
             buttoncustom10.TabIndex = 10;
             buttoncustom10.Text = "Rooms";
             buttoncustom10.UseVisualStyleBackColor = false;
@@ -356,5 +378,6 @@
         private Panel panel2;
         private Label label2;
         private Label label3;
+        private Buttoncustom buttoncustom4;
     }
 }

@@ -95,51 +95,92 @@ namespace hostelproject
         private void buttoncustom2_Click(object sender, EventArgs e)
         {
 
+            //try
+            //{
+            //    using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
+            //    {
+
+            //        string message = "Please note that you are only allowed to update your email address. Are you sure you want to proceed?";
+
+            //        DialogResult dialogResult = MessageBox.Show(message, "Update Confirmation", MessageBoxButtons.YesNo);
+
+            //        if (dialogResult == DialogResult.Yes)
+            //        {
+
+            //            string email = txtemail.Text;
+            //            string enrollNo = txtenroll.Text;
+            //            con.Open();
+
+            //            SqlCommand command = new SqlCommand("UpdateProfileEmail", con);
+            //            command.CommandType = CommandType.StoredProcedure;
+
+            //            command.Parameters.AddWithValue("@enrollno", enrollNo);
+            //            command.Parameters.AddWithValue("@email", email);
+
+            //            int rowsAffected = command.ExecuteNonQuery();
+
+            //            if (rowsAffected > 0)
+            //            {
+            //                MessageBox.Show("Email updated successfully!");
+            //            }
+            //            else
+            //            {
+            //                MessageBox.Show("No student record found with the provided enrollment number.");
+            //            }
+            //        }
+            //    }
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error: " + ex.Message);
+            //}
+
+
             try
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
+                string enrollNo = txtenroll.Texts;
+                string email = txtemail.Texts;
+
+                using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
                 {
+                    con.Open();
 
-                    string message = "Please note that you are only allowed to update your email address. Are you sure you want to proceed?";
+                    SqlCommand command = new SqlCommand("UpdateProfileEmail", con);
+                    command.CommandType = CommandType.StoredProcedure;
 
-                    DialogResult dialogResult = MessageBox.Show(message, "Update Confirmation", MessageBoxButtons.YesNo);
+                    command.Parameters.AddWithValue("@enrollno", enrollNo);
+                    command.Parameters.AddWithValue("@email", email);
 
-                    if (dialogResult == DialogResult.Yes)
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
                     {
-                        string email = txtemail.Text;
-                        string enrollNo = txtenroll.Text;
-                        con.Open();
-
-                        SqlCommand command = new SqlCommand("UpdateProfileEmail", con);
-                        command.CommandType = CommandType.StoredProcedure;
-
-                        command.Parameters.AddWithValue("@enrollno", enrollNo);
-                        command.Parameters.AddWithValue("@email", email);
-
-                        int rowsAffected = command.ExecuteNonQuery();
-
-                        if (rowsAffected > 0)
-                        {
-                            MessageBox.Show("Email updated successfully!");
-                        }
-                        else
-                        {
-                            MessageBox.Show("No student record found with the provided enrollment number.");
-                        }
+                        MessageBox.Show("Email updated successfully!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No record found with the provided enrollment number.");
                     }
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+
+
             populate();
         }
 
         private void Profile_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnsent_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

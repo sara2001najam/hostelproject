@@ -142,18 +142,16 @@ namespace hostelproject
         {
             try
             {
+                int staffId = Convert.ToInt32(txtid.Texts);
+
                 using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
                 {
                     con.Open();
-
-                    int? staffId = int.TryParse(txtid.Text, out int id) ? id : (int?)null;
-                    string name = txtname.Text;
 
                     SqlCommand command = new SqlCommand("SearchStaff", con);
                     command.CommandType = CommandType.StoredProcedure;
 
                     command.Parameters.AddWithValue("@staff_id", staffId);
-                    command.Parameters.AddWithValue("@name", name);
 
                     SqlDataAdapter adapter = new SqlDataAdapter(command);
                     DataTable dataTable = new DataTable();
@@ -161,12 +159,11 @@ namespace hostelproject
 
                     if (dataTable.Rows.Count > 0)
                     {
-                        // Display the search results by binding the DataTable to the DataGridView
                         dataGridView1.DataSource = dataTable;
                     }
                     else
                     {
-                        MessageBox.Show("No staff records found with the provided ID or name.");
+                        MessageBox.Show("No staff records found with the provided ID.");
                     }
                 }
             }
@@ -174,6 +171,8 @@ namespace hostelproject
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+
+           // populate();
 
         }
 
@@ -226,6 +225,11 @@ namespace hostelproject
         private void HostelStaff_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnsent_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 

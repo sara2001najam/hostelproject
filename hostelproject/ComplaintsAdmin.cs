@@ -94,8 +94,13 @@ namespace hostelproject
 
         private void label1_Click(object sender, EventArgs e)
         {
-            lbll.Visible=false;
+            lbll.Visible = false;
 
+        }
+
+        private void btnsent_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

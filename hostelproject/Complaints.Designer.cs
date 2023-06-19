@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Complaints));
-            panel1 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
             lben = new Label();
             txtenroll = new Textboxcustom();
             label2 = new Label();
@@ -45,51 +42,8 @@
             btnsent = new Buttoncustom();
             txtTitle = new Textboxcustom();
             label1 = new Label();
-            panel1.SuspendLayout();
+            buttoncustom2 = new Buttoncustom();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.RoyalBlue;
-            panel1.BackgroundImageLayout = ImageLayout.None;
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1350, 77);
-            panel1.TabIndex = 4;
-            // 
-            // button2
-            // 
-            button2.Dock = DockStyle.Right;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
-            button2.FlatAppearance.MouseOverBackColor = Color.Red;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(1278, 0);
-            button2.Name = "button2";
-            button2.Size = new Size(72, 77);
-            button2.TabIndex = 15;
-            button2.Text = "X";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.Dock = DockStyle.Left;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = SystemColors.ButtonFace;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(0, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(124, 77);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = false;
             // 
             // lben
             // 
@@ -161,7 +115,7 @@
             // panel4
             // 
             panel4.BackColor = Color.RoyalBlue;
-            panel4.Location = new Point(698, 122);
+            panel4.Location = new Point(698, 27);
             panel4.Name = "panel4";
             panel4.Size = new Size(1, 650);
             panel4.TabIndex = 42;
@@ -237,7 +191,7 @@
             btnsent.FlatStyle = FlatStyle.Flat;
             btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnsent.ForeColor = Color.White;
-            btnsent.Location = new Point(398, 619);
+            btnsent.Location = new Point(398, 590);
             btnsent.Name = "btnsent";
             btnsent.Size = new Size(198, 35);
             btnsent.TabIndex = 70;
@@ -278,12 +232,31 @@
             label1.TabIndex = 71;
             label1.Text = "Enter Title/reason";
             // 
+            // buttoncustom2
+            // 
+            buttoncustom2.BackColor = Color.CornflowerBlue;
+            buttoncustom2.BorderColor = Color.Black;
+            buttoncustom2.BorderRadius = 40;
+            buttoncustom2.BorderSize = 0;
+            buttoncustom2.FlatAppearance.BorderSize = 0;
+            buttoncustom2.FlatStyle = FlatStyle.Flat;
+            buttoncustom2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttoncustom2.ForeColor = Color.White;
+            buttoncustom2.Location = new Point(1318, 582);
+            buttoncustom2.Name = "buttoncustom2";
+            buttoncustom2.Size = new Size(198, 35);
+            buttoncustom2.TabIndex = 73;
+            buttoncustom2.Text = "LEAVE";
+            buttoncustom2.UseVisualStyleBackColor = false;
+            buttoncustom2.Click += buttoncustom2_Click;
+            // 
             // Complaints
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
-            ClientSize = new Size(1350, 700);
+            ClientSize = new Size(1600, 650);
+            Controls.Add(buttoncustom2);
             Controls.Add(txtTitle);
             Controls.Add(label1);
             Controls.Add(btnsent);
@@ -297,21 +270,15 @@
             Controls.Add(label2);
             Controls.Add(txtenroll);
             Controls.Add(lben);
-            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Complaints";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Complaints";
-            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
-        private Button button2;
-        private Button button1;
         private Label lben;
         private Textboxcustom txtenroll;
         private Label label2;
@@ -325,5 +292,6 @@
         private Buttoncustom btnsent;
         private Textboxcustom txtTitle;
         private Label label1;
+        private Buttoncustom buttoncustom2;
     }
 }

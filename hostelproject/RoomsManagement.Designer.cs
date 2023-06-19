@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomsManagement));
-            panel1 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
             label9 = new Label();
             label1 = new Label();
             txtRoomno = new Textboxcustom();
@@ -51,56 +47,9 @@
             label2 = new Label();
             txtsrch = new Textboxcustom();
             label5 = new Label();
-            listBox1 = new ListBox();
-            panel1.SuspendLayout();
+            btnsent = new Buttoncustom();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.RoyalBlue;
-            panel1.BackgroundImageLayout = ImageLayout.None;
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1300, 75);
-            panel1.TabIndex = 5;
-            // 
-            // button2
-            // 
-            button2.Dock = DockStyle.Right;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
-            button2.FlatAppearance.MouseOverBackColor = Color.Red;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(1228, 0);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(72, 75);
-            button2.TabIndex = 15;
-            button2.Text = "X";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.Dock = DockStyle.Left;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = SystemColors.ButtonFace;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(0, 0);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(124, 75);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = false;
             // 
             // label9
             // 
@@ -230,11 +179,11 @@
             dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.BackgroundColor = SystemColors.ButtonShadow;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(149, 430);
+            dataGridView1.Location = new Point(149, 404);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(968, 248);
+            dataGridView1.Size = new Size(968, 218);
             dataGridView1.TabIndex = 50;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
@@ -244,7 +193,7 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label6.ForeColor = Color.RoyalBlue;
-            label6.Location = new Point(527, 399);
+            label6.Location = new Point(527, 359);
             label6.Name = "label6";
             label6.Size = new Size(147, 28);
             label6.TabIndex = 51;
@@ -362,21 +311,29 @@
             label5.TabIndex = 61;
             label5.Text = "Room No";
             // 
-            // listBox1
+            // btnsent
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 25;
-            listBox1.Location = new Point(1018, 339);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(180, 129);
-            listBox1.TabIndex = 63;
+            btnsent.BackColor = Color.CornflowerBlue;
+            btnsent.BorderColor = Color.Black;
+            btnsent.BorderRadius = 40;
+            btnsent.BorderSize = 0;
+            btnsent.FlatAppearance.BorderSize = 0;
+            btnsent.FlatStyle = FlatStyle.Flat;
+            btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsent.ForeColor = Color.White;
+            btnsent.Location = new Point(976, 352);
+            btnsent.Name = "btnsent";
+            btnsent.Size = new Size(198, 35);
+            btnsent.TabIndex = 71;
+            btnsent.Text = "SEND";
+            btnsent.UseVisualStyleBackColor = false;
             // 
             // RoomsManagement
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1300, 700);
-            Controls.Add(listBox1);
+            ClientSize = new Size(1600, 650);
+            Controls.Add(btnsent);
             Controls.Add(txtsrch);
             Controls.Add(label5);
             Controls.Add(comboBox3);
@@ -396,23 +353,17 @@
             Controls.Add(txtRoomno);
             Controls.Add(label1);
             Controls.Add(label9);
-            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "RoomsManagement";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Rooms";
             Load += RoomsManagement_Load;
-            panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
-        private Button button2;
-        private Button button1;
         private Label label9;
         private Label label1;
         private Textboxcustom txtRoomno;
@@ -432,6 +383,6 @@
         private Label label2;
         private Textboxcustom txtsrch;
         private Label label5;
-        private ListBox listBox1;
+        private Buttoncustom btnsent;
     }
 }

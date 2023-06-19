@@ -26,5 +26,10 @@ namespace hostelproject
         {
             this.Close();
         }
+
+        private void btnsent_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

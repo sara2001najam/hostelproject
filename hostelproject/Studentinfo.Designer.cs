@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Studentinfo));
-            panel1 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
             label8 = new Label();
             dataGridView1 = new DataGridView();
             buttoncustom4 = new Buttoncustom();
@@ -57,55 +53,9 @@
             txtroomid = new Label();
             label7 = new Label();
             txtfname = new Textboxcustom();
-            panel1.SuspendLayout();
+            btnsent = new Buttoncustom();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.RoyalBlue;
-            panel1.BackgroundImageLayout = ImageLayout.None;
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1350, 49);
-            panel1.TabIndex = 70;
-            // 
-            // button2
-            // 
-            button2.Dock = DockStyle.Right;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
-            button2.FlatAppearance.MouseOverBackColor = Color.Red;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(1278, 0);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(72, 49);
-            button2.TabIndex = 15;
-            button2.Text = "X";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.Dock = DockStyle.Left;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = SystemColors.ButtonFace;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(0, 0);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(124, 49);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -113,7 +63,7 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label8.ForeColor = Color.RoyalBlue;
-            label8.Location = new Point(897, 123);
+            label8.Location = new Point(1011, 124);
             label8.Name = "label8";
             label8.Size = new Size(180, 28);
             label8.TabIndex = 72;
@@ -128,7 +78,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(586, 453);
+            dataGridView1.Size = new Size(794, 427);
             dataGridView1.TabIndex = 71;
             // 
             // buttoncustom4
@@ -156,7 +106,7 @@
             buttoncustom3.FlatAppearance.BorderSize = 0;
             buttoncustom3.FlatStyle = FlatStyle.Flat;
             buttoncustom3.ForeColor = Color.White;
-            buttoncustom3.Location = new Point(352, 589);
+            buttoncustom3.Location = new Point(334, 593);
             buttoncustom3.Name = "buttoncustom3";
             buttoncustom3.Size = new Size(148, 45);
             buttoncustom3.TabIndex = 75;
@@ -173,7 +123,7 @@
             buttoncustom2.FlatAppearance.BorderSize = 0;
             buttoncustom2.FlatStyle = FlatStyle.Flat;
             buttoncustom2.ForeColor = Color.White;
-            buttoncustom2.Location = new Point(198, 608);
+            buttoncustom2.Location = new Point(184, 593);
             buttoncustom2.Name = "buttoncustom2";
             buttoncustom2.Size = new Size(148, 45);
             buttoncustom2.TabIndex = 74;
@@ -190,7 +140,7 @@
             buttoncustom1.FlatAppearance.BorderSize = 0;
             buttoncustom1.FlatStyle = FlatStyle.Flat;
             buttoncustom1.ForeColor = Color.White;
-            buttoncustom1.Location = new Point(41, 589);
+            buttoncustom1.Location = new Point(30, 559);
             buttoncustom1.Name = "buttoncustom1";
             buttoncustom1.Size = new Size(148, 45);
             buttoncustom1.TabIndex = 73;
@@ -207,7 +157,7 @@
             stdemail.BorderSize = 3;
             stdemail.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             stdemail.ForeColor = Color.DimGray;
-            stdemail.Location = new Point(192, 217);
+            stdemail.Location = new Point(184, 184);
             stdemail.Multiline = false;
             stdemail.Name = "stdemail";
             stdemail.Padding = new Padding(10, 7, 10, 7);
@@ -228,7 +178,7 @@
             stdUsn.BorderSize = 3;
             stdUsn.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             stdUsn.ForeColor = Color.DimGray;
-            stdUsn.Location = new Point(192, 72);
+            stdUsn.Location = new Point(184, 39);
             stdUsn.Multiline = false;
             stdUsn.Name = "stdUsn";
             stdUsn.Padding = new Padding(10, 7, 10, 7);
@@ -246,7 +196,7 @@
             label12.BackColor = Color.Transparent;
             label12.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label12.ForeColor = Color.RoyalBlue;
-            label12.Location = new Point(38, 86);
+            label12.Location = new Point(30, 53);
             label12.Name = "label12";
             label12.Size = new Size(114, 25);
             label12.TabIndex = 77;
@@ -261,7 +211,7 @@
             stdname.BorderSize = 3;
             stdname.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             stdname.ForeColor = Color.DimGray;
-            stdname.Location = new Point(192, 169);
+            stdname.Location = new Point(184, 136);
             stdname.Multiline = false;
             stdname.Name = "stdname";
             stdname.Padding = new Padding(10, 7, 10, 7);
@@ -279,7 +229,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.RoyalBlue;
-            label1.Location = new Point(38, 231);
+            label1.Location = new Point(30, 198);
             label1.Name = "label1";
             label1.Size = new Size(151, 25);
             label1.TabIndex = 80;
@@ -294,7 +244,7 @@
             stdenrollno.BorderSize = 3;
             stdenrollno.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             stdenrollno.ForeColor = Color.DimGray;
-            stdenrollno.Location = new Point(203, 308);
+            stdenrollno.Location = new Point(195, 275);
             stdenrollno.Multiline = false;
             stdenrollno.Name = "stdenrollno";
             stdenrollno.Padding = new Padding(10, 7, 10, 7);
@@ -312,7 +262,7 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.RoyalBlue;
-            label2.Location = new Point(37, 180);
+            label2.Location = new Point(29, 147);
             label2.Name = "label2";
             label2.Size = new Size(149, 25);
             label2.TabIndex = 82;
@@ -324,7 +274,7 @@
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.RoyalBlue;
-            label3.Location = new Point(35, 322);
+            label3.Location = new Point(27, 289);
             label3.Name = "label3";
             label3.Size = new Size(141, 25);
             label3.TabIndex = 84;
@@ -339,7 +289,7 @@
             stdphoneno.BorderSize = 3;
             stdphoneno.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             stdphoneno.ForeColor = Color.DimGray;
-            stdphoneno.Location = new Point(198, 362);
+            stdphoneno.Location = new Point(190, 329);
             stdphoneno.Multiline = false;
             stdphoneno.Name = "stdphoneno";
             stdphoneno.Padding = new Padding(10, 7, 10, 7);
@@ -357,7 +307,7 @@
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.RoyalBlue;
-            label4.Location = new Point(35, 376);
+            label4.Location = new Point(27, 343);
             label4.Name = "label4";
             label4.Size = new Size(101, 25);
             label4.TabIndex = 85;
@@ -369,7 +319,7 @@
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label5.ForeColor = Color.RoyalBlue;
-            label5.Location = new Point(35, 476);
+            label5.Location = new Point(27, 443);
             label5.Name = "label5";
             label5.Size = new Size(154, 25);
             label5.TabIndex = 88;
@@ -384,7 +334,7 @@
             stdaddress.BorderSize = 3;
             stdaddress.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             stdaddress.ForeColor = Color.DimGray;
-            stdaddress.Location = new Point(203, 476);
+            stdaddress.Location = new Point(195, 443);
             stdaddress.Multiline = true;
             stdaddress.Name = "stdaddress";
             stdaddress.Padding = new Padding(10, 7, 10, 7);
@@ -402,7 +352,7 @@
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.RoyalBlue;
-            label6.Location = new Point(41, 428);
+            label6.Location = new Point(33, 395);
             label6.Name = "label6";
             label6.Size = new Size(70, 25);
             label6.TabIndex = 90;
@@ -410,7 +360,7 @@
             // 
             // dtpDateOfBirth
             // 
-            dtpDateOfBirth.Location = new Point(195, 422);
+            dtpDateOfBirth.Location = new Point(187, 389);
             dtpDateOfBirth.Name = "dtpDateOfBirth";
             dtpDateOfBirth.Size = new Size(300, 31);
             dtpDateOfBirth.TabIndex = 91;
@@ -424,7 +374,7 @@
             buttoncustom5.FlatAppearance.BorderSize = 0;
             buttoncustom5.FlatStyle = FlatStyle.Flat;
             buttoncustom5.ForeColor = Color.White;
-            buttoncustom5.Location = new Point(506, 608);
+            buttoncustom5.Location = new Point(488, 559);
             buttoncustom5.Name = "buttoncustom5";
             buttoncustom5.Size = new Size(148, 45);
             buttoncustom5.TabIndex = 92;
@@ -441,7 +391,7 @@
             textboxcustom1.BorderSize = 3;
             textboxcustom1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             textboxcustom1.ForeColor = Color.DimGray;
-            textboxcustom1.Location = new Point(192, 123);
+            textboxcustom1.Location = new Point(184, 90);
             textboxcustom1.Multiline = false;
             textboxcustom1.Name = "textboxcustom1";
             textboxcustom1.Padding = new Padding(10, 7, 10, 7);
@@ -459,7 +409,7 @@
             txtroomid.BackColor = Color.Transparent;
             txtroomid.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             txtroomid.ForeColor = Color.RoyalBlue;
-            txtroomid.Location = new Point(41, 137);
+            txtroomid.Location = new Point(33, 104);
             txtroomid.Name = "txtroomid";
             txtroomid.Size = new Size(94, 25);
             txtroomid.TabIndex = 93;
@@ -472,7 +422,7 @@
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.RoyalBlue;
-            label7.Location = new Point(35, 276);
+            label7.Location = new Point(27, 243);
             label7.Name = "label7";
             label7.Size = new Size(136, 25);
             label7.TabIndex = 97;
@@ -487,7 +437,7 @@
             txtfname.BorderSize = 3;
             txtfname.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
             txtfname.ForeColor = Color.DimGray;
-            txtfname.Location = new Point(193, 262);
+            txtfname.Location = new Point(185, 229);
             txtfname.Multiline = false;
             txtfname.Name = "txtfname";
             txtfname.Padding = new Padding(10, 7, 10, 7);
@@ -499,11 +449,30 @@
             txtfname.Texts = "";
             txtfname.UnderlinedStyle = true;
             // 
+            // btnsent
+            // 
+            btnsent.BackColor = Color.CornflowerBlue;
+            btnsent.BorderColor = Color.Black;
+            btnsent.BorderRadius = 40;
+            btnsent.BorderSize = 0;
+            btnsent.FlatAppearance.BorderSize = 0;
+            btnsent.FlatStyle = FlatStyle.Flat;
+            btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsent.ForeColor = Color.White;
+            btnsent.Location = new Point(952, 603);
+            btnsent.Name = "btnsent";
+            btnsent.Size = new Size(198, 35);
+            btnsent.TabIndex = 98;
+            btnsent.Text = "LEAVE";
+            btnsent.UseVisualStyleBackColor = false;
+            btnsent.Click += btnsent_Click;
+            // 
             // Studentinfo
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1350, 700);
+            ClientSize = new Size(1600, 650);
+            Controls.Add(btnsent);
             Controls.Add(label7);
             Controls.Add(txtfname);
             Controls.Add(textboxcustom1);
@@ -529,22 +498,16 @@
             Controls.Add(buttoncustom1);
             Controls.Add(label8);
             Controls.Add(dataGridView1);
-            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Studentinfo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Studentinfo";
-            panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
-        private Button button2;
-        private Button button1;
         private Label label8;
         private DataGridView dataGridView1;
         private Buttoncustom buttoncustom4;
@@ -570,5 +533,6 @@
         private Label txtroomid;
         private Label label7;
         private Textboxcustom txtfname;
+        private Buttoncustom btnsent;
     }
 }

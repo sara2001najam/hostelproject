@@ -117,26 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADMAAAAzCAYAAAA6oTAqAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAwdJREFUaEPt2lmoTVEcx/FjHkuJPJAkJKFEInOGhBQpUoa6pTwoRUTyIo88SCky
-        RkmhZIhMkQdDefAgJEQyZJ5n3991d/0te++715n2Ptm/+tTt3LXXXv9zz1577XVuIc9/nt7o8+fH2s4K
-        /GywRi/Uatbil2M1ai7r4RYSWImaSBNsQFgR1jJkOk2xGe7A18F9XdfQUmQyzbANdsASXPT6i22B/Z0K
-        WoJMpTl2wx3octiooK1w2y1GJtIC++EOMOod10dxO9z2i5BqWuEQ7MB+oLGBqaCdcI+rQyppjaOwA/qO
-        BUgSFbQH9ngVtBBVTVucgh3IV8yBTzRp7IPtR2/IPFQl7XEOdgBfMBPFRJOHe82poLmoaDrgEuyJP2Ea
-        SokKOgDb7zfMRkXSEVdgT/gBk1COaFY8CNu/CpqFsqYTrsOe6B3GopxRQYdhz6NrcQbKki64AXuC1xiB
-        SqQljsCeT9fkdJSUrrgJ2/FLDEUlo/uXO+2roKkoKt1xB7bD5xiEakT3sROw5/+MyfBKT9yD7egJ+qOa
-        UUEnYceh2TPxpKNn9YewHTxCX6SRNjgNO56PGI/Y9MNj2AMfoBfSjFYcZ2HHpdvCOIRmIJ7BHnAXPZCF
-        tMN52PG9x2j8lcF4AdvwFrohS9FS6gLsOHW/G4n6DMMr2AZyDcehJ0WtcNOMno2OQbPbRbhjfYvhKNxv
-        eCFOxRd9MRmDsDG5NPv+c52EWYW0Mh9hY3KpjvoVrz5SutMHbsM2THPjzi1GfwE7VrmKKQhNZ9gOkhSj
-        zYohmOAhyUzpFuO9AimmmI2wxyShFfFExCWVYp7CHpOU9trikkox7n0qqR2IS+rFaOmh5XoULUWCtpkv
-        Zq9eiIgmijcI2ubF+CQvBkH7vJiI5MXY5MUgaJ8XE5GyF6PBaZc/jh5fbfuouMWcQVh/gU0I2krJxfjy
-        KcaXdzHa8Q/rKKldiIqKsR9JXwPgHXfzOintCTe245jknx7CXIa+bfOOdmT05DjKU9LtKe3ThR0fRbtI
-        +sojT42lUPgNe3pswdQaHjcAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="label4.Text" xml:space="preserve">
     <value>For more information, visit our website at 
 www.bahriauniversity.edu.pk

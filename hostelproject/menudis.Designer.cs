@@ -28,59 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(menudis));
-            panel1 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
             label14 = new Label();
             dataGridView1 = new DataGridView();
             btshow = new Buttoncustom();
-            panel1.SuspendLayout();
+            btnsent = new Buttoncustom();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.RoyalBlue;
-            panel1.BackgroundImageLayout = ImageLayout.None;
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1350, 77);
-            panel1.TabIndex = 4;
-            // 
-            // button2
-            // 
-            button2.Dock = DockStyle.Right;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
-            button2.FlatAppearance.MouseOverBackColor = Color.Red;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(1278, 0);
-            button2.Name = "button2";
-            button2.Size = new Size(72, 77);
-            button2.TabIndex = 15;
-            button2.Text = "X";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.Dock = DockStyle.Left;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = SystemColors.ButtonFace;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(0, 0);
-            button1.Name = "button1";
-            button1.Size = new Size(124, 77);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = false;
             // 
             // label14
             // 
@@ -88,7 +41,7 @@
             label14.BackColor = Color.Transparent;
             label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label14.ForeColor = Color.RoyalBlue;
-            label14.Location = new Point(52, 128);
+            label14.Location = new Point(46, 83);
             label14.Name = "label14";
             label14.Size = new Size(142, 29);
             label14.TabIndex = 43;
@@ -97,7 +50,7 @@
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 179);
+            dataGridView1.Location = new Point(12, 152);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
@@ -113,7 +66,7 @@
             btshow.FlatAppearance.BorderSize = 0;
             btshow.FlatStyle = FlatStyle.Flat;
             btshow.ForeColor = Color.White;
-            btshow.Location = new Point(788, 572);
+            btshow.Location = new Point(795, 563);
             btshow.Name = "btshow";
             btshow.Size = new Size(167, 36);
             btshow.TabIndex = 44;
@@ -121,32 +74,46 @@
             btshow.UseVisualStyleBackColor = false;
             btshow.Click += btshow_Click;
             // 
+            // btnsent
+            // 
+            btnsent.BackColor = Color.CornflowerBlue;
+            btnsent.BorderColor = Color.Black;
+            btnsent.BorderRadius = 40;
+            btnsent.BorderSize = 0;
+            btnsent.FlatAppearance.BorderSize = 0;
+            btnsent.FlatStyle = FlatStyle.Flat;
+            btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsent.ForeColor = Color.White;
+            btnsent.Location = new Point(991, 563);
+            btnsent.Name = "btnsent";
+            btnsent.Size = new Size(166, 28);
+            btnsent.TabIndex = 71;
+            btnsent.Text = "LEAVE";
+            btnsent.UseVisualStyleBackColor = false;
+            btnsent.Click += btnsent_Click;
+            // 
             // menudis
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1350, 700);
+            ClientSize = new Size(1600, 650);
+            Controls.Add(btnsent);
             Controls.Add(btshow);
             Controls.Add(label14);
             Controls.Add(dataGridView1);
-            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "menudis";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "menudis";
-            panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
-        private Button button2;
-        private Button button1;
         private Label label14;
         private DataGridView dataGridView1;
         private Buttoncustom btshow;
+        private Buttoncustom btnsent;
     }
 }

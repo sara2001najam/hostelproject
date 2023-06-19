@@ -67,7 +67,7 @@ namespace hostelproject
             }
 
             //fn.getdata();
-            populate();
+            //populate();
         }
 
         public void populate()
@@ -176,6 +176,11 @@ namespace hostelproject
         private void txtroomid_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnsent_Click(object sender, EventArgs e)
+        {
+            this.Close();   
         }
     }
 }

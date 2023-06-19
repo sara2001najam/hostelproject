@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
-            panel1 = new Panel();
-            button2 = new Button();
-            button1 = new Button();
             label14 = new Label();
             panel2 = new Panel();
             label9 = new Label();
@@ -46,60 +42,14 @@
             buttoncustom1 = new Buttoncustom();
             buttoncustom2 = new Buttoncustom();
             label7 = new Label();
-            txtfname = new Textboxcustom();
             dtpDateOfBirth = new DateTimePicker();
             label6 = new Label();
             txtphoneno = new Textboxcustom();
             dataGridView1 = new DataGridView();
-            panel1.SuspendLayout();
+            btnsent = new Buttoncustom();
+            txtfname = new Textboxcustom();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.RoyalBlue;
-            panel1.BackgroundImageLayout = ImageLayout.None;
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1350, 95);
-            panel1.TabIndex = 3;
-            // 
-            // button2
-            // 
-            button2.Dock = DockStyle.Right;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
-            button2.FlatAppearance.MouseOverBackColor = Color.Red;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            button2.ForeColor = SystemColors.Control;
-            button2.Location = new Point(1278, 0);
-            button2.Margin = new Padding(3, 4, 3, 4);
-            button2.Name = "button2";
-            button2.Size = new Size(72, 95);
-            button2.TabIndex = 15;
-            button2.Text = "X";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.RoyalBlue;
-            button1.Dock = DockStyle.Left;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = SystemColors.ButtonFace;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(0, 0);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(124, 95);
-            button1.TabIndex = 1;
-            button1.UseVisualStyleBackColor = false;
             // 
             // label14
             // 
@@ -107,7 +57,7 @@
             label14.BackColor = Color.Transparent;
             label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label14.ForeColor = Color.RoyalBlue;
-            label14.Location = new Point(34, 137);
+            label14.Location = new Point(34, 104);
             label14.Name = "label14";
             label14.Size = new Size(90, 29);
             label14.TabIndex = 40;
@@ -117,7 +67,7 @@
             // panel2
             // 
             panel2.BackColor = Color.RoyalBlue;
-            panel2.Location = new Point(34, 168);
+            panel2.Location = new Point(34, 135);
             panel2.Name = "panel2";
             panel2.Size = new Size(700, 1);
             panel2.TabIndex = 41;
@@ -276,7 +226,7 @@
             buttoncustom1.FlatStyle = FlatStyle.Flat;
             buttoncustom1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttoncustom1.ForeColor = Color.White;
-            buttoncustom1.Location = new Point(363, 595);
+            buttoncustom1.Location = new Point(363, 578);
             buttoncustom1.Name = "buttoncustom1";
             buttoncustom1.Size = new Size(225, 60);
             buttoncustom1.TabIndex = 59;
@@ -294,9 +244,9 @@
             buttoncustom2.FlatStyle = FlatStyle.Flat;
             buttoncustom2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttoncustom2.ForeColor = Color.White;
-            buttoncustom2.Location = new Point(604, 595);
+            buttoncustom2.Location = new Point(603, 578);
             buttoncustom2.Name = "buttoncustom2";
-            buttoncustom2.Size = new Size(225, 60);
+            buttoncustom2.Size = new Size(194, 60);
             buttoncustom2.TabIndex = 60;
             buttoncustom2.Text = "Update";
             buttoncustom2.UseVisualStyleBackColor = false;
@@ -313,27 +263,6 @@
             label7.Size = new Size(136, 25);
             label7.TabIndex = 115;
             label7.Text = "Father Name";
-            // 
-            // txtfname
-            // 
-            txtfname.BackColor = SystemColors.Control;
-            txtfname.BorderColor = Color.DarkBlue;
-            txtfname.BorderFocusColor = Color.Indigo;
-            txtfname.BorderRadius = 0;
-            txtfname.BorderSize = 3;
-            txtfname.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtfname.ForeColor = Color.DimGray;
-            txtfname.Location = new Point(821, 199);
-            txtfname.Multiline = false;
-            txtfname.Name = "txtfname";
-            txtfname.Padding = new Padding(10, 7, 10, 7);
-            txtfname.PasswordChar = false;
-            txtfname.PlaceholderColor = Color.White;
-            txtfname.PlaceholderText = "";
-            txtfname.Size = new Size(297, 39);
-            txtfname.TabIndex = 114;
-            txtfname.Texts = "";
-            txtfname.UnderlinedStyle = true;
             // 
             // dtpDateOfBirth
             // 
@@ -388,11 +317,51 @@
             dataGridView1.Size = new Size(586, 181);
             dataGridView1.TabIndex = 116;
             // 
+            // btnsent
+            // 
+            btnsent.BackColor = Color.CornflowerBlue;
+            btnsent.BorderColor = Color.Black;
+            btnsent.BorderRadius = 40;
+            btnsent.BorderSize = 0;
+            btnsent.FlatAppearance.BorderSize = 0;
+            btnsent.FlatStyle = FlatStyle.Flat;
+            btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsent.ForeColor = Color.White;
+            btnsent.Location = new Point(825, 578);
+            btnsent.Name = "btnsent";
+            btnsent.Size = new Size(183, 60);
+            btnsent.TabIndex = 117;
+            btnsent.Text = "LEAVE";
+            btnsent.UseVisualStyleBackColor = false;
+            btnsent.Click += btnsent_Click;
+            // 
+            // txtfname
+            // 
+            txtfname.BackColor = SystemColors.Control;
+            txtfname.BorderColor = Color.DarkBlue;
+            txtfname.BorderFocusColor = Color.Indigo;
+            txtfname.BorderRadius = 0;
+            txtfname.BorderSize = 3;
+            txtfname.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
+            txtfname.ForeColor = Color.DimGray;
+            txtfname.Location = new Point(821, 199);
+            txtfname.Multiline = false;
+            txtfname.Name = "txtfname";
+            txtfname.Padding = new Padding(10, 7, 10, 7);
+            txtfname.PasswordChar = false;
+            txtfname.PlaceholderColor = Color.White;
+            txtfname.PlaceholderText = "";
+            txtfname.Size = new Size(297, 39);
+            txtfname.TabIndex = 114;
+            txtfname.Texts = "";
+            txtfname.UnderlinedStyle = true;
+            // 
             // Profile
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1350, 700);
+            ClientSize = new Size(1600, 650);
+            Controls.Add(btnsent);
             Controls.Add(dataGridView1);
             Controls.Add(label7);
             Controls.Add(txtfname);
@@ -412,23 +381,17 @@
             Controls.Add(label9);
             Controls.Add(panel2);
             Controls.Add(label14);
-            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Profile";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Profile";
             Load += Profile_Load;
-            panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
-        private Button button2;
-        private Button button1;
         private Label label14;
         private Panel panel2;
         private Label label9;
@@ -445,10 +408,11 @@
         private Buttoncustom buttoncustom1;
         private Buttoncustom buttoncustom2;
         private Label label7;
-        private Textboxcustom txtfname;
         private DateTimePicker dtpDateOfBirth;
         private Label label6;
         private Textboxcustom txtphoneno;
         private DataGridView dataGridView1;
+        private Buttoncustom btnsent;
+        private Textboxcustom txtfname;
     }
 }

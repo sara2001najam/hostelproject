@@ -34,6 +34,7 @@
             panel2 = new Panel();
             label14 = new Label();
             btnsent = new Buttoncustom();
+            buttoncustom1 = new Buttoncustom();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             dataGridView1.RowTemplate.Height = 33;
             dataGridView1.Size = new Size(1455, 443);
             dataGridView1.TabIndex = 25;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // comboBox1
             // 
@@ -97,7 +99,7 @@
             btnsent.FlatStyle = FlatStyle.Flat;
             btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnsent.ForeColor = Color.White;
-            btnsent.Location = new Point(588, 112);
+            btnsent.Location = new Point(587, 96);
             btnsent.Name = "btnsent";
             btnsent.Size = new Size(198, 35);
             btnsent.TabIndex = 71;
@@ -105,11 +107,30 @@
             btnsent.UseVisualStyleBackColor = false;
             btnsent.Click += btnsent_Click;
             // 
+            // buttoncustom1
+            // 
+            buttoncustom1.BackColor = Color.CornflowerBlue;
+            buttoncustom1.BorderColor = Color.Black;
+            buttoncustom1.BorderRadius = 40;
+            buttoncustom1.BorderSize = 0;
+            buttoncustom1.FlatAppearance.BorderSize = 0;
+            buttoncustom1.FlatStyle = FlatStyle.Flat;
+            buttoncustom1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttoncustom1.ForeColor = Color.White;
+            buttoncustom1.Location = new Point(587, 137);
+            buttoncustom1.Name = "buttoncustom1";
+            buttoncustom1.Size = new Size(198, 35);
+            buttoncustom1.TabIndex = 72;
+            buttoncustom1.Text = "DISPLAY";
+            buttoncustom1.UseVisualStyleBackColor = false;
+            buttoncustom1.Click += buttoncustom1_Click;
+            // 
             // RoomAlloted
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1600, 650);
+            Controls.Add(buttoncustom1);
             Controls.Add(btnsent);
             Controls.Add(label14);
             Controls.Add(panel2);
@@ -133,5 +154,6 @@
         private Panel panel2;
         private Label label14;
         private Buttoncustom btnsent;
+        private Buttoncustom buttoncustom1;
     }
 }

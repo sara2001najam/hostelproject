@@ -47,6 +47,12 @@
             printDocument1 = new System.Drawing.Printing.PrintDocument();
             printPreviewDialog1 = new PrintPreviewDialog();
             btnsent = new Buttoncustom();
+            label6 = new Label();
+            buttoncustom1 = new Buttoncustom();
+            panel2 = new Panel();
+            label7 = new Label();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // dateTimePicker1
@@ -120,11 +126,11 @@
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label8.ForeColor = Color.RoyalBlue;
-            label8.Location = new Point(840, 78);
+            label8.Location = new Point(766, 74);
             label8.Name = "label8";
-            label8.Size = new Size(137, 28);
+            label8.Size = new Size(126, 28);
             label8.TabIndex = 67;
-            label8.Text = "PAYMENTS";
+            label8.Text = "CHALLAN";
             // 
             // btnPrint
             // 
@@ -135,7 +141,7 @@
             btnPrint.FlatAppearance.BorderSize = 0;
             btnPrint.FlatStyle = FlatStyle.Flat;
             btnPrint.ForeColor = Color.White;
-            btnPrint.Location = new Point(446, 541);
+            btnPrint.Location = new Point(401, 525);
             btnPrint.Name = "btnPrint";
             btnPrint.Size = new Size(148, 45);
             btnPrint.TabIndex = 71;
@@ -152,7 +158,7 @@
             btnReset.FlatAppearance.BorderSize = 0;
             btnReset.FlatStyle = FlatStyle.Flat;
             btnReset.ForeColor = Color.White;
-            btnReset.Location = new Point(241, 541);
+            btnReset.Location = new Point(228, 525);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(148, 45);
             btnReset.TabIndex = 70;
@@ -169,7 +175,7 @@
             btnGenerate.FlatAppearance.BorderSize = 0;
             btnGenerate.FlatStyle = FlatStyle.Flat;
             btnGenerate.ForeColor = Color.White;
-            btnGenerate.Location = new Point(54, 541);
+            btnGenerate.Location = new Point(54, 525);
             btnGenerate.Name = "btnGenerate";
             btnGenerate.Size = new Size(148, 45);
             btnGenerate.TabIndex = 69;
@@ -179,9 +185,9 @@
             // 
             // txtResult
             // 
-            txtResult.Location = new Point(641, 121);
+            txtResult.Location = new Point(564, 117);
             txtResult.Name = "txtResult";
-            txtResult.Size = new Size(603, 477);
+            txtResult.Size = new Size(496, 507);
             txtResult.TabIndex = 73;
             txtResult.Text = "";
             // 
@@ -296,19 +302,83 @@
             btnsent.FlatStyle = FlatStyle.Flat;
             btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnsent.ForeColor = Color.White;
-            btnsent.Location = new Point(228, 603);
+            btnsent.Location = new Point(228, 578);
             btnsent.Name = "btnsent";
-            btnsent.Size = new Size(198, 35);
+            btnsent.Size = new Size(148, 46);
             btnsent.TabIndex = 79;
             btnsent.Text = "LEAVE";
             btnsent.UseVisualStyleBackColor = false;
             btnsent.Click += btnsent_Click;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.BackColor = Color.Transparent;
+            label6.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label6.ForeColor = Color.RoyalBlue;
+            label6.Location = new Point(1262, 74);
+            label6.Name = "label6";
+            label6.Size = new Size(160, 28);
+            label6.TabIndex = 80;
+            label6.Text = "PAID STATUS";
+            // 
+            // buttoncustom1
+            // 
+            buttoncustom1.BackColor = Color.AliceBlue;
+            buttoncustom1.BorderColor = Color.RoyalBlue;
+            buttoncustom1.BorderRadius = 40;
+            buttoncustom1.BorderSize = 2;
+            buttoncustom1.FlatAppearance.BorderSize = 0;
+            buttoncustom1.FlatStyle = FlatStyle.Flat;
+            buttoncustom1.ForeColor = Color.RoyalBlue;
+            buttoncustom1.Location = new Point(1449, 70);
+            buttoncustom1.Name = "buttoncustom1";
+            buttoncustom1.Size = new Size(120, 37);
+            buttoncustom1.TabIndex = 82;
+            buttoncustom1.Text = "CHECK";
+            buttoncustom1.UseVisualStyleBackColor = false;
+            buttoncustom1.Click += buttoncustom1_Click;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.RoyalBlue;
+            panel2.Location = new Point(38, 85);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(700, 1);
+            panel2.TabIndex = 83;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label7.ForeColor = Color.RoyalBlue;
+            label7.Location = new Point(72, 37);
+            label7.Name = "label7";
+            label7.Size = new Size(304, 28);
+            label7.TabIndex = 84;
+            label7.Text = "CHALLAN MANAGEMENT";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(1077, 117);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.RowTemplate.Height = 33;
+            dataGridView1.Size = new Size(511, 507);
+            dataGridView1.TabIndex = 85;
             // 
             // Fee_info
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1600, 650);
+            Controls.Add(dataGridView1);
+            Controls.Add(label7);
+            Controls.Add(panel2);
+            Controls.Add(buttoncustom1);
+            Controls.Add(label6);
             Controls.Add(btnsent);
             Controls.Add(txtEnrollment);
             Controls.Add(txtStudentName);
@@ -329,6 +399,8 @@
             Name = "Fee_info";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Fee_info";
+            Load += Fee_info_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -352,5 +424,10 @@
         private System.Drawing.Printing.PrintDocument printDocument1;
         private PrintPreviewDialog printPreviewDialog1;
         private Buttoncustom btnsent;
+        private Label label6;
+        private Buttoncustom buttoncustom1;
+        private Panel panel2;
+        private Label label7;
+        private DataGridView dataGridView1;
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace hostelproject
 {
     public partial class Fee_info : Form
     {
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True");
         public Fee_info()
         {
             InitializeComponent();
@@ -27,6 +29,10 @@ namespace hostelproject
             txtResult.Clear();
 
             txtResult.Text += "\n\n";
+
+            txtResult.Text += "\t***********************************************\n";
+            txtResult.Text += "\t********    BAHRIA HOSTEL KARACHI    **********\n";
+            txtResult.Text += "\t***********************************************\n\n";
 
             txtResult.Text += "\t***********************************************\n";
             txtResult.Text += "\t*************    FEE CHALLAN    ***************\n";
@@ -70,6 +76,25 @@ namespace hostelproject
         private void btnsent_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Fee_info_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void populate()
+        {
+            string query = "SELECT * FROM Fee";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            SqlCommandBuilder cb = new SqlCommandBuilder(da);
+            var ds = new DataSet();
+            da.Fill(ds);
+            dataGridView1.DataSource = ds.Tables[0];
+        }
+        private void buttoncustom1_Click(object sender, EventArgs e)
+        {
+            populate();
         }
     }
 }

@@ -49,11 +49,11 @@
             label6 = new Label();
             dtpDateOfBirth = new DateTimePicker();
             buttoncustom5 = new Buttoncustom();
-            textboxcustom1 = new Textboxcustom();
             txtroomid = new Label();
             label7 = new Label();
             txtfname = new Textboxcustom();
             btnsent = new Buttoncustom();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -90,12 +90,13 @@
             buttoncustom4.FlatAppearance.BorderSize = 0;
             buttoncustom4.FlatStyle = FlatStyle.Flat;
             buttoncustom4.ForeColor = Color.White;
-            buttoncustom4.Location = new Point(506, 66);
+            buttoncustom4.Location = new Point(497, 43);
             buttoncustom4.Name = "buttoncustom4";
-            buttoncustom4.Size = new Size(148, 45);
+            buttoncustom4.Size = new Size(148, 42);
             buttoncustom4.TabIndex = 76;
             buttoncustom4.Text = "SEARCH";
             buttoncustom4.UseVisualStyleBackColor = false;
+            buttoncustom4.Click += buttoncustom4_Click;
             // 
             // buttoncustom3
             // 
@@ -382,27 +383,6 @@
             buttoncustom5.UseVisualStyleBackColor = false;
             buttoncustom5.Click += buttoncustom5_Click;
             // 
-            // textboxcustom1
-            // 
-            textboxcustom1.BackColor = SystemColors.Control;
-            textboxcustom1.BorderColor = Color.DarkBlue;
-            textboxcustom1.BorderFocusColor = Color.Indigo;
-            textboxcustom1.BorderRadius = 0;
-            textboxcustom1.BorderSize = 3;
-            textboxcustom1.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            textboxcustom1.ForeColor = Color.DimGray;
-            textboxcustom1.Location = new Point(184, 90);
-            textboxcustom1.Multiline = false;
-            textboxcustom1.Name = "textboxcustom1";
-            textboxcustom1.Padding = new Padding(10, 7, 10, 7);
-            textboxcustom1.PasswordChar = false;
-            textboxcustom1.PlaceholderColor = Color.White;
-            textboxcustom1.PlaceholderText = "";
-            textboxcustom1.Size = new Size(297, 39);
-            textboxcustom1.TabIndex = 94;
-            textboxcustom1.Texts = "";
-            textboxcustom1.UnderlinedStyle = true;
-            // 
             // txtroomid
             // 
             txtroomid.AutoSize = true;
@@ -467,15 +447,22 @@
             btnsent.UseVisualStyleBackColor = false;
             btnsent.Click += btnsent_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(185, 98);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(302, 31);
+            textBox1.TabIndex = 99;
+            // 
             // Studentinfo
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1600, 650);
+            Controls.Add(textBox1);
             Controls.Add(btnsent);
             Controls.Add(label7);
             Controls.Add(txtfname);
-            Controls.Add(textboxcustom1);
             Controls.Add(txtroomid);
             Controls.Add(buttoncustom5);
             Controls.Add(dtpDateOfBirth);
@@ -529,10 +516,10 @@
         private Label label6;
         private DateTimePicker dtpDateOfBirth;
         private Buttoncustom buttoncustom5;
-        private Textboxcustom textboxcustom1;
         private Label txtroomid;
         private Label label7;
         private Textboxcustom txtfname;
         private Buttoncustom btnsent;
+        private TextBox textBox1;
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button3 = new Button();
             buttoncustom4 = new Buttoncustom();
             dataGridView1 = new DataGridView();
             label3 = new Label();
@@ -36,22 +35,9 @@
             buttoncustom1 = new Buttoncustom();
             buttoncustom2 = new Buttoncustom();
             btnsent = new Buttoncustom();
+            buttoncustom3 = new Buttoncustom();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // button3
-            // 
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Underline, GraphicsUnit.Point);
-            button3.ForeColor = Color.RoyalBlue;
-            button3.Location = new Point(467, 517);
-            button3.Name = "button3";
-            button3.Size = new Size(190, 55);
-            button3.TabIndex = 25;
-            button3.Text = "Update Utility Bills+";
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
             // 
             // buttoncustom4
             // 
@@ -63,9 +49,9 @@
             buttoncustom4.FlatStyle = FlatStyle.Flat;
             buttoncustom4.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttoncustom4.ForeColor = Color.White;
-            buttoncustom4.Location = new Point(294, 529);
+            buttoncustom4.Location = new Point(681, 511);
             buttoncustom4.Name = "buttoncustom4";
-            buttoncustom4.Size = new Size(156, 33);
+            buttoncustom4.Size = new Size(122, 51);
             buttoncustom4.TabIndex = 27;
             buttoncustom4.Text = "Get";
             buttoncustom4.UseVisualStyleBackColor = false;
@@ -110,9 +96,9 @@
             buttoncustom1.FlatStyle = FlatStyle.Flat;
             buttoncustom1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttoncustom1.ForeColor = Color.White;
-            buttoncustom1.Location = new Point(673, 529);
+            buttoncustom1.Location = new Point(832, 511);
             buttoncustom1.Name = "buttoncustom1";
-            buttoncustom1.Size = new Size(156, 33);
+            buttoncustom1.Size = new Size(126, 51);
             buttoncustom1.TabIndex = 42;
             buttoncustom1.Text = "Display";
             buttoncustom1.UseVisualStyleBackColor = false;
@@ -128,9 +114,9 @@
             buttoncustom2.FlatStyle = FlatStyle.Flat;
             buttoncustom2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttoncustom2.ForeColor = Color.White;
-            buttoncustom2.Location = new Point(902, 529);
+            buttoncustom2.Location = new Point(990, 511);
             buttoncustom2.Name = "buttoncustom2";
-            buttoncustom2.Size = new Size(156, 33);
+            buttoncustom2.Size = new Size(130, 51);
             buttoncustom2.TabIndex = 43;
             buttoncustom2.Text = "Delete";
             buttoncustom2.UseVisualStyleBackColor = false;
@@ -146,19 +132,38 @@
             btnsent.FlatStyle = FlatStyle.Flat;
             btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnsent.ForeColor = Color.White;
-            btnsent.Location = new Point(765, 584);
+            btnsent.Location = new Point(931, 568);
             btnsent.Name = "btnsent";
-            btnsent.Size = new Size(198, 35);
+            btnsent.Size = new Size(108, 42);
             btnsent.TabIndex = 71;
             btnsent.Text = "LEAVE";
             btnsent.UseVisualStyleBackColor = false;
             btnsent.Click += btnsent_Click;
+            // 
+            // buttoncustom3
+            // 
+            buttoncustom3.BackColor = Color.CornflowerBlue;
+            buttoncustom3.BorderColor = Color.Black;
+            buttoncustom3.BorderRadius = 40;
+            buttoncustom3.BorderSize = 0;
+            buttoncustom3.FlatAppearance.BorderSize = 0;
+            buttoncustom3.FlatStyle = FlatStyle.Flat;
+            buttoncustom3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttoncustom3.ForeColor = Color.White;
+            buttoncustom3.Location = new Point(751, 568);
+            buttoncustom3.Name = "buttoncustom3";
+            buttoncustom3.Size = new Size(122, 42);
+            buttoncustom3.TabIndex = 72;
+            buttoncustom3.Text = "UPDATE";
+            buttoncustom3.UseVisualStyleBackColor = false;
+            buttoncustom3.Click += buttoncustom3_Click;
             // 
             // utilitybills
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1600, 650);
+            Controls.Add(buttoncustom3);
             Controls.Add(btnsent);
             Controls.Add(buttoncustom2);
             Controls.Add(buttoncustom1);
@@ -166,7 +171,6 @@
             Controls.Add(label3);
             Controls.Add(dataGridView1);
             Controls.Add(buttoncustom4);
-            Controls.Add(button3);
             FormBorderStyle = FormBorderStyle.None;
             Name = "utilitybills";
             StartPosition = FormStartPosition.CenterScreen;
@@ -177,7 +181,6 @@
         }
 
         #endregion
-        private Button button3;
         private Buttoncustom buttoncustom4;
         private DataGridView dataGridView1;
         private Label label3;
@@ -185,5 +188,6 @@
         private Buttoncustom buttoncustom1;
         private Buttoncustom buttoncustom2;
         private Buttoncustom btnsent;
+        private Buttoncustom buttoncustom3;
     }
 }

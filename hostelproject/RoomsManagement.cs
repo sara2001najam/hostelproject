@@ -90,7 +90,7 @@ namespace hostelproject
         //        {
         //            int roomId = (int)reader["room_id"];
         //            string roomNumber = (string)reader["room_number"];
-        //            Room room = new Room(roomId, roomNumber);
+        //            Rooms room = new Room(roomId, roomNumber);
 
         //            comboBox2.Items.Add(room);
         //        }
@@ -177,7 +177,12 @@ namespace hostelproject
 
         private void RoomsManagement_Load(object sender, EventArgs e)
         {
+            
+        }
 
+        private void btnsent_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
         //public class Room
         //{

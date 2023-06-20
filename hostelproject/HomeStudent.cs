@@ -75,12 +75,13 @@ namespace hostelproject
 
         private void buttoncustom12_Click(object sender, EventArgs e)
         {
-            
+            Fee f = new Fee();  
+            f.Show();
         }
 
         private void buttoncustom11_Click(object sender, EventArgs e)
         {
-            Actcalen ac = new Actcalen();
+            Act ac = new Act();
             ac.Show();
         }
 

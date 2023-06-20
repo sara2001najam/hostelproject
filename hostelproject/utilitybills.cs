@@ -116,47 +116,47 @@ namespace hostelproject
 
         private void button3_Click(object sender, EventArgs e)
         {
-            try
-            {
-                con.Open();
-                string billIdInput = Microsoft.VisualBasic.Interaction.InputBox("Enter the Bill ID:", "Update Utility Bill Status", "");
+            //try
+            //{
+            //    con.Open();
+            //    string billIdInput = Microsoft.VisualBasic.Interaction.InputBox("Enter the Bill ID:", "Update Utility Bill Status", "");
 
-                int billId;
-                if (!int.TryParse(billIdInput, out billId))
-                {
-                    MessageBox.Show("Invalid Bill ID. Please enter a numeric value.");
-                    return;
-                }
-                // int weekId = 15; // The week ID for which you want to update the status to paid
+            //    int billId;
+            //    if (!int.TryParse(billIdInput, out billId))
+            //    {
+            //        MessageBox.Show("Invalid Bill ID. Please enter a numeric value.");
+            //        return;
+            //    }
+            //    // int weekId = 15; // The week ID for which you want to update the status to paid
 
-                // Update the status of the utility bill
-                string updateQuery = "UPDATE UtilityBills SET IsPaid = 1 WHERE BillId = @BillId";
+            //    // Update the status of the utility bill
+            //    string updateQuery = "UPDATE UtilityBills SET IsPaid = 1 WHERE BillId = @BillId";
 
-                using (SqlCommand updateCommand = new SqlCommand(updateQuery, con))
-                {
-                    updateCommand.Parameters.AddWithValue("@BillId", billId);
-                    int rowsAffected = updateCommand.ExecuteNonQuery();
+            //    using (SqlCommand updateCommand = new SqlCommand(updateQuery, con))
+            //    {
+            //        updateCommand.Parameters.AddWithValue("@BillId", billId);
+            //        int rowsAffected = updateCommand.ExecuteNonQuery();
 
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Utility bill status updated to paid for Week ID: " + billId);
-                        populate(); // Refresh the data in the DataGridView
-                    }
-                    else
-                    {
-                        MessageBox.Show("No utility bill found for Week ID: " + billId);
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                // Handle the SQL exception here
-                MessageBox.Show("An error occurred while updating the utility bill status: " + ex.Message);
-            }
-            finally
-            {
-                con.Close();
-            }
+            //        if (rowsAffected > 0)
+            //        {
+            //            MessageBox.Show("Utility bill status updated to paid for Week ID: " + billId);
+            //            populate(); // Refresh the data in the DataGridView
+            //        }
+            //        else
+            //        {
+            //            MessageBox.Show("No utility bill found for Week ID: " + billId);
+            //        }
+            //    }
+            //}
+            //catch (SqlException ex)
+            //{
+            //    // Handle the SQL exception here
+            //    MessageBox.Show("An error occurred while updating the utility bill status: " + ex.Message);
+            //}
+            //finally
+            //{
+            //    con.Close();
+            //}
 
         }
 
@@ -228,6 +228,51 @@ namespace hostelproject
         private void btnsent_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttoncustom3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                con.Open();
+                string billIdInput = Microsoft.VisualBasic.Interaction.InputBox("Enter the Bill ID:", "Update Utility Bill Status", "");
+
+                int billId;
+                if (!int.TryParse(billIdInput, out billId))
+                {
+                    MessageBox.Show("Invalid Bill ID. Please enter a numeric value.");
+                    return;
+                }
+                // int weekId = 15; // The week ID for which you want to update the status to paid
+
+                // Update the status of the utility bill
+                string updateQuery = "UPDATE UtilityBills SET IsPaid = 1 WHERE BillId = @BillId";
+
+                using (SqlCommand updateCommand = new SqlCommand(updateQuery, con))
+                {
+                    updateCommand.Parameters.AddWithValue("@BillId", billId);
+                    int rowsAffected = updateCommand.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Utility bill status updated to paid for Bill/Week ID: " + billId);
+                        populate(); // Refresh the data in the DataGridView
+                    }
+                    else
+                    {
+                        MessageBox.Show("No utility bill found for Week ID: " + billId);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Handle the SQL exception here
+                MessageBox.Show("An error occurred while updating the utility bill status: " + ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace hostelproject
 {
-    partial class Actcalen
+    partial class Fee
     {
         /// <summary>
         /// Required designer variable.
@@ -28,37 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label14 = new Label();
+            label8 = new Label();
+            dataGridView1 = new DataGridView();
             panel2 = new Panel();
             btnsent = new Buttoncustom();
-            dataGridView1 = new DataGridView();
-            buttoncustom4 = new Buttoncustom();
             buttoncustom1 = new Buttoncustom();
             buttoncustom2 = new Buttoncustom();
             buttoncustom3 = new Buttoncustom();
-            buttoncustom5 = new Buttoncustom();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // label14
+            // label8
             // 
-            label14.AutoSize = true;
-            label14.BackColor = Color.Transparent;
-            label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label14.ForeColor = Color.RoyalBlue;
-            label14.Location = new Point(90, 113);
-            label14.Name = "label14";
-            label14.Size = new Size(208, 29);
-            label14.TabIndex = 41;
-            label14.Text = "Activity Calender";
+            label8.AutoSize = true;
+            label8.BackColor = Color.Transparent;
+            label8.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label8.ForeColor = Color.RoyalBlue;
+            label8.Location = new Point(104, 54);
+            label8.Name = "label8";
+            label8.Size = new Size(245, 28);
+            label8.TabIndex = 68;
+            label8.Text = "FEE CHALLAN INFO";
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(51, 128);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.RowTemplate.Height = 33;
+            dataGridView1.Size = new Size(968, 369);
+            dataGridView1.TabIndex = 69;
             // 
             // panel2
             // 
             panel2.BackColor = Color.RoyalBlue;
-            panel2.Location = new Point(74, 145);
+            panel2.Location = new Point(51, 96);
             panel2.Name = "panel2";
             panel2.Size = new Size(700, 1);
-            panel2.TabIndex = 42;
+            panel2.TabIndex = 70;
             // 
             // btnsent
             // 
@@ -70,40 +78,13 @@
             btnsent.FlatStyle = FlatStyle.Flat;
             btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnsent.ForeColor = Color.White;
-            btnsent.Location = new Point(1109, 113);
+            btnsent.Location = new Point(821, 587);
             btnsent.Name = "btnsent";
-            btnsent.Size = new Size(133, 38);
-            btnsent.TabIndex = 71;
+            btnsent.Size = new Size(131, 45);
+            btnsent.TabIndex = 80;
             btnsent.Text = "LEAVE";
             btnsent.UseVisualStyleBackColor = false;
             btnsent.Click += btnsent_Click;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(51, 168);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(1191, 389);
-            dataGridView1.TabIndex = 72;
-            // 
-            // buttoncustom4
-            // 
-            buttoncustom4.BackColor = Color.CornflowerBlue;
-            buttoncustom4.BorderColor = Color.Black;
-            buttoncustom4.BorderRadius = 40;
-            buttoncustom4.BorderSize = 0;
-            buttoncustom4.FlatAppearance.BorderSize = 0;
-            buttoncustom4.FlatStyle = FlatStyle.Flat;
-            buttoncustom4.ForeColor = Color.White;
-            buttoncustom4.Location = new Point(979, 578);
-            buttoncustom4.Name = "buttoncustom4";
-            buttoncustom4.Size = new Size(119, 41);
-            buttoncustom4.TabIndex = 73;
-            buttoncustom4.Text = "UPDATE";
-            buttoncustom4.UseVisualStyleBackColor = false;
-            buttoncustom4.Click += buttoncustom4_Click;
             // 
             // buttoncustom1
             // 
@@ -113,12 +94,13 @@
             buttoncustom1.BorderSize = 0;
             buttoncustom1.FlatAppearance.BorderSize = 0;
             buttoncustom1.FlatStyle = FlatStyle.Flat;
+            buttoncustom1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttoncustom1.ForeColor = Color.White;
-            buttoncustom1.Location = new Point(1120, 578);
+            buttoncustom1.Location = new Point(725, 517);
             buttoncustom1.Name = "buttoncustom1";
-            buttoncustom1.Size = new Size(122, 41);
-            buttoncustom1.TabIndex = 74;
-            buttoncustom1.Text = "GENERATE";
+            buttoncustom1.Size = new Size(126, 46);
+            buttoncustom1.TabIndex = 81;
+            buttoncustom1.Text = "CHECK";
             buttoncustom1.UseVisualStyleBackColor = false;
             buttoncustom1.Click += buttoncustom1_Click;
             // 
@@ -130,82 +112,62 @@
             buttoncustom2.BorderSize = 0;
             buttoncustom2.FlatAppearance.BorderSize = 0;
             buttoncustom2.FlatStyle = FlatStyle.Flat;
+            buttoncustom2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttoncustom2.ForeColor = Color.White;
-            buttoncustom2.Location = new Point(1248, 578);
+            buttoncustom2.Location = new Point(872, 517);
             buttoncustom2.Name = "buttoncustom2";
-            buttoncustom2.Size = new Size(110, 41);
-            buttoncustom2.TabIndex = 75;
-            buttoncustom2.Text = "DELETE";
+            buttoncustom2.Size = new Size(129, 46);
+            buttoncustom2.TabIndex = 82;
+            buttoncustom2.Text = "UPDATE";
             buttoncustom2.UseVisualStyleBackColor = false;
             buttoncustom2.Click += buttoncustom2_Click;
             // 
             // buttoncustom3
             // 
-            buttoncustom3.BackColor = Color.CornflowerBlue;
-            buttoncustom3.BorderColor = Color.Black;
+            buttoncustom3.BackColor = Color.AliceBlue;
+            buttoncustom3.BorderColor = Color.RoyalBlue;
             buttoncustom3.BorderRadius = 40;
-            buttoncustom3.BorderSize = 0;
+            buttoncustom3.BorderSize = 2;
             buttoncustom3.FlatAppearance.BorderSize = 0;
             buttoncustom3.FlatStyle = FlatStyle.Flat;
-            buttoncustom3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            buttoncustom3.ForeColor = Color.White;
-            buttoncustom3.Location = new Point(954, 113);
+            buttoncustom3.ForeColor = Color.RoyalBlue;
+            buttoncustom3.Location = new Point(858, 85);
             buttoncustom3.Name = "buttoncustom3";
-            buttoncustom3.Size = new Size(133, 38);
-            buttoncustom3.TabIndex = 76;
-            buttoncustom3.Text = "SEARCH";
+            buttoncustom3.Size = new Size(120, 37);
+            buttoncustom3.TabIndex = 83;
+            buttoncustom3.Text = "VIEW PDF";
             buttoncustom3.UseVisualStyleBackColor = false;
             buttoncustom3.Click += buttoncustom3_Click;
             // 
-            // buttoncustom5
-            // 
-            buttoncustom5.BackColor = Color.CornflowerBlue;
-            buttoncustom5.BorderColor = Color.Black;
-            buttoncustom5.BorderRadius = 40;
-            buttoncustom5.BorderSize = 0;
-            buttoncustom5.FlatAppearance.BorderSize = 0;
-            buttoncustom5.FlatStyle = FlatStyle.Flat;
-            buttoncustom5.ForeColor = Color.White;
-            buttoncustom5.Location = new Point(844, 578);
-            buttoncustom5.Name = "buttoncustom5";
-            buttoncustom5.Size = new Size(107, 41);
-            buttoncustom5.TabIndex = 77;
-            buttoncustom5.Text = "SH";
-            buttoncustom5.UseVisualStyleBackColor = false;
-            buttoncustom5.Click += buttoncustom5_Click;
-            // 
-            // Actcalen
+            // Fee
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1600, 650);
-            Controls.Add(buttoncustom5);
+            ClientSize = new Size(1578, 644);
             Controls.Add(buttoncustom3);
             Controls.Add(buttoncustom2);
             Controls.Add(buttoncustom1);
-            Controls.Add(buttoncustom4);
-            Controls.Add(dataGridView1);
             Controls.Add(btnsent);
             Controls.Add(panel2);
-            Controls.Add(label14);
+            Controls.Add(dataGridView1);
+            Controls.Add(label8);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Actcalen";
+            Name = "Fee";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Actcalen";
+            Text = "Fee";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Label label14;
+
+        private Label label8;
+        private DataGridView dataGridView1;
         private Panel panel2;
         private Buttoncustom btnsent;
-        private DataGridView dataGridView1;
-        private Buttoncustom buttoncustom4;
         private Buttoncustom buttoncustom1;
         private Buttoncustom buttoncustom2;
         private Buttoncustom buttoncustom3;
-        private Buttoncustom buttoncustom5;
     }
 }

@@ -46,6 +46,7 @@
             txtsalid = new Textboxcustom();
             label7 = new Label();
             btnsent = new Buttoncustom();
+            panel2 = new Panel();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -79,7 +80,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label1.Location = new Point(68, 41);
             label1.Name = "label1";
             label1.Size = new Size(258, 29);
@@ -95,9 +96,9 @@
             btnDisplay.FlatAppearance.BorderSize = 0;
             btnDisplay.FlatStyle = FlatStyle.Flat;
             btnDisplay.ForeColor = Color.White;
-            btnDisplay.Location = new Point(742, 558);
+            btnDisplay.Location = new Point(786, 566);
             btnDisplay.Name = "btnDisplay";
-            btnDisplay.Size = new Size(225, 60);
+            btnDisplay.Size = new Size(161, 49);
             btnDisplay.TabIndex = 7;
             btnDisplay.Text = "Display";
             btnDisplay.UseVisualStyleBackColor = false;
@@ -106,42 +107,42 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold, GraphicsUnit.Point);
             label2.Location = new Point(34, 280);
             label2.Name = "label2";
-            label2.Size = new Size(115, 29);
+            label2.Size = new Size(80, 26);
             label2.TabIndex = 8;
-            label2.Text = "STATUS";
+            label2.Text = "Status";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold, GraphicsUnit.Point);
             label3.Location = new Point(34, 190);
             label3.Name = "label3";
-            label3.Size = new Size(137, 29);
+            label3.Size = new Size(98, 26);
             label3.TabIndex = 9;
-            label3.Text = "POSITION";
+            label3.Text = "Position";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold, GraphicsUnit.Point);
             label4.Location = new Point(34, 105);
             label4.Name = "label4";
-            label4.Size = new Size(233, 29);
+            label4.Size = new Size(188, 26);
             label4.TabIndex = 10;
-            label4.Text = "EMPLOYEE NAME";
+            label4.Text = "Employee Name";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold, GraphicsUnit.Point);
             label6.Location = new Point(34, 370);
             label6.Name = "label6";
-            label6.Size = new Size(111, 29);
+            label6.Size = new Size(80, 26);
             label6.TabIndex = 12;
-            label6.Text = "SALARY";
+            label6.Text = "Salary";
             // 
             // txtEmployeeName
             // 
@@ -244,12 +245,12 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Bold, GraphicsUnit.Point);
             label5.Location = new Point(34, 447);
             label5.Name = "label5";
-            label5.Size = new Size(239, 29);
+            label5.Size = new Size(176, 26);
             label5.TabIndex = 80;
-            label5.Text = "UPDATED SALARY";
+            label5.Text = "Updated Salary";
             // 
             // txtsalid
             // 
@@ -290,21 +291,30 @@
             btnsent.BorderSize = 0;
             btnsent.FlatAppearance.BorderSize = 0;
             btnsent.FlatStyle = FlatStyle.Flat;
-            btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsent.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnsent.ForeColor = Color.White;
-            btnsent.Location = new Point(993, 572);
+            btnsent.Location = new Point(972, 566);
             btnsent.Name = "btnsent";
-            btnsent.Size = new Size(198, 35);
+            btnsent.Size = new Size(140, 49);
             btnsent.TabIndex = 84;
             btnsent.Text = "LEAVE";
             btnsent.UseVisualStyleBackColor = false;
             btnsent.Click += btnsent_Click;
+            // 
+            // panel2
+            // 
+            panel2.BackColor = Color.RoyalBlue;
+            panel2.Location = new Point(43, 73);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(700, 1);
+            panel2.TabIndex = 85;
             // 
             // SalaryEmp
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1600, 650);
+            Controls.Add(panel2);
             Controls.Add(btnsent);
             Controls.Add(txtsalid);
             Controls.Add(label7);
@@ -352,5 +362,6 @@
         private Textboxcustom txtsalid;
         private Label label7;
         private Buttoncustom btnsent;
+        private Panel panel2;
     }
 }

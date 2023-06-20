@@ -44,7 +44,6 @@
             buttoncustom2 = new Buttoncustom();
             buttoncustom3 = new Buttoncustom();
             buttoncustom4 = new Buttoncustom();
-            label9 = new Label();
             label8 = new Label();
             txtemail = new Textboxcustom();
             label6 = new Label();
@@ -123,9 +122,9 @@
             label1.ForeColor = Color.RoyalBlue;
             label1.Location = new Point(65, 154);
             label1.Name = "label1";
-            label1.Size = new Size(169, 25);
+            label1.Size = new Size(119, 25);
             label1.TabIndex = 41;
-            label1.Text = "Employee Name";
+            label1.Text = "Staff Name";
             // 
             // txtAddress
             // 
@@ -189,9 +188,9 @@
             label3.ForeColor = Color.RoyalBlue;
             label3.Location = new Point(65, 314);
             label3.Name = "label3";
-            label3.Size = new Size(175, 25);
+            label3.Size = new Size(125, 25);
             label3.TabIndex = 48;
-            label3.Text = "Employee Phone";
+            label3.Text = "Staff Phone";
             // 
             // label13
             // 
@@ -277,25 +276,13 @@
             buttoncustom4.FlatAppearance.BorderSize = 0;
             buttoncustom4.FlatStyle = FlatStyle.Flat;
             buttoncustom4.ForeColor = Color.White;
-            buttoncustom4.Location = new Point(71, 564);
+            buttoncustom4.Location = new Point(555, 89);
             buttoncustom4.Name = "buttoncustom4";
-            buttoncustom4.Size = new Size(148, 45);
+            buttoncustom4.Size = new Size(109, 45);
             buttoncustom4.TabIndex = 54;
             buttoncustom4.Text = "SEARCH";
             buttoncustom4.UseVisualStyleBackColor = false;
             buttoncustom4.Click += buttoncustom4_Click;
-            // 
-            // label9
-            // 
-            label9.AutoSize = true;
-            label9.BackColor = Color.Transparent;
-            label9.Font = new Font("Times New Roman", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
-            label9.ForeColor = Color.RoyalBlue;
-            label9.Location = new Point(771, 32);
-            label9.Name = "label9";
-            label9.Size = new Size(201, 28);
-            label9.TabIndex = 55;
-            label9.Text = "EMPLOYEE LIST";
             // 
             // label8
             // 
@@ -384,7 +371,7 @@
             buttoncustom5.FlatAppearance.BorderSize = 0;
             buttoncustom5.FlatStyle = FlatStyle.Flat;
             buttoncustom5.ForeColor = Color.White;
-            buttoncustom5.Location = new Point(242, 564);
+            buttoncustom5.Location = new Point(144, 563);
             buttoncustom5.Name = "buttoncustom5";
             buttoncustom5.Size = new Size(148, 45);
             buttoncustom5.TabIndex = 75;
@@ -400,9 +387,9 @@
             btnsent.BorderSize = 0;
             btnsent.FlatAppearance.BorderSize = 0;
             btnsent.FlatStyle = FlatStyle.Flat;
-            btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsent.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnsent.ForeColor = Color.White;
-            btnsent.Location = new Point(414, 564);
+            btnsent.Location = new Point(332, 564);
             btnsent.Name = "btnsent";
             btnsent.Size = new Size(156, 45);
             btnsent.TabIndex = 76;
@@ -422,7 +409,6 @@
             Controls.Add(txtemail);
             Controls.Add(label6);
             Controls.Add(label8);
-            Controls.Add(label9);
             Controls.Add(buttoncustom4);
             Controls.Add(buttoncustom3);
             Controls.Add(buttoncustom2);
@@ -466,7 +452,6 @@
         private Buttoncustom buttoncustom2;
         private Buttoncustom buttoncustom3;
         private Buttoncustom buttoncustom4;
-        private Label label9;
         private Label label8;
         private Textboxcustom txtemail;
         private Label label6;

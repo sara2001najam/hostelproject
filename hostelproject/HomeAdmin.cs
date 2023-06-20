@@ -136,7 +136,7 @@ namespace hostelproject
 
         private void buttoncustom4_Click_1(object sender, EventArgs e)
         {
-            SalaryEmp s =new SalaryEmp();
+            SalaryEmp s = new SalaryEmp();
             s.Show();
         }
     }

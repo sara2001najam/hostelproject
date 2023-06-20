@@ -78,9 +78,9 @@
             btnsent.FlatStyle = FlatStyle.Flat;
             btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnsent.ForeColor = Color.White;
-            btnsent.Location = new Point(821, 587);
+            btnsent.Location = new Point(810, 569);
             btnsent.Name = "btnsent";
-            btnsent.Size = new Size(131, 45);
+            btnsent.Size = new Size(131, 40);
             btnsent.TabIndex = 80;
             btnsent.Text = "LEAVE";
             btnsent.UseVisualStyleBackColor = false;

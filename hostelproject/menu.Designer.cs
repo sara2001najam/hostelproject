@@ -54,7 +54,7 @@
             // 
             label14.AutoSize = true;
             label14.BackColor = Color.Transparent;
-            label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label14.ForeColor = Color.RoyalBlue;
             label14.Location = new Point(63, 65);
             label14.Name = "label14";
@@ -79,9 +79,9 @@
             buttoncustom1.FlatAppearance.BorderSize = 0;
             buttoncustom1.FlatStyle = FlatStyle.Flat;
             buttoncustom1.ForeColor = Color.White;
-            buttoncustom1.Location = new Point(683, 583);
+            buttoncustom1.Location = new Point(1119, 547);
             buttoncustom1.Name = "buttoncustom1";
-            buttoncustom1.Size = new Size(193, 41);
+            buttoncustom1.Size = new Size(179, 41);
             buttoncustom1.TabIndex = 42;
             buttoncustom1.Text = "SHOW MONTHLY ";
             buttoncustom1.UseVisualStyleBackColor = false;
@@ -96,9 +96,9 @@
             buttoncustom2.FlatAppearance.BorderSize = 0;
             buttoncustom2.FlatStyle = FlatStyle.Flat;
             buttoncustom2.ForeColor = Color.White;
-            buttoncustom2.Location = new Point(908, 583);
+            buttoncustom2.Location = new Point(931, 594);
             buttoncustom2.Name = "buttoncustom2";
-            buttoncustom2.Size = new Size(193, 41);
+            buttoncustom2.Size = new Size(161, 41);
             buttoncustom2.TabIndex = 43;
             buttoncustom2.Text = "UPDATE";
             buttoncustom2.UseVisualStyleBackColor = false;
@@ -113,7 +113,7 @@
             buttoncustom3.FlatAppearance.BorderSize = 0;
             buttoncustom3.FlatStyle = FlatStyle.Flat;
             buttoncustom3.ForeColor = Color.White;
-            buttoncustom3.Location = new Point(1119, 583);
+            buttoncustom3.Location = new Point(1119, 597);
             buttoncustom3.Name = "buttoncustom3";
             buttoncustom3.Size = new Size(179, 41);
             buttoncustom3.TabIndex = 44;
@@ -130,9 +130,9 @@
             buttoncustom4.FlatAppearance.BorderSize = 0;
             buttoncustom4.FlatStyle = FlatStyle.Flat;
             buttoncustom4.ForeColor = Color.White;
-            buttoncustom4.Location = new Point(468, 583);
+            buttoncustom4.Location = new Point(931, 550);
             buttoncustom4.Name = "buttoncustom4";
-            buttoncustom4.Size = new Size(193, 41);
+            buttoncustom4.Size = new Size(161, 41);
             buttoncustom4.TabIndex = 45;
             buttoncustom4.Text = "DISPLAY";
             buttoncustom4.UseVisualStyleBackColor = false;

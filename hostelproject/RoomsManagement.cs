@@ -177,12 +177,62 @@ namespace hostelproject
 
         private void RoomsManagement_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnsent_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttoncustom2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
+                {
+                    connection.Open();
+
+                    string roomNumberInput = txtsrch.Text.Trim(); // Assuming txtRoomNumber is a TextBox control containing the room number input
+
+                    if (int.TryParse(roomNumberInput, out int roomNumber))
+                    {
+                        SqlCommand command = new SqlCommand("SELECT * FROM Rooms WHERE room_number = @room_number", connection);
+                        command.Parameters.AddWithValue("@room_number", roomNumber);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        if (dataTable.Rows.Count > 0)
+                        {
+                            // Rooms found for the specified room number
+                            dataGridView1.DataSource = dataTable;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No rooms found for the specified room number.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid room number format. Please enter a valid room number.");
+                    }
+
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+
+
+        }
+
+        private void buttoncustom1_Click_1(object sender, EventArgs e)
+        {
+            populate();
         }
         //public class Room
         //{

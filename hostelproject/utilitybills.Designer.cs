@@ -130,11 +130,11 @@
             btnsent.BorderSize = 0;
             btnsent.FlatAppearance.BorderSize = 0;
             btnsent.FlatStyle = FlatStyle.Flat;
-            btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsent.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnsent.ForeColor = Color.White;
-            btnsent.Location = new Point(931, 568);
+            btnsent.Location = new Point(931, 575);
             btnsent.Name = "btnsent";
-            btnsent.Size = new Size(108, 42);
+            btnsent.Size = new Size(108, 35);
             btnsent.TabIndex = 71;
             btnsent.Text = "LEAVE";
             btnsent.UseVisualStyleBackColor = false;
@@ -148,7 +148,7 @@
             buttoncustom3.BorderSize = 0;
             buttoncustom3.FlatAppearance.BorderSize = 0;
             buttoncustom3.FlatStyle = FlatStyle.Flat;
-            buttoncustom3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttoncustom3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttoncustom3.ForeColor = Color.White;
             buttoncustom3.Location = new Point(751, 568);
             buttoncustom3.Name = "buttoncustom3";

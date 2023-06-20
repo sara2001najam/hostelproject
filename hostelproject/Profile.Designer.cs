@@ -55,9 +55,9 @@
             // 
             label14.AutoSize = true;
             label14.BackColor = Color.Transparent;
-            label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label14.ForeColor = Color.RoyalBlue;
-            label14.Location = new Point(34, 104);
+            label14.Location = new Point(47, 92);
             label14.Name = "label14";
             label14.Size = new Size(90, 29);
             label14.TabIndex = 40;
@@ -325,7 +325,7 @@
             btnsent.BorderSize = 0;
             btnsent.FlatAppearance.BorderSize = 0;
             btnsent.FlatStyle = FlatStyle.Flat;
-            btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsent.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnsent.ForeColor = Color.White;
             btnsent.Location = new Point(825, 578);
             btnsent.Name = "btnsent";

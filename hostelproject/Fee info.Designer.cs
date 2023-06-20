@@ -300,7 +300,7 @@
             btnsent.BorderSize = 0;
             btnsent.FlatAppearance.BorderSize = 0;
             btnsent.FlatStyle = FlatStyle.Flat;
-            btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsent.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnsent.ForeColor = Color.White;
             btnsent.Location = new Point(228, 578);
             btnsent.Name = "btnsent";

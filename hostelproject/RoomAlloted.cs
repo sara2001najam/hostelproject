@@ -44,12 +44,51 @@ namespace hostelproject
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void buttoncustom1_Click(object sender, EventArgs e)
         {
-            populate();
+            using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
+            {
+                connection.Open();
+
+                string query = @"SELECT Student.student_id, Student.name, Student.address, Student.email, Rooms.room_id, Rooms.room_number, Rooms.occupancy_status
+                     FROM Student
+                     INNER JOIN Rooms ON Student.room_id = Rooms.room_id";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                DataTable dataTable = new DataTable();
+                adapter.Fill(dataTable);
+
+                dataGridView1.DataSource = dataTable;
+            }
+        }
+
+        private void buttoncustom2_Click(object sender, EventArgs e)
+        {
+            string roomNumber = txtroom.Text.Trim();
+
+            // Perform the search
+            if (!string.IsNullOrEmpty(roomNumber))
+            {
+                // Filter the DataTable based on the room number
+                DataTable filteredTable = ((DataTable)dataGridView1.DataSource).Clone();
+                DataRow[] filteredRows = ((DataTable)dataGridView1.DataSource).Select($"room_number = '{roomNumber}'");
+
+                foreach (DataRow row in filteredRows)
+                {
+                    filteredTable.ImportRow(row);
+                }
+
+                dataGridView1.DataSource = filteredTable;
+            }
+            else
+            {
+                // If room number is empty, show the original data
+                populate();
+            }
         }
     }
 }

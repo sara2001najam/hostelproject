@@ -39,9 +39,10 @@
             comboBox1 = new ComboBox();
             comboBox3 = new ComboBox();
             label2 = new Label();
-            txtsrch = new Textboxcustom();
             label5 = new Label();
             btnsent = new Buttoncustom();
+            buttoncustom1 = new Buttoncustom();
+            txtsrch = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -99,9 +100,9 @@
             btnAdd.FlatAppearance.BorderSize = 0;
             btnAdd.FlatStyle = FlatStyle.Flat;
             btnAdd.ForeColor = Color.White;
-            btnAdd.Location = new Point(381, 285);
+            btnAdd.Location = new Point(393, 288);
             btnAdd.Name = "btnAdd";
-            btnAdd.Size = new Size(138, 36);
+            btnAdd.Size = new Size(126, 33);
             btnAdd.TabIndex = 43;
             btnAdd.Text = "INSERT";
             btnAdd.UseVisualStyleBackColor = false;
@@ -122,6 +123,7 @@
             buttoncustom2.TabIndex = 47;
             buttoncustom2.Text = "SEARCH";
             buttoncustom2.UseVisualStyleBackColor = false;
+            buttoncustom2.Click += buttoncustom2_Click;
             // 
             // dataGridView1
             // 
@@ -190,27 +192,6 @@
             label2.TabIndex = 59;
             label2.Text = "Occupancy Status";
             // 
-            // txtsrch
-            // 
-            txtsrch.BackColor = SystemColors.Control;
-            txtsrch.BorderColor = Color.DarkBlue;
-            txtsrch.BorderFocusColor = Color.Indigo;
-            txtsrch.BorderRadius = 0;
-            txtsrch.BorderSize = 3;
-            txtsrch.Font = new Font("Microsoft Sans Serif", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
-            txtsrch.ForeColor = Color.DimGray;
-            txtsrch.Location = new Point(829, 126);
-            txtsrch.Multiline = false;
-            txtsrch.Name = "txtsrch";
-            txtsrch.Padding = new Padding(10, 7, 10, 7);
-            txtsrch.PasswordChar = false;
-            txtsrch.PlaceholderColor = Color.White;
-            txtsrch.PlaceholderText = "";
-            txtsrch.Size = new Size(223, 39);
-            txtsrch.TabIndex = 62;
-            txtsrch.Texts = "";
-            txtsrch.UnderlinedStyle = true;
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -241,13 +222,38 @@
             btnsent.UseVisualStyleBackColor = false;
             btnsent.Click += btnsent_Click;
             // 
+            // buttoncustom1
+            // 
+            buttoncustom1.BackColor = Color.CornflowerBlue;
+            buttoncustom1.BorderColor = Color.Black;
+            buttoncustom1.BorderRadius = 40;
+            buttoncustom1.BorderSize = 0;
+            buttoncustom1.FlatAppearance.BorderSize = 0;
+            buttoncustom1.FlatStyle = FlatStyle.Flat;
+            buttoncustom1.ForeColor = Color.White;
+            buttoncustom1.Location = new Point(393, 327);
+            buttoncustom1.Name = "buttoncustom1";
+            buttoncustom1.Size = new Size(128, 36);
+            buttoncustom1.TabIndex = 72;
+            buttoncustom1.Text = "SHOW";
+            buttoncustom1.UseVisualStyleBackColor = false;
+            buttoncustom1.Click += buttoncustom1_Click_1;
+            // 
+            // txtsrch
+            // 
+            txtsrch.Location = new Point(847, 139);
+            txtsrch.Name = "txtsrch";
+            txtsrch.Size = new Size(185, 31);
+            txtsrch.TabIndex = 73;
+            // 
             // RoomsManagement
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1600, 650);
-            Controls.Add(btnsent);
             Controls.Add(txtsrch);
+            Controls.Add(buttoncustom1);
+            Controls.Add(btnsent);
             Controls.Add(label5);
             Controls.Add(comboBox3);
             Controls.Add(label2);
@@ -282,8 +288,9 @@
         private ComboBox comboBox1;
         private ComboBox comboBox3;
         private Label label2;
-        private Textboxcustom txtsrch;
         private Label label5;
         private Buttoncustom btnsent;
+        private Buttoncustom buttoncustom1;
+        private TextBox txtsrch;
     }
 }

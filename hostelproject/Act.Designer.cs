@@ -45,7 +45,7 @@
             buttoncustom3.BorderSize = 0;
             buttoncustom3.FlatAppearance.BorderSize = 0;
             buttoncustom3.FlatStyle = FlatStyle.Flat;
-            buttoncustom3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttoncustom3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttoncustom3.ForeColor = Color.White;
             buttoncustom3.Location = new Point(952, 95);
             buttoncustom3.Name = "buttoncustom3";
@@ -63,7 +63,7 @@
             btnsent.BorderSize = 0;
             btnsent.FlatAppearance.BorderSize = 0;
             btnsent.FlatStyle = FlatStyle.Flat;
-            btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsent.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnsent.ForeColor = Color.White;
             btnsent.Location = new Point(1107, 95);
             btnsent.Name = "btnsent";
@@ -85,7 +85,7 @@
             // 
             label14.AutoSize = true;
             label14.BackColor = Color.Transparent;
-            label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label14.ForeColor = Color.RoyalBlue;
             label14.Location = new Point(91, 75);
             label14.Name = "label14";

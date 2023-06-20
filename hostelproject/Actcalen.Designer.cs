@@ -44,9 +44,9 @@
             // 
             label14.AutoSize = true;
             label14.BackColor = Color.Transparent;
-            label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
             label14.ForeColor = Color.RoyalBlue;
-            label14.Location = new Point(90, 113);
+            label14.Location = new Point(88, 102);
             label14.Name = "label14";
             label14.Size = new Size(208, 29);
             label14.TabIndex = 41;
@@ -68,7 +68,7 @@
             btnsent.BorderSize = 0;
             btnsent.FlatAppearance.BorderSize = 0;
             btnsent.FlatStyle = FlatStyle.Flat;
-            btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnsent.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnsent.ForeColor = Color.White;
             btnsent.Location = new Point(1109, 113);
             btnsent.Name = "btnsent";
@@ -85,7 +85,7 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(1191, 389);
+            dataGridView1.Size = new Size(1191, 356);
             dataGridView1.TabIndex = 72;
             // 
             // buttoncustom4
@@ -97,11 +97,11 @@
             buttoncustom4.FlatAppearance.BorderSize = 0;
             buttoncustom4.FlatStyle = FlatStyle.Flat;
             buttoncustom4.ForeColor = Color.White;
-            buttoncustom4.Location = new Point(979, 578);
+            buttoncustom4.Location = new Point(968, 597);
             buttoncustom4.Name = "buttoncustom4";
-            buttoncustom4.Size = new Size(119, 41);
+            buttoncustom4.Size = new Size(119, 35);
             buttoncustom4.TabIndex = 73;
-            buttoncustom4.Text = "UPDATE";
+            buttoncustom4.Text = "Update";
             buttoncustom4.UseVisualStyleBackColor = false;
             buttoncustom4.Click += buttoncustom4_Click;
             // 
@@ -114,11 +114,11 @@
             buttoncustom1.FlatAppearance.BorderSize = 0;
             buttoncustom1.FlatStyle = FlatStyle.Flat;
             buttoncustom1.ForeColor = Color.White;
-            buttoncustom1.Location = new Point(1120, 578);
+            buttoncustom1.Location = new Point(1121, 544);
             buttoncustom1.Name = "buttoncustom1";
-            buttoncustom1.Size = new Size(122, 41);
+            buttoncustom1.Size = new Size(110, 41);
             buttoncustom1.TabIndex = 74;
-            buttoncustom1.Text = "GENERATE";
+            buttoncustom1.Text = "Generate";
             buttoncustom1.UseVisualStyleBackColor = false;
             buttoncustom1.Click += buttoncustom1_Click;
             // 
@@ -131,9 +131,9 @@
             buttoncustom2.FlatAppearance.BorderSize = 0;
             buttoncustom2.FlatStyle = FlatStyle.Flat;
             buttoncustom2.ForeColor = Color.White;
-            buttoncustom2.Location = new Point(1248, 578);
+            buttoncustom2.Location = new Point(1121, 597);
             buttoncustom2.Name = "buttoncustom2";
-            buttoncustom2.Size = new Size(110, 41);
+            buttoncustom2.Size = new Size(110, 35);
             buttoncustom2.TabIndex = 75;
             buttoncustom2.Text = "DELETE";
             buttoncustom2.UseVisualStyleBackColor = false;
@@ -147,7 +147,7 @@
             buttoncustom3.BorderSize = 0;
             buttoncustom3.FlatAppearance.BorderSize = 0;
             buttoncustom3.FlatStyle = FlatStyle.Flat;
-            buttoncustom3.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            buttoncustom3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttoncustom3.ForeColor = Color.White;
             buttoncustom3.Location = new Point(954, 113);
             buttoncustom3.Name = "buttoncustom3";
@@ -166,11 +166,11 @@
             buttoncustom5.FlatAppearance.BorderSize = 0;
             buttoncustom5.FlatStyle = FlatStyle.Flat;
             buttoncustom5.ForeColor = Color.White;
-            buttoncustom5.Location = new Point(844, 578);
+            buttoncustom5.Location = new Point(968, 544);
             buttoncustom5.Name = "buttoncustom5";
-            buttoncustom5.Size = new Size(107, 41);
+            buttoncustom5.Size = new Size(119, 41);
             buttoncustom5.TabIndex = 77;
-            buttoncustom5.Text = "SH";
+            buttoncustom5.Text = "Show";
             buttoncustom5.UseVisualStyleBackColor = false;
             buttoncustom5.Click += buttoncustom5_Click;
             // 

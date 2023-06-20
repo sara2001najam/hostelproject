@@ -35,6 +35,7 @@
             buttoncustom1 = new Buttoncustom();
             buttoncustom2 = new Buttoncustom();
             buttoncustom3 = new Buttoncustom();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -57,8 +58,9 @@
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(968, 369);
+            dataGridView1.Size = new Size(786, 369);
             dataGridView1.TabIndex = 69;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // panel2
             // 
@@ -78,7 +80,7 @@
             btnsent.FlatStyle = FlatStyle.Flat;
             btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnsent.ForeColor = Color.White;
-            btnsent.Location = new Point(810, 569);
+            btnsent.Location = new Point(1364, 521);
             btnsent.Name = "btnsent";
             btnsent.Size = new Size(131, 40);
             btnsent.TabIndex = 80;
@@ -96,7 +98,7 @@
             buttoncustom1.FlatStyle = FlatStyle.Flat;
             buttoncustom1.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttoncustom1.ForeColor = Color.White;
-            buttoncustom1.Location = new Point(725, 517);
+            buttoncustom1.Location = new Point(585, 521);
             buttoncustom1.Name = "buttoncustom1";
             buttoncustom1.Size = new Size(126, 46);
             buttoncustom1.TabIndex = 81;
@@ -114,7 +116,7 @@
             buttoncustom2.FlatStyle = FlatStyle.Flat;
             buttoncustom2.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             buttoncustom2.ForeColor = Color.White;
-            buttoncustom2.Location = new Point(872, 517);
+            buttoncustom2.Location = new Point(728, 521);
             buttoncustom2.Name = "buttoncustom2";
             buttoncustom2.Size = new Size(129, 46);
             buttoncustom2.TabIndex = 82;
@@ -131,7 +133,7 @@
             buttoncustom3.FlatAppearance.BorderSize = 0;
             buttoncustom3.FlatStyle = FlatStyle.Flat;
             buttoncustom3.ForeColor = Color.RoyalBlue;
-            buttoncustom3.Location = new Point(858, 85);
+            buttoncustom3.Location = new Point(1344, 74);
             buttoncustom3.Name = "buttoncustom3";
             buttoncustom3.Size = new Size(120, 37);
             buttoncustom3.TabIndex = 83;
@@ -139,11 +141,21 @@
             buttoncustom3.UseVisualStyleBackColor = false;
             buttoncustom3.Click += buttoncustom3_Click;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(922, 128);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(551, 369);
+            textBox1.TabIndex = 84;
+            textBox1.TextChanged += textBox1_TextChanged;
+            // 
             // Fee
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1578, 644);
+            Controls.Add(textBox1);
             Controls.Add(buttoncustom3);
             Controls.Add(buttoncustom2);
             Controls.Add(buttoncustom1);
@@ -169,5 +181,6 @@
         private Buttoncustom buttoncustom1;
         private Buttoncustom buttoncustom2;
         private Buttoncustom buttoncustom3;
+        private TextBox textBox1;
     }
 }

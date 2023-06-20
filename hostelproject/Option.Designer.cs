@@ -45,7 +45,7 @@
             button1.FlatAppearance.BorderSize = 5;
             button1.FlatAppearance.MouseDownBackColor = Color.LightBlue;
             button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button1.ForeColor = SystemColors.Control;
             button1.Location = new Point(182, 404);
             button1.Name = "button1";
@@ -61,7 +61,7 @@
             button2.FlatAppearance.BorderSize = 5;
             button2.FlatAppearance.MouseDownBackColor = Color.LightBlue;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.Control;
             button2.Location = new Point(790, 404);
             button2.Name = "button2";
@@ -75,11 +75,11 @@
             // 
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
-            label1.Font = new Font("Century Gothic", 22F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 22F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
             label1.Location = new Point(450, 216);
             label1.Name = "label1";
-            label1.Size = new Size(523, 51);
+            label1.Size = new Size(526, 52);
             label1.TabIndex = 2;
             label1.Text = "Bahria University Hostel ";
             // 
@@ -87,11 +87,11 @@
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Century Gothic", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
             label2.Location = new Point(518, 322);
             label2.Name = "label2";
-            label2.Size = new Size(358, 43);
+            label2.Size = new Size(319, 40);
             label2.TabIndex = 3;
             label2.Text = "Choose one option";
             // 
@@ -112,7 +112,7 @@
             button3.FlatAppearance.MouseDownBackColor = Color.WhiteSmoke;
             button3.FlatAppearance.MouseOverBackColor = Color.Red;
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             button3.ForeColor = SystemColors.Control;
             button3.Location = new Point(1351, 0);
             button3.Name = "button3";
@@ -124,8 +124,7 @@
             // 
             // timer1
             // 
-            timer1.Enabled = true;
-            timer1.Interval = 1000;
+            timer1.Interval = 5;
             timer1.Tick += timer1_Tick;
             // 
             // Option
@@ -143,6 +142,7 @@
             Name = "Option";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Option";
+            Load += Option_Load;
             panel4.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();

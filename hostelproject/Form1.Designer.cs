@@ -155,6 +155,7 @@
             buttoncustom2.TabIndex = 12;
             buttoncustom2.Text = "Sign up";
             buttoncustom2.UseVisualStyleBackColor = false;
+            buttoncustom2.Click += buttoncustom2_Click;
             // 
             // panel3
             // 

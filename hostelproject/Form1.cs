@@ -82,5 +82,11 @@ namespace hostelproject
             //    MessageBox.Show("Invalid username or password!");
             //}
         }
+
+        private void buttoncustom2_Click(object sender, EventArgs e)
+        {
+            Signup s = new Signup();
+            s.Show();
+        }
     }
 }

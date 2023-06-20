@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PdfiumViewer;
+using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.parser;
 
 namespace hostelproject
 {
@@ -86,7 +89,70 @@ namespace hostelproject
 
         private void buttoncustom3_Click(object sender, EventArgs e)
         {
+            //string filePath = "C:\\Users\\Lenovo\\Desktop\\New folder\\OS\\Operating-Systems_9thEdition_WilliamStallings.pdf";
 
+
+
+            //try
+            //{
+            //    StringBuilder text = new StringBuilder();
+
+            //    using (PdfReader reader = new PdfReader(filePath))
+            //    {
+            //        for (int page = 1; page <= reader.NumberOfPages; page++)
+            //        {
+            //            text.Append(PdfTextExtractor.GetTextFromPage(reader, page));
+            //        }
+            //    }
+
+            //    Console.WriteLine(text.ToString());
+            //}
+            //catch (IOException ex)
+            //{
+            //    Console.WriteLine("An error occurred while reading the PDF file: " + ex.Message);
+            //}
+
+            string filePath = "C:\\Users\\Lenovo\\Desktop\\New folder\\OS\\Operating-Systems_9thEdition_WilliamStallings.pdf";
+            LoadPdf(filePath);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void LoadPdf(string filePath)
+        {
+            StringBuilder text = new StringBuilder();
+
+            using (PdfReader reader = new PdfReader(filePath))
+            {
+                for (int i = 1; i <= reader.NumberOfPages; i++)
+                {
+                    text.Append(PdfTextExtractor.GetTextFromPage(reader, i));
+                }
+            }
+
+            textBox1.Text = text.ToString();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            StringBuilder text = new StringBuilder();
+
+            using (PdfReader reader = new PdfReader("C:\\Users\\Lenovo\\Desktop"))
+            {
+                for (int i = 1; i <= reader.NumberOfPages; i++)
+                {
+                    text.Append(PdfTextExtractor.GetTextFromPage(reader, i));
+                }
+            }
+
+            textBox1.Text = text.ToString();
         }
     }
 }

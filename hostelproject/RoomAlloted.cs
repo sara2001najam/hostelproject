@@ -53,7 +53,7 @@ namespace hostelproject
             {
                 connection.Open();
 
-                string query = @"SELECT Student.student_id, Student.name, Student.address, Student.email, Rooms.room_id, Rooms.room_number, Rooms.occupancy_status
+                string query = @"SELECT Student.student_id, Rooms.room_id, Rooms.room_number, Rooms.occupancy_status
                      FROM Student
                      INNER JOIN Rooms ON Student.room_id = Rooms.room_id";
 

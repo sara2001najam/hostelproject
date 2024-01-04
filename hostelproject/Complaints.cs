@@ -70,6 +70,7 @@ namespace hostelproject
 
                     lbl.Visible = true;
                     MessageBox.Show("Complaint sent successfully!");
+                    con.Close();
 
                 }
             }

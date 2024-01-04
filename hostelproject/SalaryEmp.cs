@@ -108,7 +108,7 @@ namespace hostelproject
                     SqlCommand command = new SqlCommand("UpdateSalary", connection);
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("@salary_id", salary_id);
-                    command.Parameters.AddWithValue("@new_salary", new_salary);
+                    command.Parameters.AddWithValue("@salary", new_salary);
 
                     command.ExecuteNonQuery();
 
@@ -126,6 +126,21 @@ namespace hostelproject
         private void btnsent_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtNewsal__Textchanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSalary__Textchanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

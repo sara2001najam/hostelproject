@@ -55,41 +55,67 @@ namespace hostelproject
 
                 if (!string.IsNullOrEmpty(enrollmentNumber))
                 {
-                    string query = "EXEC [UpdateComplaintStatus] @enrollno, @status";
-
-                    using (SqlCommand command = new SqlCommand(query, con))
+                    using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
                     {
-                        command.Parameters.AddWithValue("@enrollno", enrollmentNumber);
-                        command.Parameters.AddWithValue("@status", "Complete");
-                        con.Open();
+                        connection.Open();
 
-                        command.ExecuteNonQuery();
+                        // Check if enrollmentNumber is already updated
+                        if (IsEnrollmentUpdated(enrollmentNumber))
+                        {
+                            MessageBox.Show("The entered enrollment number is already updated.");
+                        }
+                        else
+                        {
+                            using (SqlCommand command = new SqlCommand("UpdateComplaintStatus", connection))
+                            {
+                                command.CommandType = CommandType.StoredProcedure;
 
-                        MessageBox.Show("Complaint status updated successfully!");
-                        lbll.Visible = true;
+                                command.Parameters.AddWithValue("@enrollno", enrollmentNumber);
+                                command.Parameters.AddWithValue("@status", "Complete");
 
+                                int rowsAffected = command.ExecuteNonQuery();
+
+                                if (rowsAffected > 0)
+                                {
+                                    MessageBox.Show("Complaint status updated successfully!");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No rows updated. Please check the enrollment number or student ID.");
+                                }
+                            }
+                        }
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Enrollmentno / ID cannot be empty!");
+                    MessageBox.Show("Enrollment number / ID cannot be empty!");
                 }
+
+                // Assuming this function retrieves and displays the updated complaints data
+                populate();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-            finally
+        }
+
+        bool IsEnrollmentUpdated(string enrollmentNumber)
+        {
+            using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
             {
-                if (con.State == ConnectionState.Open)
+                connection.Open();
+
+                using (SqlCommand command = new SqlCommand("SELECT COUNT(*) FROM Complaint WHERE student_id = @enrollno AND Status = 'Complete'", connection))
                 {
-                    con.Close();
+                    command.Parameters.AddWithValue("@enrollno", enrollmentNumber);
+
+                    int rowCount = (int)command.ExecuteScalar();
+
+                    return rowCount > 0;
                 }
             }
-
-
-            populate(); // Assuming this function retrieves and displays the updated complaints data
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -102,5 +128,10 @@ namespace hostelproject
         {
             this.Close();
         }
+
+
+
     }
+
 }
+

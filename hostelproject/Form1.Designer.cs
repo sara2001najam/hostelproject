@@ -79,11 +79,12 @@
             label5.BackColor = Color.RoyalBlue;
             label5.FlatStyle = FlatStyle.Flat;
             label5.Font = new Font("Constantia", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = SystemColors.ButtonHighlight;
             label5.Location = new Point(96, 476);
             label5.Name = "label5";
-            label5.Size = new Size(123, 24);
+            label5.Size = new Size(100, 24);
             label5.TabIndex = 18;
-            label5.Text = "PASSWORD";
+            label5.Text = "Password";
             // 
             // label4
             // 
@@ -91,11 +92,12 @@
             label4.BackColor = Color.RoyalBlue;
             label4.FlatStyle = FlatStyle.Flat;
             label4.Font = new Font("Constantia", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = SystemColors.ButtonHighlight;
             label4.Location = new Point(96, 420);
             label4.Name = "label4";
-            label4.Size = new Size(121, 24);
+            label4.Size = new Size(108, 24);
             label4.TabIndex = 17;
-            label4.Text = "USERNAME";
+            label4.Text = "Username";
             // 
             // txtpass
             // 

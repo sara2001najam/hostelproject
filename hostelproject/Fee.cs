@@ -137,7 +137,7 @@ namespace hostelproject
                 }
             }
 
-            textBox1.Text = text.ToString();
+            //textBox1.Text = text.ToString();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -152,7 +152,7 @@ namespace hostelproject
                 }
             }
 
-            textBox1.Text = text.ToString();
+            //textBox1.Text = text.ToString();
         }
     }
 }

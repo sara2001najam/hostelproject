@@ -43,6 +43,7 @@
             btnsent = new Buttoncustom();
             buttoncustom1 = new Buttoncustom();
             txtsrch = new TextBox();
+            buttoncustom3 = new Buttoncustom();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -246,11 +247,29 @@
             txtsrch.Size = new Size(185, 31);
             txtsrch.TabIndex = 73;
             // 
+            // buttoncustom3
+            // 
+            buttoncustom3.BackColor = Color.CornflowerBlue;
+            buttoncustom3.BorderColor = Color.Black;
+            buttoncustom3.BorderRadius = 40;
+            buttoncustom3.BorderSize = 0;
+            buttoncustom3.FlatAppearance.BorderSize = 0;
+            buttoncustom3.FlatStyle = FlatStyle.Flat;
+            buttoncustom3.ForeColor = Color.White;
+            buttoncustom3.Location = new Point(527, 131);
+            buttoncustom3.Name = "buttoncustom3";
+            buttoncustom3.Size = new Size(128, 31);
+            buttoncustom3.TabIndex = 74;
+            buttoncustom3.Text = "Update";
+            buttoncustom3.UseVisualStyleBackColor = false;
+            buttoncustom3.Click += buttoncustom3_Click;
+            // 
             // RoomsManagement
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1600, 650);
+            Controls.Add(buttoncustom3);
             Controls.Add(txtsrch);
             Controls.Add(buttoncustom1);
             Controls.Add(btnsent);
@@ -292,5 +311,6 @@
         private Buttoncustom btnsent;
         private Buttoncustom buttoncustom1;
         private TextBox txtsrch;
+        private Buttoncustom buttoncustom3;
     }
 }

@@ -46,6 +46,7 @@
             panel2 = new Panel();
             label2 = new Label();
             label3 = new Label();
+            buttoncustom5 = new Buttoncustom();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -93,6 +94,7 @@
             button1.Size = new Size(124, 92);
             button1.TabIndex = 1;
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // label1
             // 
@@ -338,11 +340,29 @@
             label3.TabIndex = 44;
             label3.Text = "Get Started with management stuff!";
             // 
+            // buttoncustom5
+            // 
+            buttoncustom5.BackColor = Color.CornflowerBlue;
+            buttoncustom5.BorderColor = Color.Black;
+            buttoncustom5.BorderRadius = 40;
+            buttoncustom5.BorderSize = 0;
+            buttoncustom5.FlatAppearance.BorderSize = 0;
+            buttoncustom5.FlatStyle = FlatStyle.Flat;
+            buttoncustom5.ForeColor = Color.White;
+            buttoncustom5.Location = new Point(531, 280);
+            buttoncustom5.Name = "buttoncustom5";
+            buttoncustom5.Size = new Size(211, 63);
+            buttoncustom5.TabIndex = 45;
+            buttoncustom5.Text = "CHAT SERVER";
+            buttoncustom5.UseVisualStyleBackColor = false;
+            buttoncustom5.Click += buttoncustom5_Click;
+            // 
             // HomeAdmin
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1630, 963);
+            Controls.Add(buttoncustom5);
             Controls.Add(label3);
             Controls.Add(panel2);
             Controls.Add(label2);
@@ -379,5 +399,6 @@
         private Label label2;
         private Label label3;
         private Buttoncustom buttoncustom4;
+        private Buttoncustom buttoncustom5;
     }
 }

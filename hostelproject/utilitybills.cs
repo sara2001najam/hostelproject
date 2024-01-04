@@ -25,7 +25,7 @@ namespace hostelproject
         }
         private void populate()
         {
-            string query = "SELECT * FROM UtilityBills";
+            string query = "SELECT * FROM UnpaidUtilityBills";
             SqlCommand cmd = new SqlCommand(query, con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             SqlCommandBuilder cb = new SqlCommandBuilder(da);
@@ -243,7 +243,6 @@ namespace hostelproject
                     MessageBox.Show("Invalid Bill ID. Please enter a numeric value.");
                     return;
                 }
-                // int weekId = 15; // The week ID for which you want to update the status to paid
 
                 // Update the status of the utility bill
                 string updateQuery = "UPDATE UtilityBills SET IsPaid = 1 WHERE BillId = @BillId";
@@ -255,12 +254,12 @@ namespace hostelproject
 
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Utility bill status updated to paid for Bill/Week ID: " + billId);
+                        MessageBox.Show("Utility bill status updated to paid for Bill ID: " + billId);
                         populate(); // Refresh the data in the DataGridView
                     }
                     else
                     {
-                        MessageBox.Show("No utility bill found for Week ID: " + billId);
+                        MessageBox.Show("No utility bill found for Bill ID: " + billId);
                     }
                 }
             }
@@ -273,6 +272,7 @@ namespace hostelproject
             {
                 con.Close();
             }
+
         }
     }
 }

@@ -42,6 +42,7 @@ namespace hostelproject
 
         public void populate()
         {
+            con.Open();
             string query = "select * from Profile";
             SqlCommand cmd = new SqlCommand(query, con);
             cmd.ExecuteNonQuery();
@@ -81,6 +82,7 @@ namespace hostelproject
                     command.ExecuteNonQuery();
 
                     MessageBox.Show("Student saved successfully!");
+                    con.Close();
                 }
             }
             catch (Exception ex)
@@ -162,11 +164,13 @@ namespace hostelproject
                     {
                         MessageBox.Show("No record found with the provided enrollment number.");
                     }
+
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
+                con.Close();
             }
 
 

@@ -310,11 +310,11 @@
             dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.BackgroundColor = SystemColors.Highlight;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(687, 367);
+            dataGridView1.Location = new Point(687, 325);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 62;
             dataGridView1.RowTemplate.Height = 33;
-            dataGridView1.Size = new Size(586, 181);
+            dataGridView1.Size = new Size(653, 223);
             dataGridView1.TabIndex = 116;
             // 
             // btnsent

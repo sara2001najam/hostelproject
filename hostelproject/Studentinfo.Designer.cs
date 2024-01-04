@@ -453,6 +453,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(302, 31);
             textBox1.TabIndex = 99;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // Studentinfo
             // 

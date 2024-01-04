@@ -59,6 +59,7 @@
             dataGridView1.RowTemplate.Height = 33;
             dataGridView1.Size = new Size(859, 351);
             dataGridView1.TabIndex = 4;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // btnInsert
             // 
@@ -185,6 +186,7 @@
             txtSalary.TabIndex = 76;
             txtSalary.Texts = "";
             txtSalary.UnderlinedStyle = true;
+            txtSalary._Textchanged += txtSalary__Textchanged;
             // 
             // cmbposition
             // 
@@ -241,6 +243,7 @@
             txtNewsal.TabIndex = 81;
             txtNewsal.Texts = "";
             txtNewsal.UnderlinedStyle = true;
+            txtNewsal._Textchanged += txtNewsal__Textchanged;
             // 
             // label5
             // 

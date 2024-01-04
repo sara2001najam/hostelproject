@@ -47,35 +47,51 @@ namespace hostelproject
             using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
             {
                 connection.Open();
-                string query = "SELECT COUNT(*) FROM users WHERE username = @username AND pass = @pass";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@username", txtuser.Text);
-                command.Parameters.AddWithValue("@pass", txtpass.Text);
-                //int result=command.ExecuteNonQuery();
-                //int result = (int)command.ExecuteScalar();
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                DataTable dt = new DataTable();
-                adapter.Fill(dt);
 
+                string username = txtuser.Text;
+                string password = txtpass.Text;
 
-                //}
-
-
-                //if (AuthenticateUser(txtuser.Text, txtpass.Text))
-                //{
-                if (txtuser.Text == "admin")
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
-                    this.Hide();
-                    HomeAdmin ha = new HomeAdmin();
-                    ha.Show();
+                    MessageBox.Show("Please enter your username and password.");
                 }
                 else
                 {
-                    this.Hide();
-                    HomeStudent hs = new HomeStudent();
-                    hs.Show();
+                    string query = "SELECT COUNT(*) FROM users WHERE username = @username AND pass = @pass";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@pass", password);
+
+                    SqlDataAdapter adapter = new SqlDataAdapter(command);
+                    DataTable dt = new DataTable();
+                    adapter.Fill(dt);
+
+                    if (dt.Rows[0][0].ToString() == "1")
+                    {
+                        MessageBox.Show("Login successful!");
+
+                        if (username == "admin")
+                        {
+                            this.Hide();
+                            HomeAdmin ha = new HomeAdmin();
+                            ha.ShowDialog(); // Use ShowDialog to make the new form modal
+                        }
+                        else
+                        {
+                            this.Hide();
+                            HomeStudent hs = new HomeStudent();
+                            hs.ShowDialog(); // Use ShowDialog to make the new form modal
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid username or password.");
+                    }
                 }
             }
+
+
+
             // }
             //else
             //{

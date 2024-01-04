@@ -34,8 +34,6 @@
             btnsent = new Buttoncustom();
             buttoncustom1 = new Buttoncustom();
             buttoncustom2 = new Buttoncustom();
-            buttoncustom3 = new Buttoncustom();
-            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -80,7 +78,7 @@
             btnsent.FlatStyle = FlatStyle.Flat;
             btnsent.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnsent.ForeColor = Color.White;
-            btnsent.Location = new Point(1364, 521);
+            btnsent.Location = new Point(1340, 527);
             btnsent.Name = "btnsent";
             btnsent.Size = new Size(131, 40);
             btnsent.TabIndex = 80;
@@ -124,39 +122,11 @@
             buttoncustom2.UseVisualStyleBackColor = false;
             buttoncustom2.Click += buttoncustom2_Click;
             // 
-            // buttoncustom3
-            // 
-            buttoncustom3.BackColor = Color.AliceBlue;
-            buttoncustom3.BorderColor = Color.RoyalBlue;
-            buttoncustom3.BorderRadius = 40;
-            buttoncustom3.BorderSize = 2;
-            buttoncustom3.FlatAppearance.BorderSize = 0;
-            buttoncustom3.FlatStyle = FlatStyle.Flat;
-            buttoncustom3.ForeColor = Color.RoyalBlue;
-            buttoncustom3.Location = new Point(1344, 74);
-            buttoncustom3.Name = "buttoncustom3";
-            buttoncustom3.Size = new Size(120, 37);
-            buttoncustom3.TabIndex = 83;
-            buttoncustom3.Text = "VIEW PDF";
-            buttoncustom3.UseVisualStyleBackColor = false;
-            buttoncustom3.Click += buttoncustom3_Click;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(922, 128);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(551, 369);
-            textBox1.TabIndex = 84;
-            textBox1.TextChanged += textBox1_TextChanged;
-            // 
             // Fee
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1578, 644);
-            Controls.Add(textBox1);
-            Controls.Add(buttoncustom3);
             Controls.Add(buttoncustom2);
             Controls.Add(buttoncustom1);
             Controls.Add(btnsent);
@@ -180,7 +150,5 @@
         private Buttoncustom btnsent;
         private Buttoncustom buttoncustom1;
         private Buttoncustom buttoncustom2;
-        private Buttoncustom buttoncustom3;
-        private TextBox textBox1;
     }
 }

@@ -72,19 +72,19 @@ namespace hostelproject
 
         private void buttoncustom2_Click(object sender, EventArgs e)
         {
-
-            string username = txtUsername.Texts;
-            string password = txtpass.Texts;
-            string confirmPassword = txtcpass.Texts;
-            string email = txtEmail.Texts;
+            string username = txtUsername.Text;
+            string password = txtpass.Text;
+            string confirmPassword = txtcpass.Text;
+            string email = txtEmail.Text;
             DateTime dateRegistered = DateTime.Now;
 
             // Check if the password and confirm password match
-            if (password != confirmPassword)
+           if (password != confirmPassword)
             {
                 MessageBox.Show("Password and Confirm Password do not match!");
                 return;
             }
+           else
 
             try
             {
@@ -103,6 +103,13 @@ namespace hostelproject
                     command.ExecuteNonQuery();
 
                     MessageBox.Show("Signup successful!");
+
+                    // Close the current signup form
+                    this.Close();
+
+                    // Open the login form
+                    Form1 loginForm = new Form1();
+                    loginForm.Show();
                 }
             }
             catch (Exception ex)

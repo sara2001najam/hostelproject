@@ -36,33 +36,83 @@ namespace hostelproject
         private void buttoncustom1_Click(object sender, EventArgs e)
         {
             string roomNumber = txtRoomno.Texts;
-            string roomType = comboBox1.SelectedItem.ToString();
+            string roomType = comboBox1.SelectedItem?.ToString();
             string occupancyStatus = "vacant";
 
-            // Replace with your actual connection string
-            string query = "INSERT INTO Rooms (room_number, room_type, occupancy_status) VALUES (@RoomNumber, @RoomType, @OccupancyStatus)";
-
-            using (SqlCommand command = new SqlCommand(query, con))
+            // Check if the room already exists
+            if (IsRoomOccupied(roomNumber))
             {
-                con.Open();
-                command.Parameters.AddWithValue("@RoomNumber", roomNumber);
-                command.Parameters.AddWithValue("@RoomType", roomType);
-                command.Parameters.AddWithValue("@OccupancyStatus", occupancyStatus);
+                MessageBox.Show("Room is already occupied. Cannot add an occupied room.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (IsRoomExists(roomNumber))
+            {
+                MessageBox.Show("Room already exists in the database!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                // Replace with your actual connection string
+                string query = "INSERT INTO Rooms (room_number, room_type, occupancy_status) VALUES (@RoomNumber, @RoomType, @OccupancyStatus)";
 
-                int rowsAffected = command.ExecuteNonQuery();
-
-                if (rowsAffected > 0)
+                using (SqlCommand command = new SqlCommand(query, con))
                 {
-                    MessageBox.Show("Room inserted successfully!");
+                    con.Open();
+                    command.Parameters.AddWithValue("@RoomNumber", roomNumber);
+                    command.Parameters.AddWithValue("@RoomType", roomType);
+                    command.Parameters.AddWithValue("@OccupancyStatus", occupancyStatus);
 
+                    int rowsAffected = command.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Room inserted successfully!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to insert room!");
+                    }
                 }
-                else
+                con.Close();
+                populate();
+            }
+
+            // Function to check if the room already exists
+            bool IsRoomExists(string roomNumber)
+            {
+                // Replace with your actual connection string
+                string query = "SELECT COUNT(*) FROM Rooms WHERE room_number = @RoomNumber";
+
+                using (SqlCommand command = new SqlCommand(query, con))
                 {
-                    MessageBox.Show("Failed to insert room!");
+                    con.Open();
+                    command.Parameters.AddWithValue("@RoomNumber", roomNumber);
+
+                    int count = (int)command.ExecuteScalar();
+
+                    con.Close();
+
+                    return count > 0;
                 }
             }
-            con.Close();
-            populate();
+
+            // Function to check if the room is occupied
+            bool IsRoomOccupied(string roomNumber)
+            {
+                // Replace with your actual connection string
+                string query = "SELECT COUNT(*) FROM Rooms WHERE room_number = @RoomNumber AND occupancy_status = 'occupied'";
+
+                using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    con.Open();
+                    command.Parameters.AddWithValue("@RoomNumber", roomNumber);
+
+                    int count = (int)command.ExecuteScalar();
+
+                    con.Close();
+
+                    return count > 0;
+                }
+            }
+
         }
 
         private void buttoncustom1_Click(object sender, EventArgs e, function fn)
@@ -233,6 +283,67 @@ namespace hostelproject
         private void buttoncustom1_Click_1(object sender, EventArgs e)
         {
             populate();
+        }
+
+        private void buttoncustom3_Click(object sender, EventArgs e)
+        {
+            string roomNumber = txtRoomno.Texts;
+            // Function to check if the room is occupied
+            bool IsRoomOccupied(string roomNumber)
+            {
+                // Replace with your actual connection string
+                string query = "SELECT COUNT(*) FROM Rooms WHERE room_number = @RoomNumber AND occupancy_status = 'occupied'";
+
+                using (SqlCommand command = new SqlCommand(query, con))
+                {
+                    con.Open();
+                    command.Parameters.AddWithValue("@RoomNumber", roomNumber);
+
+                    int count = (int)command.ExecuteScalar();
+
+                    con.Close();
+
+                    return count > 0;
+                }
+            }
+            // Check if the room is vacant before updating to occupied
+            if (!IsRoomOccupied(roomNumber))
+            {
+                // Replace with your actual connection string
+                using (SqlConnection con = new SqlConnection("Data Source=DESKTOP-EH07IIP;Initial Catalog=HostelMn;Integrated Security=True"))
+                {
+                    using (SqlCommand command = new SqlCommand("UpdateRoomStatusToOccupied", con))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@RoomNumber", roomNumber);
+
+                        try
+                        {
+                            con.Open();
+                            int rowsAffected = command.ExecuteNonQuery();
+
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Room status updated to 'occupied' successfully!");
+                                // You may want to refresh your room data or perform other actions here
+                            }
+                            else
+                            {
+                                MessageBox.Show("Failed to update room status!");
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error: " + ex.Message);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Room is already occupied!");
+            }
+
         }
         //public class Room
         //{

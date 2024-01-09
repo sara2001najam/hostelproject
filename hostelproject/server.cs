@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
-using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class server : Form
+    public partial class Client : Form
     {
         private bool connected = false;
         private Thread client = null;
@@ -28,7 +25,7 @@ namespace Client
         private Task send = null;
         private bool exit = false;
 
-        public server()
+        public Client()
         {
             InitializeComponent();
         }
